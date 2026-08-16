@@ -209,6 +209,17 @@
     font-size:0.7rem; padding:4px 12px; border-radius:var(--radius);
     background:var(--peach-deep); margin-left:12px; white-space:nowrap;
   }
+  .login-badge{
+    font-size:0.68rem; padding:4px 10px; border-radius:var(--radius);
+    margin-left:10px; white-space:nowrap;
+  }
+  .login-no{background:var(--sage);}
+  .login-yes{background:var(--peach);}
+  .practice-card{
+    background:linear-gradient(135deg, var(--sage) 0%, var(--blue) 100%);
+  }
+  .practice-desc{font-size:0.88rem; color:var(--text); margin:0 0 14px;}
+  .sidebar-item.practice-nav{font-weight:600;}
   .placeholder{
     background:#fff; border-radius:22px; padding:40px; text-align:center;
     box-shadow:var(--shadow); color:var(--text-soft);
@@ -281,399 +292,80 @@
 </div>
 
 <script>
-/* ---------------- DATA ---------------- */
-const TOPICS = {
-  general: {
-    label: "General", emoji:"🌍", color:"general",
-    subtopics: [
-      {slug:"geography", label:"Geography"},
-      {slug:"countries", label:"Countries around the world"},
-      {slug:"israeli-history", label:"Israeli history"},
-      {slug:"israeli-wars", label:"Israeli wars & military history"},
-      {slug:"torah-history", label:"Torah & Jewish history"},
-      {slug:"mythology", label:"Mythology"},
-      {slug:"kabbalah", label:"Kabbalah / mysticism"},
-      {slug:"world-religions", label:"World religions"},
-      {slug:"archaeology", label:"Archaeology"},
-    ]
-  },
-  science: {
-    label: "Science", emoji:"🔬", color:"science",
-    subtopics: [
-      {slug:"physics", label:"Physics"},
-      {slug:"neuroscience", label:"Neuroscience"},
-      {slug:"human-biology", label:"Human biology"},
-      {slug:"nutrition", label:"Nutrition"},
-      {slug:"gut-health", label:"Gut health"},
-      {slug:"astronomy", label:"Astronomy"},
-      {slug:"genetics", label:"Genetics"},
-    ]
-  },
-  tech: {
-    label: "Tech", emoji:"💻", color:"tech",
-    subtopics: [
-      {slug:"technology", label:"Technology"},
-      {slug:"cloud", label:"Cloud computing"},
-      {slug:"docker", label:"Docker"},
-      {slug:"kubernetes", label:"Kubernetes"},
-      {slug:"devops", label:"SRE / DevOps"},
-      {slug:"cicd", label:"CI/CD"},
-      {slug:"infra", label:"Infrastructure / Linux / networking"},
-      {slug:"python", label:"Python / programming"},
-      {slug:"git", label:"Git & version control"},
-      {slug:"ai-ml", label:"AI & machine learning"},
-    ]
-  },
-  cyber: {
-    label: "Cyber", emoji:"🔐", color:"cyber",
-    subtopics: [
-      {slug:"cybersecurity", label:"Cybersecurity"},
-      {slug:"detection", label:"Detection engineering"},
-      {slug:"pentesting", label:"Penetration testing"},
-      {slug:"cryptography", label:"Cryptography"},
-    ]
-  },
-  other: {
-    label: "Other", emoji:"✈️", color:"other",
-    subtopics: [
-      {slug:"aviation", label:"Aircraft / aviation"},
-      {slug:"finance", label:"Personal finance"},
-      {slug:"books", label:"Books / literature"},
-      {slug:"travel", label:"Travel"},
-      {slug:"productivity", label:"Productivity"},
-    ]
-  },
-};
+/* ---------------- DATA (loaded from data.json) ---------------- */
+let TOPICS = null;   // built from data.json categories
+let CONTENT = {};    // built from data.json concepts
+let PRACTICE = {};   // built from data.json practice
+let FACTS = [];       // flattened from data.json facts
 
-/* Fully researched content — Other category */
-const CONTENT = {
-  "tech/technology": [
-    {title:"Staying Current, Not Overwhelmed", resources:[
-      {title:"TLDR Newsletter", desc:"Byte-sized daily summaries of the most important tech and AI news — free, no fluff.", tag:"Free newsletter", url:"https://tldr.tech/"},
-      {title:"The Verge", desc:"Broad, readable tech news covering gadgets, AI, and industry shifts as they happen.", tag:"Free site", url:"https://www.theverge.com/"},
-      {title:"Ars Technica", desc:"Deeper, more technical tech journalism for when you want more than headlines.", tag:"Free site", url:"https://arstechnica.com/"},
-    ]},
-  ],
-  "tech/cloud": [
-    {title:"Free Foundations", resources:[
-      {title:"Microsoft Learn — Azure Fundamentals (AZ-900)", desc:"Free, structured, official Microsoft training path — the standard entry point into cloud concepts.", tag:"Free course", url:"https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/"},
-      {title:"AWS Skill Builder", desc:"Amazon's own free training portal covering core AWS services and cloud fundamentals.", tag:"Free course", url:"https://skillbuilder.aws/"},
-      {title:"Google Cloud Skills Boost — Fundamentals", desc:"Google's official free path covering compute, containers, and storage on GCP.", tag:"Free course", url:"https://www.cloudskillsboost.google/"},
-    ]},
-    {title:"Cross-Provider Foundations", resources:[
-      {title:"Linux Foundation — Intro to Cloud Infrastructure Technologies", desc:"Grounds cloud concepts in open-source infrastructure rather than one vendor's product catalog — useful before you specialize.", tag:"Free course", url:"https://training.linuxfoundation.org/"},
-    ]},
-  ],
-  "tech/docker": [
-    {title:"Free Foundations", resources:[
-      {title:"Docker Official Get Started Guide", desc:"The official, always up-to-date walkthrough for building your first images and containers.", tag:"Free docs", url:"https://docs.docker.com/get-started/"},
-      {title:"TechWorld with Nana (YouTube)", desc:"One of the most trusted free DevOps educators — clear, practical Docker tutorials from zero to production use.", tag:"YouTube", url:"https://www.youtube.com/@TechWorldwithNana"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"Play with Docker", desc:"A free, browser-based Docker playground — no install needed to start experimenting.", tag:"Free tool", url:"https://labs.play-with-docker.com/"},
-    ]},
-  ],
-  "tech/kubernetes": [
-    {title:"Free Foundations (do Docker first)", resources:[
-      {title:"Kubernetes Basics — Official Tutorials", desc:"Interactive, in-browser tutorials from the Kubernetes project maintainers themselves.", tag:"Free official docs", url:"https://kubernetes.io/docs/tutorials/kubernetes-basics/"},
-      {title:"TechWorld with Nana — Kubernetes", desc:"The same trusted channel's Kubernetes series, building directly on its Docker content.", tag:"YouTube", url:"https://www.youtube.com/@TechWorldwithNana"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"Play with Kubernetes", desc:"A free, disposable, browser-based cluster playground — experiment without installing anything.", tag:"Free tool", url:"https://labs.play-with-k8s.com/"},
-      {title:"CNCF Kubernetes Resource List", desc:"A curated, maintained list of the best free Kubernetes learning material as the ecosystem evolves.", tag:"Free resource hub", url:"https://www.cncf.io/blog/2026/01/19/top-28-kubernetes-resources-for-2026-learn-and-stay-up-to-date/"},
-    ]},
-  ],
-  "tech/devops": [
-    {title:"Free Foundations", resources:[
-      {title:"Google's Site Reliability Engineering book", desc:"Google's own SRE book, free to read online — the source text the entire discipline is built on.", tag:"Free book", url:"https://sre.google/books/"},
-      {title:"DevOps Roadmap (GitHub)", desc:"A free, community-maintained roadmap linking out to the best resource for every DevOps skill area.", tag:"Free roadmap", url:"https://github.com/milanm/DevOps-Roadmap"},
-    ]},
-  ],
-  "tech/cicd": [
-    {title:"Free Foundations", resources:[
-      {title:"GitHub Actions documentation", desc:"Free, official docs covering CI/CD pipelines using GitHub's built-in, widely-used tooling — practical to set up immediately.", tag:"Free docs", url:"https://docs.github.com/en/actions"},
-      {title:"TechWorld with Nana — CI/CD", desc:"Practical CI/CD pipeline walkthroughs from the same trusted DevOps channel.", tag:"YouTube", url:"https://www.youtube.com/@TechWorldwithNana"},
-    ]},
-  ],
-  "tech/infra": [
-    {title:"Free Foundations", resources:[
-      {title:"Linux Journey", desc:"A free, interactive, browser-based path from basic commands through networking and kernel concepts.", tag:"Free interactive", url:"https://www.linuxjourney.com/"},
-      {title:"The Linux Command Line (book)", desc:"A free, classic, thorough PDF book covering the terminal from basics to shell scripting.", tag:"Free book", url:"https://linuxcommand.org/tlcl.php"},
-    ]},
-    {title:"Networking Specifics", resources:[
-      {title:"freeCodeCamp — Linux Networking Commands", desc:"A free, practical article covering the core networking commands you'll actually use day to day.", tag:"Free article", url:"https://www.freecodecamp.org/news/linux-networking-commands-for-beginners/"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"OverTheWire: Bandit", desc:"A free, gamified wargame that teaches Linux command-line skills through hands-on challenges — genuinely fun.", tag:"Free practice", url:"https://overthewire.org/wargames/bandit/"},
-    ]},
-  ],
-  "tech/python": [
-    {title:"Free Foundations", resources:[
-      {title:"Harvard CS50P (edX)", desc:"University-quality, structured, completely free introduction to Python programming from Harvard.", tag:"Free course", url:"https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python"},
-      {title:"Automate the Boring Stuff with Python", desc:"A free online book that teaches Python by having you automate real tasks from the first few chapters.", tag:"Free book", url:"https://automatetheboringstuff.com/"},
-    ]},
-    {title:"Learning by Video", resources:[
-      {title:"freeCodeCamp (YouTube)", desc:"Long-form, completely free Python courses from absolute beginner to advanced topics.", tag:"YouTube", url:"https://www.youtube.com/@freecodecamp"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"Python Discord", desc:"One of the largest free programming communities — real-time help and discussion as you practice.", tag:"Free community", url:"https://pythondiscord.com/"},
-    ]},
-  ],
-  "cyber/cybersecurity": [
-    {title:"Free Foundations", resources:[
-      {title:"TryHackMe — Pre-Security & Beginner Path", desc:"The most recommended free starting point in 2026: structured, hands-on rooms that teach networking, Linux, and web fundamentals step by step, entirely in-browser.", tag:"Free hands-on", url:"https://tryhackme.com/beginner-path"},
-      {title:"OverTheWire: Bandit", desc:"A free, gamified wargame that builds command-line and Linux confidence — the recommended first step before TryHackMe for absolute beginners.", tag:"Free practice", url:"https://overthewire.org/wargames/bandit/"},
-    ]},
-    {title:"Going Deeper", resources:[
-      {title:"PortSwigger Web Security Academy", desc:"Free, extremely well-regarded, hands-on training specifically on web application vulnerabilities.", tag:"Free hands-on", url:"https://portswigger.net/web-security"},
-      {title:"picoCTF", desc:"Free beginner-friendly capture-the-flag challenges built by Carnegie Mellon, great for practicing concepts in a game format.", tag:"Free CTF", url:"https://picoctf.org/"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"Hack The Box (free tier)", desc:"Open-ended vulnerable machines for practicing skills with less hand-holding once fundamentals feel solid.", tag:"Free tier", url:"https://www.hackthebox.com/"},
-    ]},
-  ],
-  "cyber/detection": [
-    {title:"Free Foundations", resources:[
-      {title:"MITRE ATT&CK Navigator", desc:"The free, interactive, industry-standard knowledge base of real-world adversary tactics and techniques — required reading for detection work.", tag:"Free reference", url:"https://mitre-attack.github.io/attack-navigator/"},
-      {title:"SigmaHQ (GitHub)", desc:"3,000+ free, community-maintained detection rules mapped to MITRE ATT&CK — read real rules to learn how detections are actually written.", tag:"Free rules repo", url:"https://github.com/SigmaHQ/sigma"},
-    ]},
-    {title:"Hands-On Practice", resources:[
-      {title:"LetsDefend", desc:"A free SOC-analyst alert investigation simulator with realistic phishing, malware, and lateral-movement scenarios.", tag:"Free simulator", url:"https://letsdefend.io/"},
-      {title:"Blue Team Labs Online (free tier)", desc:"Weekly free SOC-style challenges for practicing detection and investigation skills.", tag:"Free tier", url:"https://blueteamlabs.online/"},
-    ]},
-    {title:"Real-World Case Studies", resources:[
-      {title:"The DFIR Report", desc:"Free, detailed write-ups of real intrusions — the best way to see how actual adversary tradecraft gets detected and investigated.", tag:"Free case studies", url:"https://thedfirreport.com/"},
-    ]},
-  ],
-  "cyber/cybersecurity": [
-    {title:"Free Foundations", resources:[
-      {title:"TryHackMe — Pre-Security & Beginner Path", desc:"The best default starting point: free, structured, hands-on rooms teaching networking, web, and Linux fundamentals with zero prior experience needed.", tag:"Free hands-on", url:"https://tryhackme.com/path/outline/beginner"},
-      {title:"ISC2 Certified in Cybersecurity (CC)", desc:"A free training course plus a free exam voucher from the field's own certifying body — real credential, no cost.", tag:"Free course + cert", url:"https://www.isc2.org/landing/1mcc"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"OverTheWire: Bandit", desc:"A free, gamified wargame that builds the command-line confidence needed before tackling harder security challenges.", tag:"Free practice", url:"https://overthewire.org/wargames/bandit/"},
-      {title:"PortSwigger Web Security Academy", desc:"Free, extremely well-regarded hands-on labs for web application security specifically.", tag:"Free labs", url:"https://portswigger.net/web-security"},
-    ]},
-  ],
-  "cyber/detection": [
-    {title:"Free Foundations", resources:[
-      {title:"MITRE ATT&CK Framework", desc:"The free, industry-standard knowledge base of attacker techniques that all real detection engineering is built around.", tag:"Free framework", url:"https://attack.mitre.org/"},
-      {title:"SANS Detection Engineering Poster", desc:"A free, practical end-to-end visual guide to the detection engineering life cycle, from raw logs to reliable alerts.", tag:"Free guide", url:"https://www.sans.org/posters/detection-engineering"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"LetsDefend", desc:"A free-tier SOC-analyst simulation platform — investigate real-style alerts and logs as practice.", tag:"Free tier", url:"https://letsdefend.io/"},
-      {title:"CyberDefenders", desc:"Free blue-team labs built around real investigation scenarios and log analysis.", tag:"Free labs", url:"https://cyberdefenders.org/"},
-    ]},
-  ],
-  "general/geography": [
-    {title:"Free Foundations", resources:[
-      {title:"Class Central — Geography", desc:"An aggregator of free geography courses from top universities, covering physical, human, and regional geography.", tag:"Free course hub", url:"https://www.classcentral.com/subject/geography"},
-      {title:"Royal Geographical Society free resources", desc:"Free interactive animations and explainers built to make foundational geography concepts stick.", tag:"Free resources", url:"https://www.rgs.org/"},
-    ]},
-    {title:"Interactive Map Learning", resources:[
-      {title:"Seterra", desc:"A genuinely fun, free map-quiz game covering countries, capitals, flags, rivers and mountains across every continent.", tag:"Free game", url:"https://online.seterra.net/en"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"CIA World Factbook", desc:"The free, definitive reference for every country's geography, terrain, and physical data — great for looking things up as you learn.", tag:"Free reference", url:"https://www.cia.gov/the-world-factbook/"},
-    ]},
-  ],
-  "general/countries": [
-    {title:"Country Reference", resources:[
-      {title:"CIA World Factbook", desc:"Free, detailed profile of every country — government, economy, geography and demographics in one place.", tag:"Free reference", url:"https://www.cia.gov/the-world-factbook/"},
-    ]},
-    {title:"Learn by Quiz", resources:[
-      {title:"Seterra — Countries & Capitals", desc:"Free customizable quizzes for memorizing every country and capital, region by region.", tag:"Free game", url:"https://online.seterra.net/en"},
-    ]},
-    {title:"Explore Visually", resources:[
-      {title:"GeoGuessr (free tier)", desc:"Drops you into real Street View locations worldwide — a genuinely engaging way to learn to recognize countries by sight.", tag:"Free tier", url:"https://www.geoguessr.com/"},
-    ]},
-  ],
-  "general/israeli-history": [
-    {title:"Free University Courses", resources:[
-      {title:"Tel Aviv University — History of Modern Israel (Coursera)", desc:"A two-part free-to-audit course covering Israel from 19th-century Zionism through today, taught by Professor Eyal Naveh.", tag:"Free to audit", url:"https://www.coursera.org/learn/history-israel"},
-      {title:"NYU — Ancient Israel (Open Culture)", desc:"A free, full 25-lecture course building ancient Israelite history from primary evidence, including the Bible.", tag:"Free course", url:"https://www.openculture.com/ancient-israel-a-free-online-course-from-nyu"},
-    ]},
-    {title:"Reference & Context", resources:[
-      {title:"Wonder Israel — Free Israel Course Directory", desc:"A curated, regularly updated list of every free Coursera/edX course on Israeli history, archaeology, and society.", tag:"Free resource hub", url:"https://wonderisrael.com/free-courses-on-israel/"},
-    ]},
-  ],
-  "general/israeli-wars": [
-    {title:"Overview & Timeline", resources:[
-      {title:"Britannica — Arab-Israeli Wars", desc:"A free, reliable overview of each major conflict from 1948 to today, with clear cause-and-effect context.", tag:"Free reference", url:"https://www.britannica.com/event/Arab-Israeli-wars"},
-    ]},
-    {title:"Deep Reference, War by War", resources:[
-      {title:"Jewish Virtual Library — Israel's Wars & Operations", desc:"Free, detailed articles on each individual war and operation, organized chronologically from 1948 onward.", tag:"Free reference", url:"https://jewishvirtuallibrary.org/israel-s-wars-and-operations"},
-    ]},
-  ],
-  "general/torah-history": [
-    {title:"Primary Texts, Free", resources:[
-      {title:"Sefaria", desc:"The largest free library of Jewish texts online — Torah, Talmud, Mishnah, and commentaries in Hebrew and English, fully interlinked.", tag:"Free library", url:"https://www.sefaria.org/"},
-    ]},
-    {title:"Explanatory Learning", resources:[
-      {title:"My Jewish Learning", desc:"Free, well-structured explanatory articles that walk through Torah portions and Jewish history topics in plain language.", tag:"Free site", url:"https://www.myjewishlearning.com/"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"Sefaria's Weekly Torah Portion Guide", desc:"A free structured way to read the Torah consistently, one weekly portion at a time, with linked commentary.", tag:"Free guide", url:"https://www.sefaria.org/sheets/503077"},
-    ]},
-  ],
-  "general/mythology": [
-    {title:"Free Foundations", resources:[
-      {title:"Mythology School", desc:"A free, research-based resource covering Greek, Norse, Egyptian and other mythologies through articles, timelines and quizzes.", tag:"Free site", url:"https://www.mythologyschool.com/"},
-    ]},
-    {title:"University-Level Free", resources:[
-      {title:"MIT OpenCourseWare — Symbolism & Mythology", desc:"A free university course on how myth and symbol are structured and woven into culture and daily life.", tag:"Free course", url:"https://ocw.mit.edu/"},
-    ]},
-  ],
-  "general/kabbalah": [
-    {title:"Free Foundations", resources:[
-      {title:"Chabad.org — Beginning Kabbalah", desc:"A free, structured introduction to Kabbalistic concepts written specifically for newcomers to the subject.", tag:"Free site", url:"https://www.chabad.org/kabbalah/article_cdo/aid/380738/jewish/Beginners.htm"},
-    ]},
-    {title:"Primary Texts", resources:[
-      {title:"Sefaria — The Zohar", desc:"The core text of Kabbalah, free to read with English translation alongside the original, on the same platform you'd use for Torah study.", tag:"Free library", url:"https://www.sefaria.org/texts"},
-    ]},
-  ],
-  "other/aviation": [
-    {title:"Aviation Fundamentals", resources:[
-      {title:"FAA Pilot's Handbook of Aeronautical Knowledge", desc:"The free official handbook covering how flight actually works — the foundation FAA training itself is built on.", tag:"Free PDF", url:"https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"},
-      {title:"MIT OpenCourseWare — Aeronautics", desc:"University-level intro courses on flight mechanics and aircraft systems, fully free.", tag:"Free course", url:"https://ocw.mit.edu/"},
-    ]},
-    {title:"Learning by Video", resources:[
-      {title:"Mentour Pilot (YouTube)", desc:"An airline captain breaks down real aviation incidents and procedures in plain language — the most trusted enthusiast channel.", tag:"YouTube", url:"https://www.youtube.com/@MentourPilot"},
-      {title:"Captain Joe (YouTube)", desc:"Structured, tutorial-style explainers on how commercial aircraft actually operate.", tag:"YouTube", url:"https://www.youtube.com/@flywithcaptainjoe"},
-    ]},
-    {title:"Free Structured Courses", resources:[
-      {title:"Embry-Riddle Free Aviation Courses", desc:"Courses from a leading aviation university covering maintenance, safety, and industry fundamentals.", tag:"Free course", url:"https://erau.edu/"},
-      {title:"Class Central — Aviation", desc:"Aggregator of free aviation courses across edX, Coursera and MIT OCW.", tag:"Free course hub", url:"https://www.classcentral.com/subject/aviation"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"Pilot Institute free resources", desc:"Free lessons, podcasts, and an interactive VR preflight trainer to test what you've learned.", tag:"Free tools", url:"https://pilotinstitute.com/"},
-    ]},
-  ],
-  "other/finance": [
-    {title:"Foundations of Budgeting", resources:[
-      {title:"Khan Academy — Personal Finance", desc:"The best free starting point: budgeting, credit, taxes and debt in short, plain-English videos.", tag:"Free course", url:"https://www.khanacademy.org/college-careers-more/personal-finance"},
-    ]},
-    {title:"Understanding Markets & Investing", resources:[
-      {title:"Yale — Financial Markets (Coursera)", desc:"Nobel laureate Robert Shiller's course on how financial markets actually work — free to audit.", tag:"Free to audit", url:"https://www.coursera.org/learn/financial-markets-global"},
-    ]},
-    {title:"Practical Money Management Tools", resources:[
-      {title:"Wave", desc:"Genuinely free budgeting and expense tracking — no trial, no paywall on the core features.", tag:"Free tool", url:"https://www.waveapps.com/"},
-    ]},
-  ],
-  "science/physics": [
-    {title:"Free Foundations", resources:[
-      {title:"Khan Academy — Physics", desc:"Complete free physics curriculum from mechanics to modern physics, with practice problems built in.", tag:"Free course", url:"https://www.khanacademy.org/science/physics"},
-      {title:"MIT OpenCourseWare — Physics", desc:"Full MIT physics course materials, lecture videos, and problem sets, totally free, no enrollment.", tag:"Free course", url:"https://ocw.mit.edu/"},
-      {title:"The Physics Classroom", desc:"A free, beginner-focused site built specifically to teach physics fundamentals step by step.", tag:"Free site", url:"https://www.physicsclassroom.com/"},
-    ]},
-    {title:"Learning by Video", resources:[
-      {title:"Veritasium (YouTube)", desc:"Derek Muller explains tricky physics and engineering ideas through real experiments and interviews.", tag:"YouTube", url:"https://www.youtube.com/@veritasium"},
-      {title:"MinutePhysics (YouTube)", desc:"Fast, hand-drawn explainers that build intuition before you dive into equations.", tag:"YouTube", url:"https://www.youtube.com/@minutephysics"},
-      {title:"PBS Space Time (YouTube)", desc:"Astrophysicist-hosted, structured deep dives into relativity, cosmology and quantum ideas.", tag:"YouTube", url:"https://www.youtube.com/@pbsspacetime"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"Khan Academy practice problems", desc:"Built into the same free course — work through problem sets after each topic to check understanding.", tag:"Free practice", url:"https://www.khanacademy.org/science/physics"},
-    ]},
-  ],
-  "science/neuroscience": [
-    {title:"Free Foundations", resources:[
-      {title:"Duke — Medical Neuroscience (Coursera)", desc:"Widely regarded as the most complete free neuroscience course online; pay only if you want a certificate.", tag:"Free course", url:"https://www.coursera.org/learn/medical-neuroscience"},
-      {title:"Harvard — Fundamentals of Neuroscience (edX)", desc:"A free, beautifully animated series covering the electrical and biological basics of the brain.", tag:"Free course", url:"https://www.edx.org/learn/neuroscience/harvard-university-fundamentals-of-neuroscience-part-1-the-electrical-properties-of-the-neuron"},
-    ]},
-    {title:"Learning by Video", resources:[
-      {title:"2-Minute Neuroscience (YouTube)", desc:"Short, clear videos breaking down individual brain structures and mechanisms one at a time.", tag:"YouTube", url:"https://www.youtube.com/@Neuroscientifically"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"Duke course quizzes", desc:"The Coursera course includes built-in quizzes after each module to reinforce what you've learned.", tag:"Free practice", url:"https://www.coursera.org/learn/medical-neuroscience"},
-    ]},
-  ],
-  "science/human-biology": [
-    {title:"Free Foundations", resources:[
-      {title:"OpenStax — Anatomy & Physiology", desc:"A complete, free, university-level textbook covering every body system in depth.", tag:"Free textbook", url:"https://openstax.org/details/books/anatomy-and-physiology-2e"},
-      {title:"GetBodySmart", desc:"Free interactive diagrams and quizzes that make body systems easier to visualize than a textbook alone.", tag:"Free interactive", url:"https://www.getbodysmart.com/"},
-    ]},
-    {title:"Visual & Interactive Learning", resources:[
-      {title:"Zygote Body", desc:"A free interactive 3D atlas of the human body you can rotate, isolate, and explore layer by layer.", tag:"Free 3D tool", url:"https://www.zygotebody.com/"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"OpenStax end-of-chapter reviews", desc:"Each chapter of the free textbook ends with review questions to test retention.", tag:"Free practice", url:"https://openstax.org/details/books/anatomy-and-physiology-2e"},
-    ]},
-  ],
-  "science/nutrition": [
-    {title:"Free Foundations", resources:[
-      {title:"Stanford — Nutrition Science (Coursera)", desc:"Explores the scientific foundations of nutrition, metabolism, and how evidence informs dietary guidance. Free to audit.", tag:"Free to audit", url:"https://www.coursera.org/"},
-      {title:"Harvard T.H. Chan — Nutrition Source", desc:"A free, evidence-based reference site maintained by one of the top public health schools, cutting through diet fads.", tag:"Free reference", url:"https://www.hsph.harvard.edu/nutritionsource/"},
-    ]},
-    {title:"Practice makes perfect", resources:[
-      {title:"Nutrition Source healthy eating guides", desc:"Practical, evidence-based guides you can apply directly to your own meals as you learn.", tag:"Free guide", url:"https://www.hsph.harvard.edu/nutritionsource/"},
-    ]},
-  ],
-  "science/gut-health": [
-    {title:"Free Foundations", resources:[
-      {title:"Open University — The Gut Microbiome (OpenLearn)", desc:"A free course on what the gut microbiome is, how it interacts with the body, and what disrupts it — no signup required to start.", tag:"Free course", url:"https://www.open.edu/openlearn/science-maths-technology/the-gut-microbiome-balancing-the-body/content-section-0"},
-      {title:"Stanford — Gut Health and the Microbiome", desc:"A two-week micro-course from leading microbiome researchers on the science behind gut health.", tag:"Course", url:"https://online.stanford.edu/courses/xche0029-gut-health-and-microbiome"},
-    ]},
-    {title:"Staying Evidence-Based", resources:[
-      {title:"NPR — What the evidence really shows about gut health", desc:"A grounded, myth-busting explainer that separates real gut-microbiome science from wellness marketing claims.", tag:"Free article", url:"https://www.npr.org/2026/06/22/nx-s1-5863119/gut-microbiome-gut-health"},
-    ]},
-  ],
-  "other/books": [
-    {title:"Discover Your Next Read", resources:[
-      {title:"Goodreads", desc:"The largest free book-tracking and recommendation community — shelves, ratings, and friend recommendations.", tag:"Free platform", url:"https://www.goodreads.com/"},
-    ]},
-    {title:"Free Classic Literature", resources:[
-      {title:"Project Gutenberg", desc:"70,000+ free public-domain ebooks, from classics to forgotten gems.", tag:"Free ebooks", url:"https://www.gutenberg.org/"},
-      {title:"LibriVox", desc:"Volunteer-read free audiobooks of public-domain classics, paired naturally with Gutenberg's texts.", tag:"Free audiobooks", url:"https://librivox.org/"},
-    ]},
-    {title:"Borrow Modern Books Free", resources:[
-      {title:"Libby", desc:"Connects to your local library card for free ebooks and audiobooks, including current releases.", tag:"Free w/ library card", url:"https://libbyapp.com/"},
-    ]},
-  ],
-};
-
-const FACTS = [
-  "The Pilot's Handbook of Aeronautical Knowledge is free and is the same source material the FAA uses for its own exams.",
-  "Project Gutenberg has offered free public-domain ebooks since 1971 — it's the oldest digital library on the internet.",
-  "Compound interest was reportedly called the 'eighth wonder of the world' — small, consistent savings habits beat timing the market.",
-  "Kabbalah's Tree of Life maps ten interconnected divine attributes (Sefirot) used to describe the structure of creation.",
-  "Docker containers share the host OS kernel, which is why they start in milliseconds — unlike full virtual machines.",
-];
-
-/* ---------------- BUILD NAV ---------------- */
 const nav = document.getElementById('main-nav');
 const cards = document.getElementById('home-cards');
 const recent = document.getElementById('recent-strip');
+const SEARCH_INDEX = [];
 
-Object.entries(TOPICS).forEach(([key, t]) => {
-  const item = document.createElement('div');
-  item.className = 'nav-item';
-  item.innerHTML = `
-    <button class="nav-btn">${t.emoji} ${t.label}</button>
-    <div class="dropdown">
-      ${t.subtopics.map((s,i) => `${i>0?'<div class="divider"></div>':''}<a href="#/${key}/${s.slug}">${s.label}</a>`).join('')}
-    </div>`;
-  nav.appendChild(item);
+async function loadData(){
+  const res = await fetch('data.json');
+  const data = await res.json();
 
-  const card = document.createElement('div');
-  card.className = `card ${t.color}`;
-  card.onclick = () => location.hash = `#/${key}/${t.subtopics[0].slug}`;
-  card.innerHTML = `<span class="emoji">${t.emoji}</span>${t.label}`;
-  cards.appendChild(card);
-});
+  TOPICS = {};
+  Object.entries(data.categories).forEach(([catKey, cat])=>{
+    TOPICS[catKey] = { label: cat.label, emoji: cat.emoji, color: catKey, subtopics: [] };
+    Object.entries(cat.subtopics).forEach(([slug, sub])=>{
+      TOPICS[catKey].subtopics.push({ slug, label: sub.label });
+      if(sub.concepts) CONTENT[`${catKey}/${slug}`] = sub.concepts;
+      if(sub.practice) PRACTICE[`${catKey}/${slug}`] = sub.practice;
+    });
+  });
+  Object.values(data.facts).forEach(list => FACTS.push(...list));
 
-[
-  {label:"Cybersecurity: Free Foundations", hash:"cyber/cybersecurity"},
-  {label:"Detection Engineering: Free Foundations", hash:"cyber/detection"},
-  {label:"Python: Free Foundations", hash:"tech/python"},
-  {label:"Docker: Practice makes perfect", hash:"tech/docker"},
-  {label:"Torah History: Primary Texts", hash:"general/torah-history"},
-].forEach(item=>{
-  const d = document.createElement('a');
-  d.className = 'strip-item';
-  d.href = `#/${item.hash}`;
-  d.textContent = item.label;
-  recent.appendChild(d);
-});
+  buildNav();
+  buildHomeCards();
+  buildRecentStrip();
+  SEARCH_INDEX.push(...buildSearchIndex());
+  initDailyFact();
+  render();
+}
+
+/* ---------------- BUILD NAV / HOME ---------------- */
+function buildNav(){
+  Object.entries(TOPICS).forEach(([key, t]) => {
+    const item = document.createElement('div');
+    item.className = 'nav-item';
+    item.innerHTML = `
+      <button class="nav-btn">${t.emoji} ${t.label}</button>
+      <div class="dropdown">
+        ${t.subtopics.map((s,i) => `${i>0?'<div class="divider"></div>':''}<a href="#/${key}/${s.slug}">${s.label}</a>`).join('')}
+      </div>`;
+    nav.appendChild(item);
+  });
+}
+
+function buildHomeCards(){
+  Object.entries(TOPICS).forEach(([key, t]) => {
+    const card = document.createElement('div');
+    card.className = `card ${t.color}`;
+    card.onclick = () => location.hash = `#/${key}/${t.subtopics[0].slug}`;
+    card.innerHTML = `<span class="emoji">${t.emoji}</span>${t.label}`;
+    cards.appendChild(card);
+  });
+}
+
+function buildRecentStrip(){
+  const picks = [
+    {label:"Cybersecurity: Free Foundations", hash:"cyber/cybersecurity"},
+    {label:"Detection Engineering: Practice", hash:"cyber/detection"},
+    {label:"Python: Free Foundations", hash:"tech/python"},
+    {label:"Docker: Practice", hash:"tech/docker"},
+    {label:"Torah History: Primary Texts", hash:"general/torah-history"},
+  ];
+  picks.forEach(item=>{
+    const d = document.createElement('a');
+    d.className = 'strip-item';
+    d.href = `#/${item.hash}`;
+    d.textContent = item.label;
+    recent.appendChild(d);
+  });
+}
 
 /* ---------------- SEARCH TOGGLE ---------------- */
 function toggleSearch(){
@@ -705,7 +397,6 @@ function buildSearchIndex(){
   });
   return idx;
 }
-const SEARCH_INDEX = buildSearchIndex();
 
 function wireSearch(inputId, resultsId){
   const input = document.getElementById(inputId);
@@ -727,13 +418,15 @@ wireSearch('hero-search-input', 'hero-search-results');
 
 /* ---------------- DAILY FACT WIDGET ---------------- */
 let streak = 0, readToday = false;
-try{
-  streak = parseInt(localStorage.getItem('hub-streak')) || 0;
-  readToday = localStorage.getItem('hub-read-date') === new Date().toDateString();
-}catch(e){}
-document.getElementById('streak-badge').textContent = streak;
-document.getElementById('fact-text').textContent = FACTS[new Date().getDate() % FACTS.length];
-if(readToday){ const b=document.getElementById('mark-read'); b.textContent='✓ Read today'; b.classList.add('done'); }
+function initDailyFact(){
+  try{
+    streak = parseInt(localStorage.getItem('hub-streak')) || 0;
+    readToday = localStorage.getItem('hub-read-date') === new Date().toDateString();
+  }catch(e){}
+  document.getElementById('streak-badge').textContent = streak;
+  document.getElementById('fact-text').textContent = FACTS[new Date().getDate() % FACTS.length];
+  if(readToday){ const b=document.getElementById('mark-read'); b.textContent='✓ Read today'; b.classList.add('done'); }
+}
 
 function toggleFact(){ document.getElementById('fact-card').classList.toggle('open'); }
 function shuffleFact(){
@@ -756,7 +449,14 @@ function markRead(){
 }
 
 /* ---------------- ROUTING ---------------- */
+function loginBadge(login){
+  return login
+    ? `<span class="login-badge login-yes">🔐 Login required</span>`
+    : `<span class="login-badge login-no">🔓 No login</span>`;
+}
+
 function render(){
+  if(!TOPICS) return;
   const hash = location.hash.replace('#/','');
   const home = document.getElementById('home-page');
   const page = document.getElementById('topic-page');
@@ -775,6 +475,7 @@ function render(){
   const contentCol = document.getElementById('content-col');
   const key = `${catKey}/${sub.slug}`;
   const concepts = CONTENT[key];
+  const practice = PRACTICE[key];
 
   if(!concepts){
     sidebar.innerHTML = `<h5>${sub.label}</h5><div class="sidebar-item">Being researched...</div>`;
@@ -782,13 +483,27 @@ function render(){
     return;
   }
 
-  sidebar.innerHTML = `<h5>${sub.label}</h5>` + concepts.map((c,i)=>`
-    <div class="sidebar-item" data-target="concept-${i}">
+  const allSections = practice ? [...concepts, {title:"Practice", isPractice:true}] : concepts;
+
+  sidebar.innerHTML = `<h5>${sub.label}</h5>` + allSections.map((c,i)=>`
+    <div class="sidebar-item${c.isPractice?' practice-nav':''}" data-target="concept-${i}">
       <span class="checkbox" onclick="toggleCheck(event,this)"></span>
-      <span>${i+1}. ${c.title}</span>
+      <span>${i+1}. ${c.isPractice?'🎯 Practice':c.title}</span>
     </div>`).join('');
 
-  contentCol.innerHTML = concepts.map((c,i)=>`
+  contentCol.innerHTML = allSections.map((c,i)=>{
+    if(c.isPractice){
+      return `
+      <div class="concept practice-card" id="concept-${i}">
+        <h3>${i+1}. 🎯 Practice: ${practice.title}</h3>
+        <p class="practice-desc">${practice.desc}</p>
+        <a class="resource" href="${practice.url}" target="_blank" rel="noopener">
+          <div class="r-info"><div class="r-title">Start practicing →</div></div>
+          ${loginBadge(practice.login)}
+        </a>
+      </div>`;
+    }
+    return `
     <div class="concept" id="concept-${i}">
       <h3>${i+1}. ${c.title}</h3>
       ${c.resources.map(r=>`
@@ -798,8 +513,10 @@ function render(){
             <div class="r-desc">${r.desc}</div>
           </div>
           <span class="tag">${r.tag}</span>
+          ${loginBadge(r.login)}
         </a>`).join('')}
-    </div>`).join('');
+    </div>`;
+  }).join('');
 
   // scroll-highlight
   const items = sidebar.querySelectorAll('.sidebar-item');
@@ -830,7 +547,7 @@ function toggleCheck(e, el){
 }
 
 window.addEventListener('hashchange', render);
-render();
+loadData();
 </script>
 
 </body>
