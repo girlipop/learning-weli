@@ -1,0 +1,439 @@
+{
+  "categories": {
+    "general": {
+      "label": "General", "emoji": "🌍",
+      "subtopics": {
+        "geography": {
+          "label": "Geography",
+          "practice": {"title": "Seterra Map Quizzes", "url": "https://online.seterra.net/en", "login": false, "desc": "Interactive map quizzes covering countries, capitals, rivers and mountains."},
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "Class Central — Geography", "desc": "Aggregator of free geography courses from top universities.", "tag": "Free course hub", "url": "https://www.classcentral.com/subject/geography", "login": false},
+              {"title": "Royal Geographical Society free resources", "desc": "Free interactive animations and explainers for foundational geography concepts.", "tag": "Free resources", "url": "https://www.rgs.org/", "login": false},
+              {"title": "World Atlas", "desc": "Free reference maps and country/region profiles, great for browsing while learning.", "tag": "Free reference", "url": "https://www.worldatlas.com/", "login": false}
+            ]},
+            {"title": "Interactive Map Learning", "resources": [
+              {"title": "Seterra", "desc": "Free, fun map-quiz game covering countries, capitals, flags, rivers and mountains.", "tag": "Free game", "url": "https://online.seterra.net/en", "login": false}
+            ]},
+            {"title": "Practice makes perfect", "resources": [
+              {"title": "CIA World Factbook", "desc": "The definitive free reference for every country's geography and physical data.", "tag": "Free reference", "url": "https://www.cia.gov/the-world-factbook/", "login": false}
+            ]}
+          ]
+        },
+        "countries": {
+          "label": "Countries around the world",
+          "practice": {"title": "Seterra — Countries & Capitals", "url": "https://online.seterra.net/en", "login": false, "desc": "Free customizable quizzes for memorizing every country and capital."},
+          "concepts": [
+            {"title": "Country Reference", "resources": [
+              {"title": "CIA World Factbook", "desc": "Free, detailed profile of every country — government, economy, geography and demographics.", "tag": "Free reference", "url": "https://www.cia.gov/the-world-factbook/", "login": false},
+              {"title": "Nations Online Project", "desc": "Free encyclopedia-style overview of every country, region, and territory in the world.", "tag": "Free reference", "url": "https://www.nationsonline.org/", "login": false}
+            ]},
+            {"title": "Learn by Quiz", "resources": [
+              {"title": "Seterra — Countries & Capitals", "desc": "Free customizable quizzes for memorizing every country and capital, region by region.", "tag": "Free game", "url": "https://online.seterra.net/en", "login": false}
+            ]},
+            {"title": "Explore Visually", "resources": [
+              {"title": "GeoGuessr (free tier)", "desc": "Drops you into real Street View locations worldwide to learn to recognize countries by sight.", "tag": "Free tier", "url": "https://www.geoguessr.com/", "login": true}
+            ]}
+          ]
+        },
+        "israeli-history": {
+          "label": "Israeli history",
+          "practice": {"title": "FunTrivia — Israel History Quizzes", "url": "https://www.funtrivia.com/quizzes/history/asian/israel.html", "login": false, "desc": "Free multiple-choice trivia quizzes covering Israeli history from ancient times to today."},
+          "concepts": [
+            {"title": "Free University Courses", "resources": [
+              {"title": "Tel Aviv University — History of Modern Israel (Coursera)", "desc": "Two-part free-to-audit course covering Israel from 19th-century Zionism through today.", "tag": "Free to audit", "url": "https://www.coursera.org/learn/history-israel", "login": true},
+              {"title": "NYU — Ancient Israel (Open Culture)", "desc": "Free 25-lecture course building ancient Israelite history from primary evidence.", "tag": "Free course", "url": "https://www.openculture.com/ancient-israel-a-free-online-course-from-nyu", "login": false}
+            ]},
+            {"title": "Reference & Context", "resources": [
+              {"title": "Wonder Israel — Free Israel Course Directory", "desc": "Curated list of free Coursera/edX courses on Israeli history, archaeology and society.", "tag": "Free resource hub", "url": "https://wonderisrael.com/free-courses-on-israel/", "login": false},
+              {"title": "Jewish Virtual Library — Israel History", "desc": "Free, detailed reference articles spanning ancient to modern Israeli history.", "tag": "Free reference", "url": "https://jewishvirtuallibrary.org/", "login": false}
+            ]}
+          ]
+        },
+        "israeli-wars": {
+          "label": "Israeli wars & military history",
+          "practice": {"title": "FunTrivia — Arab-Israeli Wars Quizzes", "url": "https://www.funtrivia.com/quizzes/history/war_history/arab-israeli_wars.html", "login": false, "desc": "Free trivia quizzes on the 1948, 1956, 1967 and 1973 wars specifically."},
+          "concepts": [
+            {"title": "Overview & Timeline", "resources": [
+              {"title": "Britannica — Arab-Israeli Wars", "desc": "Free, reliable overview of each major conflict from 1948 to today.", "tag": "Free reference", "url": "https://www.britannica.com/event/Arab-Israeli-wars", "login": false}
+            ]},
+            {"title": "Deep Reference, War by War", "resources": [
+              {"title": "Jewish Virtual Library — Israel's Wars & Operations", "desc": "Free, detailed articles on each individual war and operation, organized chronologically.", "tag": "Free reference", "url": "https://jewishvirtuallibrary.org/israel-s-wars-and-operations", "login": false}
+            ]}
+          ]
+        },
+        "torah-history": {
+          "label": "Torah & Jewish history",
+          "practice": {"title": "Sefaria's Weekly Torah Portion Guide", "url": "https://www.sefaria.org/sheets/503077", "login": false, "desc": "A structured way to read the Torah consistently, one weekly portion at a time."},
+          "concepts": [
+            {"title": "Primary Texts, Free", "resources": [
+              {"title": "Sefaria", "desc": "The largest free library of Jewish texts — Torah, Talmud, Mishnah and commentaries in Hebrew and English.", "tag": "Free library", "url": "https://www.sefaria.org/", "login": false},
+              {"title": "Aleph Beta", "desc": "Polished free video lessons offering close readings of Torah text and Jewish history.", "tag": "Free videos", "url": "https://www.alephbeta.org/", "login": false}
+            ]},
+            {"title": "Explanatory Learning", "resources": [
+              {"title": "My Jewish Learning", "desc": "Free, well-structured explanatory articles on Torah portions and Jewish history topics.", "tag": "Free site", "url": "https://www.myjewishlearning.com/", "login": false}
+            ]}
+          ]
+        },
+        "mythology": {
+          "label": "Mythology",
+          "practice": {"title": "Mythology School Quizzes", "url": "https://www.mythologyschool.com/", "login": false, "desc": "Built-in quizzes across Greek, Norse, Egyptian and other mythologies."},
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "Mythology School", "desc": "Free, research-based articles, timelines and quizzes across world mythologies.", "tag": "Free site", "url": "https://www.mythologyschool.com/", "login": false},
+              {"title": "Crash Course World Mythology (YouTube)", "desc": "A free, structured video series covering mythology traditions from around the globe.", "tag": "YouTube", "url": "https://www.youtube.com/@crashcourse", "login": false}
+            ]},
+            {"title": "University-Level Free", "resources": [
+              {"title": "MIT OpenCourseWare — Symbolism & Mythology", "desc": "Free university course on how myth and symbol are structured and woven into culture.", "tag": "Free course", "url": "https://ocw.mit.edu/", "login": false}
+            ]}
+          ]
+        },
+        "kabbalah": {
+          "label": "Kabbalah / mysticism",
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "Chabad.org — Beginning Kabbalah", "desc": "Free, structured introduction to Kabbalistic concepts for newcomers.", "tag": "Free site", "url": "https://www.chabad.org/kabbalah/article_cdo/aid/380738/jewish/Beginners.htm", "login": false},
+              {"title": "My Jewish Learning — Kabbalah", "desc": "Free explanatory articles on Kabbalah's core ideas and history.", "tag": "Free site", "url": "https://www.myjewishlearning.com/", "login": false}
+            ]},
+            {"title": "Primary Texts", "resources": [
+              {"title": "Sefaria — The Zohar", "desc": "The core text of Kabbalah, free to read with English translation.", "tag": "Free library", "url": "https://www.sefaria.org/texts", "login": false}
+            ]}
+          ]
+        }
+      }
+    },
+    "science": {
+      "label": "Science", "emoji": "🔬",
+      "subtopics": {
+        "physics": {
+          "label": "Physics",
+          "practice": {"title": "Khan Academy Practice Problems", "url": "https://www.khanacademy.org/science/physics", "login": true, "desc": "Built-in practice sets after every physics topic, with instant feedback."},
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "Khan Academy — Physics", "desc": "Complete free physics curriculum from mechanics to modern physics.", "tag": "Free course", "url": "https://www.khanacademy.org/science/physics", "login": false},
+              {"title": "MIT OpenCourseWare — Physics", "desc": "Full MIT physics course materials, lecture videos and problem sets.", "tag": "Free course", "url": "https://ocw.mit.edu/", "login": false},
+              {"title": "The Physics Classroom", "desc": "A free, beginner-focused site built specifically to teach physics fundamentals.", "tag": "Free site", "url": "https://www.physicsclassroom.com/", "login": false}
+            ]},
+            {"title": "Learning by Video", "resources": [
+              {"title": "Veritasium (YouTube)", "desc": "Real-experiment explainers of tricky physics and engineering ideas.", "tag": "YouTube", "url": "https://www.youtube.com/@veritasium", "login": false},
+              {"title": "MinutePhysics (YouTube)", "desc": "Fast, hand-drawn explainers that build intuition before the equations.", "tag": "YouTube", "url": "https://www.youtube.com/@minutephysics", "login": false},
+              {"title": "PBS Space Time (YouTube)", "desc": "Astrophysicist-hosted deep dives into relativity, cosmology and quantum ideas.", "tag": "YouTube", "url": "https://www.youtube.com/@pbsspacetime", "login": false}
+            ]}
+          ]
+        },
+        "neuroscience": {
+          "label": "Neuroscience",
+          "practice": {"title": "Duke Coursera Course Quizzes", "url": "https://www.coursera.org/learn/medical-neuroscience", "login": true, "desc": "Built-in quizzes after each module of the free neuroscience course."},
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "Duke — Medical Neuroscience (Coursera)", "desc": "Widely regarded as the most complete free neuroscience course online.", "tag": "Free course", "url": "https://www.coursera.org/learn/medical-neuroscience", "login": true},
+              {"title": "Harvard — Fundamentals of Neuroscience (edX)", "desc": "Free, animated series on the electrical and biological basics of the brain.", "tag": "Free course", "url": "https://www.edx.org/learn/neuroscience/harvard-university-fundamentals-of-neuroscience-part-1-the-electrical-properties-of-the-neuron", "login": true}
+            ]},
+            {"title": "Learning by Video", "resources": [
+              {"title": "2-Minute Neuroscience (YouTube)", "desc": "Short, clear videos on individual brain structures and mechanisms.", "tag": "YouTube", "url": "https://www.youtube.com/@Neuroscientifically", "login": false}
+            ]}
+          ]
+        },
+        "human-biology": {
+          "label": "Human biology",
+          "practice": {"title": "OpenStax End-of-Chapter Reviews", "url": "https://openstax.org/details/books/anatomy-and-physiology-2e", "login": false, "desc": "Free review questions after every chapter of the anatomy & physiology textbook."},
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "OpenStax — Anatomy & Physiology", "desc": "A complete, free, university-level textbook covering every body system.", "tag": "Free textbook", "url": "https://openstax.org/details/books/anatomy-and-physiology-2e", "login": false},
+              {"title": "GetBodySmart", "desc": "Free interactive diagrams and quizzes for visualizing body systems.", "tag": "Free interactive", "url": "https://www.getbodysmart.com/", "login": false}
+            ]},
+            {"title": "Visual & Interactive Learning", "resources": [
+              {"title": "Zygote Body", "desc": "Free interactive 3D atlas of the human body, rotate and explore layer by layer.", "tag": "Free 3D tool", "url": "https://www.zygotebody.com/", "login": false}
+            ]}
+          ]
+        },
+        "nutrition": {
+          "label": "Nutrition",
+          "practice": {"title": "Free Interactive Nutrition Quiz", "url": "https://www.foodandhealth.com/free-nutrition-quiz-interactive", "login": false, "desc": "A free 9-question quiz on MyPlate, sugar, sodium and healthy fats — no sign-up needed."},
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "Stanford — Nutrition Science (Coursera)", "desc": "Explores the scientific foundations of nutrition and metabolism. Free to audit.", "tag": "Free to audit", "url": "https://www.coursera.org/", "login": true},
+              {"title": "Harvard T.H. Chan — Nutrition Source", "desc": "Free, evidence-based reference site cutting through diet fads.", "tag": "Free reference", "url": "https://www.hsph.harvard.edu/nutritionsource/", "login": false}
+            ]}
+          ]
+        },
+        "gut-health": {
+          "label": "Gut health",
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "Open University — The Gut Microbiome (OpenLearn)", "desc": "Free course on the gut microbiome and what disrupts it, no signup to start.", "tag": "Free course", "url": "https://www.open.edu/openlearn/science-maths-technology/the-gut-microbiome-balancing-the-body/content-section-0", "login": false},
+              {"title": "Stanford — Gut Health and the Microbiome", "desc": "Two-week micro-course from leading microbiome researchers.", "tag": "Course", "url": "https://online.stanford.edu/courses/xche0029-gut-health-and-microbiome", "login": true}
+            ]},
+            {"title": "Staying Evidence-Based", "resources": [
+              {"title": "NPR — What the evidence really shows about gut health", "desc": "A grounded, myth-busting explainer separating real science from wellness marketing.", "tag": "Free article", "url": "https://www.npr.org/2026/06/22/nx-s1-5863119/gut-microbiome-gut-health", "login": false}
+            ]}
+          ]
+        }
+      }
+    },
+    "tech": {
+      "label": "Tech", "emoji": "💻",
+      "subtopics": {
+        "technology": {
+          "label": "Technology",
+          "concepts": [
+            {"title": "Staying Current, Not Overwhelmed", "resources": [
+              {"title": "TLDR Newsletter", "desc": "Byte-sized daily summaries of the most important tech and AI news.", "tag": "Free newsletter", "url": "https://tldr.tech/", "login": true},
+              {"title": "The Verge", "desc": "Broad, readable tech news covering gadgets, AI, and industry shifts.", "tag": "Free site", "url": "https://www.theverge.com/", "login": false},
+              {"title": "Hacker News", "desc": "Free, community-curated feed of the tech industry's most discussed stories.", "tag": "Free site", "url": "https://news.ycombinator.com/", "login": false}
+            ]}
+          ]
+        },
+        "cloud": {
+          "label": "Cloud computing",
+          "practice": {"title": "Microsoft Learn Sandboxes", "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/", "login": true, "desc": "Free interactive, in-browser sandbox exercises built into the Azure Fundamentals path."},
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "Microsoft Learn — Azure Fundamentals (AZ-900)", "desc": "Free, structured, official Microsoft training path.", "tag": "Free course", "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/", "login": true},
+              {"title": "AWS Skill Builder", "desc": "Amazon's own free training portal covering core AWS services.", "tag": "Free course", "url": "https://skillbuilder.aws/", "login": true},
+              {"title": "Google Cloud Skills Boost — Fundamentals", "desc": "Google's official free path covering compute, containers, and storage.", "tag": "Free course", "url": "https://www.cloudskillsboost.google/", "login": true}
+            ]}
+          ]
+        },
+        "docker": {
+          "label": "Docker",
+          "practice": {"title": "Play with Docker", "url": "https://labs.play-with-docker.com/", "login": true, "desc": "A free, browser-based Docker playground — no local install needed."},
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "Docker Official Get Started Guide", "desc": "Official, always up-to-date walkthrough for building your first images and containers.", "tag": "Free docs", "url": "https://docs.docker.com/get-started/", "login": false},
+              {"title": "TechWorld with Nana (YouTube)", "desc": "Clear, practical Docker tutorials from zero to production use.", "tag": "YouTube", "url": "https://www.youtube.com/@TechWorldwithNana", "login": false}
+            ]}
+          ]
+        },
+        "kubernetes": {
+          "label": "Kubernetes",
+          "practice": {"title": "Play with Kubernetes", "url": "https://labs.play-with-k8s.com/", "login": true, "desc": "A free, disposable, browser-based cluster playground."},
+          "concepts": [
+            {"title": "Free Foundations (do Docker first)", "resources": [
+              {"title": "Kubernetes Basics — Official Tutorials", "desc": "Interactive, in-browser tutorials from the Kubernetes project maintainers.", "tag": "Free official docs", "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/", "login": false},
+              {"title": "TechWorld with Nana — Kubernetes", "desc": "The same trusted channel's Kubernetes series.", "tag": "YouTube", "url": "https://www.youtube.com/@TechWorldwithNana", "login": false},
+              {"title": "CNCF Kubernetes Resource List", "desc": "A curated, maintained list of the best free Kubernetes learning material.", "tag": "Free resource hub", "url": "https://www.cncf.io/blog/2026/01/19/top-28-kubernetes-resources-for-2026-learn-and-stay-up-to-date/", "login": false}
+            ]}
+          ]
+        },
+        "devops": {
+          "label": "SRE / DevOps",
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "Google's Site Reliability Engineering book", "desc": "Google's own SRE book, free to read online.", "tag": "Free book", "url": "https://sre.google/books/", "login": false},
+              {"title": "DevOps Roadmap (GitHub)", "desc": "Free, community-maintained roadmap linking to the best resource for every DevOps skill area.", "tag": "Free roadmap", "url": "https://github.com/milanm/DevOps-Roadmap", "login": false}
+            ]}
+          ]
+        },
+        "cicd": {
+          "label": "CI/CD",
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "GitHub Actions documentation", "desc": "Free, official docs covering CI/CD pipelines using GitHub's built-in tooling.", "tag": "Free docs", "url": "https://docs.github.com/en/actions", "login": false},
+              {"title": "TechWorld with Nana — CI/CD", "desc": "Practical CI/CD pipeline walkthroughs.", "tag": "YouTube", "url": "https://www.youtube.com/@TechWorldwithNana", "login": false}
+            ]}
+          ]
+        },
+        "infra": {
+          "label": "Infrastructure / Linux / networking",
+          "practice": {"title": "OverTheWire: Bandit", "url": "https://overthewire.org/wargames/bandit/", "login": false, "desc": "A free, gamified wargame that teaches Linux command-line skills through hands-on challenges."},
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "Linux Journey", "desc": "Free, interactive, browser-based path from basic commands through networking.", "tag": "Free interactive", "url": "https://www.linuxjourney.com/", "login": false},
+              {"title": "The Linux Command Line (book)", "desc": "A free, classic, thorough PDF book covering the terminal.", "tag": "Free book", "url": "https://linuxcommand.org/tlcl.php", "login": false}
+            ]},
+            {"title": "Networking Specifics", "resources": [
+              {"title": "freeCodeCamp — Linux Networking Commands", "desc": "A free, practical article on core networking commands you'll actually use.", "tag": "Free article", "url": "https://www.freecodecamp.org/news/linux-networking-commands-for-beginners/", "login": false}
+            ]}
+          ]
+        },
+        "python": {
+          "label": "Python / programming",
+          "practice": {"title": "Exercism.io", "url": "https://exercism.org/", "login": true, "desc": "Free, mentor-backed coding exercises in Python with instant feedback."},
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "Harvard CS50P (edX)", "desc": "University-quality, free introduction to Python programming from Harvard.", "tag": "Free course", "url": "https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python", "login": true},
+              {"title": "Automate the Boring Stuff with Python", "desc": "A free online book teaching Python via real automation tasks.", "tag": "Free book", "url": "https://automatetheboringstuff.com/", "login": false}
+            ]},
+            {"title": "Learning by Video", "resources": [
+              {"title": "freeCodeCamp (YouTube)", "desc": "Long-form, completely free Python courses from beginner to advanced.", "tag": "YouTube", "url": "https://www.youtube.com/@freecodecamp", "login": false}
+            ]}
+          ]
+        }
+      }
+    },
+    "cyber": {
+      "label": "Cyber", "emoji": "🔐",
+      "subtopics": {
+        "cybersecurity": {
+          "label": "Cybersecurity",
+          "practice": {"title": "OverTheWire: Bandit + PortSwigger Academy", "url": "https://overthewire.org/wargames/bandit/", "login": false, "desc": "Free hands-on wargames and web-security labs to practice real skills."},
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "TryHackMe — Pre-Security & Beginner Path", "desc": "Free, structured, hands-on rooms teaching networking, web, and Linux fundamentals.", "tag": "Free hands-on", "url": "https://tryhackme.com/path/outline/beginner", "login": true},
+              {"title": "ISC2 Certified in Cybersecurity (CC)", "desc": "Free training course plus a free exam voucher from the field's certifying body.", "tag": "Free course + cert", "url": "https://www.isc2.org/landing/1mcc", "login": true},
+              {"title": "Cybrary", "desc": "Large free tier of introductory cybersecurity courses and skill paths.", "tag": "Free tier", "url": "https://www.cybrary.it/", "login": true}
+            ]},
+            {"title": "Practice makes perfect", "resources": [
+              {"title": "OverTheWire: Bandit", "desc": "A free, gamified wargame building command-line confidence.", "tag": "Free practice", "url": "https://overthewire.org/wargames/bandit/", "login": false},
+              {"title": "PortSwigger Web Security Academy", "desc": "Free, extremely well-regarded hands-on labs for web application security.", "tag": "Free labs", "url": "https://portswigger.net/web-security", "login": true}
+            ]}
+          ]
+        },
+        "detection": {
+          "label": "Detection engineering",
+          "practice": {"title": "LetsDefend", "url": "https://letsdefend.io/", "login": true, "desc": "Free-tier SOC-analyst simulation — investigate real-style alerts and logs."},
+          "concepts": [
+            {"title": "Free Foundations", "resources": [
+              {"title": "MITRE ATT&CK Framework", "desc": "The free, industry-standard knowledge base of attacker techniques.", "tag": "Free framework", "url": "https://attack.mitre.org/", "login": false},
+              {"title": "SANS Detection Engineering Poster", "desc": "A free, practical guide to the detection engineering life cycle.", "tag": "Free guide", "url": "https://www.sans.org/posters/detection-engineering", "login": false}
+            ]},
+            {"title": "Practice makes perfect", "resources": [
+              {"title": "LetsDefend", "desc": "A free-tier SOC-analyst simulation platform.", "tag": "Free tier", "url": "https://letsdefend.io/", "login": true},
+              {"title": "CyberDefenders", "desc": "Free blue-team labs built around real investigation scenarios.", "tag": "Free labs", "url": "https://cyberdefenders.org/", "login": true}
+            ]}
+          ]
+        }
+      }
+    },
+    "other": {
+      "label": "Other", "emoji": "✈️",
+      "subtopics": {
+        "aviation": {
+          "label": "Aircraft / aviation",
+          "practice": {"title": "Pilot Institute VR Preflight Trainer", "url": "https://pilotinstitute.com/", "login": false, "desc": "Free interactive VR-style preflight trainer to test what you've learned."},
+          "concepts": [
+            {"title": "Aviation Fundamentals", "resources": [
+              {"title": "FAA Pilot's Handbook of Aeronautical Knowledge", "desc": "The free official handbook covering how flight actually works.", "tag": "Free PDF", "url": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak", "login": false},
+              {"title": "MIT OpenCourseWare — Aeronautics", "desc": "University-level intro courses on flight mechanics and aircraft systems.", "tag": "Free course", "url": "https://ocw.mit.edu/", "login": false}
+            ]},
+            {"title": "Learning by Video", "resources": [
+              {"title": "Mentour Pilot (YouTube)", "desc": "An airline captain breaks down real aviation incidents and procedures.", "tag": "YouTube", "url": "https://www.youtube.com/@MentourPilot", "login": false},
+              {"title": "Captain Joe (YouTube)", "desc": "Tutorial-style explainers on how commercial aircraft operate.", "tag": "YouTube", "url": "https://www.youtube.com/@flywithcaptainjoe", "login": false}
+            ]},
+            {"title": "Stay Connected to the Skies", "resources": [
+              {"title": "Flightradar24", "desc": "Free live flight tracking — see real aircraft and routes in real time.", "tag": "Free tool", "url": "https://www.flightradar24.com/", "login": false}
+            ]}
+          ]
+        },
+        "finance": {
+          "label": "Personal finance",
+          "practice": {"title": "Khan Academy Personal Finance Exercises", "url": "https://www.khanacademy.org/college-careers-more/personal-finance", "login": true, "desc": "Built-in practice exercises within the free personal finance course."},
+          "concepts": [
+            {"title": "Foundations of Budgeting", "resources": [
+              {"title": "Khan Academy — Personal Finance", "desc": "The best free starting point: budgeting, credit, taxes and debt.", "tag": "Free course", "url": "https://www.khanacademy.org/college-careers-more/personal-finance", "login": false},
+              {"title": "Investopedia", "desc": "Free, extensive reference for every personal finance and investing term or concept.", "tag": "Free reference", "url": "https://www.investopedia.com/", "login": false}
+            ]},
+            {"title": "Understanding Markets & Investing", "resources": [
+              {"title": "Yale — Financial Markets (Coursera)", "desc": "Nobel laureate Robert Shiller's course on how financial markets work.", "tag": "Free to audit", "url": "https://www.coursera.org/learn/financial-markets-global", "login": true}
+            ]},
+            {"title": "Practical Money Management Tools", "resources": [
+              {"title": "Wave", "desc": "Genuinely free budgeting and expense tracking.", "tag": "Free tool", "url": "https://www.waveapps.com/", "login": true}
+            ]}
+          ]
+        },
+        "books": {
+          "label": "Books / literature",
+          "practice": {"title": "Goodreads Reading Challenge", "url": "https://www.goodreads.com/", "login": true, "desc": "Set a yearly reading goal and track progress as an ongoing practice habit."},
+          "concepts": [
+            {"title": "Discover Your Next Read", "resources": [
+              {"title": "Goodreads", "desc": "The largest free book-tracking and recommendation community.", "tag": "Free platform", "url": "https://www.goodreads.com/", "login": true},
+              {"title": "The StoryGraph", "desc": "A free, mood-based alternative to Goodreads for tracking and discovering books.", "tag": "Free platform", "url": "https://www.thestorygraph.com/", "login": true}
+            ]},
+            {"title": "Free Classic Literature", "resources": [
+              {"title": "Project Gutenberg", "desc": "70,000+ free public-domain ebooks.", "tag": "Free ebooks", "url": "https://www.gutenberg.org/", "login": false},
+              {"title": "LibriVox", "desc": "Volunteer-read free audiobooks of public-domain classics.", "tag": "Free audiobooks", "url": "https://librivox.org/", "login": false}
+            ]},
+            {"title": "Borrow Modern Books Free", "resources": [
+              {"title": "Libby", "desc": "Connects to your local library card for free ebooks and audiobooks.", "tag": "Free w/ library card", "url": "https://libbyapp.com/", "login": true}
+            ]}
+          ]
+        }
+      }
+    }
+  },
+  "facts": {
+    "general": [
+      "The Dead Sea's surface is over 430 meters below sea level, the lowest point on Earth's land surface.",
+      "Vatican City is the smallest country in the world by both area and population.",
+      "Russia spans 11 time zones, more than any other country.",
+      "The Six-Day War in 1967 lasted exactly six days and reshaped the map of the Middle East.",
+      "Jerusalem has been besieged, attacked, captured and recaptured dozens of times throughout recorded history.",
+      "The word 'Torah' literally means 'teaching' or 'instruction' in Hebrew, not simply 'law'.",
+      "The Dead Sea Scrolls, found in caves near Qumran, include the oldest known copies of Hebrew Bible texts.",
+      "Mount Olympus in Greek mythology was believed to be the literal home of the twelve major gods.",
+      "The Norse concept of Ragnarok describes a prophesied end-of-world battle, after which the world is reborn.",
+      "The Sefirot in Kabbalah are ten attributes through which the Infinite is said to reveal itself in creation.",
+      "The Suez Canal, central to the 1956 Suez Crisis, connects the Mediterranean Sea directly to the Red Sea.",
+      "Nepal is the only country in the world whose national flag is not rectangular.",
+      "The Talmud is not a single book but a vast compiled record of centuries of rabbinic debate.",
+      "The 1973 Yom Kippur War began on Judaism's holiest day, catching Israel by surprise.",
+      "Ancient Egyptian mythology held that the heart, not the brain, was the seat of intelligence and emotion.",
+      "Iceland has no standing army, navy, or air force — one of very few countries without one.",
+      "The Zohar, Kabbalah's central text, is written mostly in Aramaic, not Hebrew.",
+      "Bhutan measures national progress using 'Gross National Happiness' instead of GDP.",
+      "The 1948 Arab-Israeli War is referred to by Israelis as the War of Independence and by Palestinians as the Nakba."
+    ],
+    "science": [
+      "Light from the Sun takes about 8 minutes and 20 seconds to reach Earth.",
+      "The human brain uses roughly 20% of the body's total energy despite being about 2% of its weight.",
+      "Neurons can transmit signals at speeds up to 120 meters per second.",
+      "Your gut contains trillions of bacteria that outnumber your own human cells.",
+      "Stomach acid is strong enough to dissolve zinc, yet it doesn't dissolve your stomach lining thanks to mucus.",
+      "A single teaspoon of neutron star material would weigh about a billion tons.",
+      "The human body replaces its entire outer layer of skin roughly every 27 days.",
+      "Water is one of the only common substances that is less dense as a solid than as a liquid.",
+      "Vitamin D is technically a hormone, not just a vitamin, since your body can synthesize it from sunlight.",
+      "The gut has its own independent nervous system, often called the 'second brain'.",
+      "Photons from the Sun's core take tens of thousands of years to reach the surface before finally radiating out as light.",
+      "Fiber isn't digested by you at all — it's fermented by gut bacteria, which is exactly what feeds a healthy microbiome.",
+      "Newton's law of universal gravitation and Einstein's general relativity give nearly identical predictions for everyday speeds.",
+      "The adult human skeleton contains 206 bones, but babies are born with about 270 that later fuse together.",
+      "Sound cannot travel through the vacuum of space because it needs a medium like air or water.",
+      "Your gut microbiome composition is largely established within the first few years of life.",
+      "Quantum entanglement lets two particles share a state instantly regardless of distance, a phenomenon Einstein called 'spooky'.",
+      "Excess sodium doesn't just affect blood pressure — it also directly disrupts the balance of gut bacteria."
+    ],
+    "tech": [
+      "Docker containers share the host OS kernel, which is why they start in milliseconds compared to full virtual machines.",
+      "Kubernetes was originally developed internally at Google, based on their own container orchestration system called Borg.",
+      "Python was named after Monty Python's Flying Circus, not the snake.",
+      "The first CI/CD pipelines trace their philosophy back to 'Continuous Integration' practices popularized by extreme programming in the late 1990s.",
+      "Git was created by Linus Torvalds in just about two weeks in 2005 to manage Linux kernel development.",
+      "The term 'cloud computing' became mainstream marketing language only around 2006, though the underlying ideas are older.",
+      "A single Kubernetes cluster can, in principle, manage thousands of containers across many physical machines.",
+      "SRE (Site Reliability Engineering) was pioneered at Google specifically to apply software engineering to operations problems.",
+      "Linux is not actually an operating system by itself — technically it's just the kernel, with distributions building the rest.",
+      "The DevOps movement emerged partly as a direct reaction to the friction between traditional development and operations teams.",
+      "Cloud providers use the term 'availability zone' to describe physically separate data centers within the same region for redundancy.",
+      "The first version of Docker was released in 2013 and rapidly changed how software is packaged and deployed.",
+      "Infrastructure as Code lets you version-control your servers the same way you version-control application code.",
+      "TCP/IP, the foundation of internet networking, was developed in the 1970s for ARPANET.",
+      "A 'container image' and a 'running container' are different things — an image is the blueprint, a container is the live instance."
+    ],
+    "cyber": [
+      "The MITRE ATT&CK framework catalogs real-world attacker techniques observed across thousands of documented incidents.",
+      "The first known computer virus, Creeper, appeared in 1971 and simply displayed the message 'I'm the creeper, catch me if you can!'.",
+      "Detection engineering treats detection logic like software — versioned, tested, and continuously improved.",
+      "A 'zero-day' vulnerability is one that's exploited before the vendor even knows it exists, hence 'zero days' to fix it.",
+      "SOC analysts often deal with alert fatigue — investigating hundreds of alerts a day, most of which turn out to be benign.",
+      "The CIA triad — Confidentiality, Integrity, Availability — is the foundational model most cybersecurity practice is built around.",
+      "Social engineering attacks succeed far more often by exploiting human trust than by exploiting technical vulnerabilities.",
+      "Capture The Flag (CTF) competitions let security learners practice real attack and defense skills in a legal, gamified setting.",
+      "Log correlation across multiple systems is often what turns a suspicious-but-explainable event into a confirmed detection.",
+      "Encryption doesn't hide that a message exists — it hides what the message says; that distinction matters in threat modeling."
+    ],
+    "other": [
+      "A Boeing 747's wingspan is longer than the Wright brothers' first flight distance in 1903.",
+      "Commercial airplanes cruise at altitudes where the outside air temperature can be around -50°C (-58°F).",
+      "The '72-hour rule' is a classic budgeting habit: wait 72 hours before any non-essential purchase to avoid impulse buys.",
+      "Compound interest grows exponentially, which is why starting to save even small amounts early outperforms saving more later.",
+      "Project Gutenberg, founded in 1971, is considered the first-ever digital library.",
+      "Turbulence, while unsettling, is rarely dangerous to modern aircraft, which are engineered with large structural safety margins.",
+      "An emergency fund covering 3–6 months of expenses is one of the most consistently recommended personal finance basics.",
+      "The black box flight recorder is actually painted bright orange, not black, to make it easier to find after an incident.",
+      "Reading fiction has been linked in studies to improved empathy, since it exercises perspective-taking on a regular basis.",
+      "A credit score isn't a single universal number — different bureaus and models can calculate it differently for the same person."
+    ]
+  }
+}
