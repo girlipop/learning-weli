@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning Hub</title>
+<style>
+  :root{
+    --cream:#FDF6EC;
+    --cream-deep:#F7EDDD;
+    --text:#3B342C;
+    --text-soft:#7A7266;
+    --pink:#F4D9E0;      /* General */
+    --pink-deep:#EBC1CD;
+    --sage:#DCEAD6;      /* Science */
+    --sage-deep:#C4DEBB;
+    --blue:#D8E6F2;      /* Tech */
+    --blue-deep:#BFDAEE;
+    --lavender:#E5DFF2;  /* Cyber */
+    --lavender-deep:#D2C7EA;
+    --peach:#F6E3CE;     /* Other */
+    --peach-deep:#F0D0AE;
+    --radius:999px;
+    --shadow:0 4px 14px rgba(59,52,44,0.12);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Segoe UI', system-ui, -apple-system, sans-serif;
+    background:var(--cream);
+    color:var(--text);
+  }
+  a{color:inherit; text-decoration:none;}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:var(--cream);
+    border-bottom:1px solid var(--cream-deep);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 32px;
+  }
+  .logo{font-weight:700; font-size:1.2rem; letter-spacing:0.5px;}
+  nav{display:flex; gap:6px;}
+  .nav-item{position:relative;}
+  .nav-btn{
+    padding:9px 18px; border-radius:var(--radius);
+    font-size:0.95rem; cursor:pointer; border:none; background:transparent;
+    font-family:inherit; color:var(--text);
+    transition:background .15s ease;
+  }
+  .nav-item:hover .nav-btn{background:var(--cream-deep);}
+  .dropdown{
+    display:none; position:absolute; top:110%; left:0;
+    background:#fff; border-radius:18px; box-shadow:var(--shadow);
+    min-width:230px; padding:8px 0; overflow:hidden;
+  }
+  .nav-item:hover .dropdown{display:block;}
+  .dropdown a{
+    display:block; padding:10px 20px; font-size:0.9rem; color:var(--text);
+  }
+  .dropdown a:hover{background:var(--cream);}
+  .divider{height:1px; background:rgba(59,52,44,0.08); margin:4px 12px;}
+
+  .search-wrap{display:flex; align-items:center; gap:8px;}
+  .search-icon{
+    width:38px; height:38px; border-radius:50%; border:none;
+    background:var(--peach); display:flex; align-items:center; justify-content:center;
+    cursor:pointer; font-size:1rem; box-shadow:var(--shadow);
+    transition:transform .15s ease;
+  }
+  .search-icon:hover{transform:scale(1.06);}
+  .search-input{
+    width:0; opacity:0; padding:0; border:none; border-radius:var(--radius);
+    background:var(--cream-deep); font-family:inherit; font-size:0.9rem;
+    transition:width .2s ease, opacity .2s ease, padding .2s ease;
+  }
+  .search-input.open{width:200px; opacity:1; padding:9px 16px;}
+
+  /* ---------- HOMEPAGE ---------- */
+  .hero{text-align:center; padding:70px 20px 40px;}
+  .hero h1{font-size:2.4rem; margin:0 0 10px;}
+  .hero p{color:var(--text-soft); margin:0 0 26px; font-size:1.05rem;}
+  .hero .search-input{width:320px; opacity:1; padding:12px 22px; margin:0 auto; display:block; background:#fff; box-shadow:var(--shadow);}
+
+  .cards{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:18px;
+    max-width:1100px; margin:40px auto; padding:0 24px;
+  }
+  .card{
+    border-radius:24px; padding:26px 18px; text-align:center; cursor:pointer;
+    box-shadow:var(--shadow); transition:transform .15s ease;
+  }
+  .card:hover{transform:translateY(-4px);}
+  .card .emoji{font-size:1.8rem; display:block; margin-bottom:8px;}
+  .card.general{background:var(--pink);}
+  .card.science{background:var(--sage);}
+  .card.tech{background:var(--blue);}
+  .card.cyber{background:var(--lavender);}
+  .card.other{background:var(--peach);}
+
+  .strip{max-width:1100px; margin:40px auto; padding:0 24px;}
+  .strip h3{font-size:1rem; color:var(--text-soft); margin-bottom:14px;}
+  .strip-row{display:flex; gap:14px; overflow-x:auto; padding-bottom:6px;}
+  .strip-item{
+    flex:0 0 auto; background:#fff; border-radius:18px; padding:14px 20px;
+    box-shadow:var(--shadow); font-size:0.9rem; white-space:nowrap;
+  }
+
+  footer{
+    text-align:center; padding:40px 20px; color:var(--text-soft); font-size:0.85rem;
+    border-top:1px solid var(--cream-deep); margin-top:60px;
+  }
+
+  /* ---------- FLOATING DAILY FACT ---------- */
+  #fact-widget{position:fixed; bottom:26px; right:26px; z-index:200;}
+  #fact-circle{
+    width:58px; height:58px; border-radius:50%; background:var(--pink-deep);
+    box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center;
+    font-size:1.4rem; cursor:pointer; position:relative; border:none;
+    transition:transform .15s ease;
+  }
+  #fact-circle:hover{transform:scale(1.07);}
+  #streak-badge{
+    position:absolute; top:-6px; right:-6px; background:var(--text);
+    color:var(--cream); font-size:0.7rem; font-weight:700; border-radius:50%;
+    width:22px; height:22px; display:flex; align-items:center; justify-content:center;
+  }
+  #fact-card{
+    display:none; position:absolute; bottom:70px; right:0; width:270px;
+    background:#fff; border-radius:20px; box-shadow:var(--shadow); padding:20px;
+  }
+  #fact-card.open{display:block;}
+  .fact-header{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;}
+  #fact-card h4{margin:0; font-size:0.85rem; color:var(--text-soft);}
+  #shuffle-fact{
+    width:24px; height:24px; border-radius:50%; border:none;
+    background:var(--peach); font-family:inherit; font-size:0.95rem; line-height:1;
+    cursor:pointer; display:flex; align-items:center; justify-content:center;
+    box-shadow:var(--shadow); transition:transform .15s ease;
+  }
+  #shuffle-fact:hover{transform:scale(1.12) rotate(90deg);}
+  #fact-card p{margin:0 0 14px; font-size:0.92rem; line-height:1.4;}
+  #mark-read{
+    background:var(--sage-deep); border:none; border-radius:var(--radius);
+    padding:8px 18px; font-family:inherit; font-size:0.85rem; cursor:pointer;
+    box-shadow:var(--shadow); transition:transform .15s ease;
+  }
+  #mark-read:hover{transform:scale(1.05);}
+  #mark-read.done{background:var(--sage); opacity:0.6; cursor:default;}
+
+  /* ---------- TOPIC PAGE ---------- */
+  #topic-page{display:none; max-width:1100px; margin:0 auto; padding:30px 24px 80px;}
+  .breadcrumb{font-size:0.85rem; color:var(--text-soft); margin-bottom:20px;}
+  .breadcrumb a{color:var(--text-soft); text-decoration:underline;}
+  .topic-layout{display:flex; gap:36px; align-items:flex-start;}
+  .sidebar{
+    flex:0 0 240px; position:sticky; top:90px;
+    background:#fff; border-radius:20px; padding:18px; box-shadow:var(--shadow);
+  }
+  .sidebar h5{margin:0 0 12px; font-size:0.85rem; color:var(--text-soft);}
+  .sidebar-item{
+    display:flex; align-items:flex-start; gap:10px; padding:9px 8px;
+    border-radius:14px; cursor:pointer; font-size:0.88rem; margin-bottom:2px;
+  }
+  .sidebar-item:hover{background:var(--cream);}
+  .sidebar-item.active{background:var(--cream-deep); font-weight:600;}
+  .checkbox{
+    width:18px; height:18px; border-radius:6px; border:2px solid var(--sage-deep);
+    flex:0 0 18px; margin-top:1px; display:flex; align-items:center; justify-content:center;
+    font-size:0.7rem; cursor:pointer;
+  }
+  .checkbox.checked{background:var(--sage-deep);}
+
+  .content-col{flex:1; min-width:0;}
+  .concept{
+    background:#fff; border-radius:22px; padding:26px; margin-bottom:22px;
+    box-shadow:var(--shadow); scroll-margin-top:100px;
+  }
+  .concept h3{margin:0 0 14px;}
+  .resource{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:12px 16px; border-radius:16px; margin-bottom:10px; background:var(--cream);
+  }
+  .resource:last-child{margin-bottom:0;}
+  .resource .r-info{flex:1;}
+  .resource .r-title{font-weight:600; font-size:0.92rem;}
+  .resource .r-desc{font-size:0.82rem; color:var(--text-soft); margin-top:2px;}
+  .tag{
+    font-size:0.7rem; padding:4px 12px; border-radius:var(--radius);
+    background:var(--peach-deep); margin-left:12px; white-space:nowrap;
+  }
+  .placeholder{
+    background:#fff; border-radius:22px; padding:40px; text-align:center;
+    box-shadow:var(--shadow); color:var(--text-soft);
+  }
+
+  @media(max-width:800px){
+    .cards{grid-template-columns:repeat(2,1fr);}
+    nav{display:none;}
+    .topic-layout{flex-direction:column;}
+    .sidebar{position:relative; top:0; width:100%; flex:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🌱 Learning Hub</div>
+  <nav id="main-nav"></nav>
+  <div class="search-wrap">
+    <button class="search-icon" onclick="toggleSearch()">🔍</button>
+    <input class="search-input" id="search-input" placeholder="Search sources...">
+  </div>
+</header>
+
+<div id="home-page">
+  <section class="hero">
+    <h1>My Learning Hub</h1>
+    <p>The best sources, curated by topic, for everything I want to learn.</p>
+    <input class="search-input open" placeholder="Search topics or resources...">
+  </section>
+
+  <div class="cards" id="home-cards"></div>
+
+  <div class="strip">
+    <h3>Recently updated</h3>
+    <div class="strip-row" id="recent-strip"></div>
+  </div>
+
+  <footer>
+    Built by me, for me — always growing. · Last updated August 2026
+  </footer>
+</div>
+
+<div id="topic-page">
+  <div class="breadcrumb" id="breadcrumb"></div>
+  <div class="topic-layout">
+    <div class="sidebar" id="sidebar"></div>
+    <div class="content-col" id="content-col"></div>
+  </div>
+</div>
+
+<div id="fact-widget">
+  <div id="fact-card">
+    <div class="fact-header">
+      <h4>Today's fact</h4>
+      <button id="shuffle-fact" onclick="shuffleFact()" title="Show another fact">+</button>
+    </div>
+    <p id="fact-text"></p>
+    <button id="mark-read" onclick="markRead()">✓ Mark as read</button>
+  </div>
+  <button id="fact-circle" onclick="toggleFact()">
+    💡
+    <span id="streak-badge">0</span>
+  </button>
+</div>
+
+<script>
+/* ---------------- DATA ---------------- */
+const TOPICS = {
+  general: {
+    label: "General", emoji:"🌍", color:"general",
+    subtopics: [
+      {slug:"geography", label:"Geography"},
+      {slug:"countries", label:"Countries around the world"},
+      {slug:"israeli-history", label:"Israeli history"},
+      {slug:"israeli-wars", label:"Israeli wars & military history"},
+      {slug:"torah-history", label:"Torah & Jewish history"},
+      {slug:"mythology", label:"Mythology"},
+      {slug:"kabbalah", label:"Kabbalah / mysticism"},
+    ]
+  },
+  science: {
+    label: "Science", emoji:"🔬", color:"science",
+    subtopics: [
+      {slug:"physics", label:"Physics"},
+      {slug:"neuroscience", label:"Neuroscience"},
+      {slug:"human-biology", label:"Human biology"},
+      {slug:"nutrition", label:"Nutrition"},
+      {slug:"gut-health", label:"Gut health"},
+    ]
+  },
+  tech: {
+    label: "Tech", emoji:"💻", color:"tech",
+    subtopics: [
+      {slug:"technology", label:"Technology"},
+      {slug:"cloud", label:"Cloud computing"},
+      {slug:"docker", label:"Docker"},
+      {slug:"kubernetes", label:"Kubernetes"},
+      {slug:"devops", label:"SRE / DevOps"},
+      {slug:"cicd", label:"CI/CD"},
+      {slug:"infra", label:"Infrastructure / Linux / networking"},
+      {slug:"python", label:"Python / programming"},
+    ]
+  },
+  cyber: {
+    label: "Cyber", emoji:"🔐", color:"cyber",
+    subtopics: [
+      {slug:"cybersecurity", label:"Cybersecurity"},
+      {slug:"detection", label:"Detection engineering"},
+    ]
+  },
+  other: {
+    label: "Other", emoji:"✈️", color:"other",
+    subtopics: [
+      {slug:"aviation", label:"Aircraft / aviation"},
+      {slug:"finance", label:"Personal finance"},
+      {slug:"books", label:"Books / literature"},
+    ]
+  },
+};
+
+/* Fully researched content — Other category */
+const CONTENT = {
+  "tech/technology": [
+    {title:"Staying Current, Not Overwhelmed", resources:[
+      {title:"TLDR Newsletter", desc:"Byte-sized daily summaries of the most important tech and AI news — free, no fluff.", tag:"Free newsletter", url:"https://tldr.tech/"},
+      {title:"The Verge", desc:"Broad, readable tech news covering gadgets, AI, and industry shifts as they happen.", tag:"Free site", url:"https://www.theverge.com/"},
+      {title:"Ars Technica", desc:"Deeper, more technical tech journalism for when you want more than headlines.", tag:"Free site", url:"https://arstechnica.com/"},
+    ]},
+  ],
+  "tech/cloud": [
+    {title:"Free Foundations", resources:[
+      {title:"Microsoft Learn — Azure Fundamentals (AZ-900)", desc:"Free, structured, official Microsoft training path — the standard entry point into cloud concepts.", tag:"Free course", url:"https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/"},
+      {title:"AWS Skill Builder", desc:"Amazon's own free training portal covering core AWS services and cloud fundamentals.", tag:"Free course", url:"https://skillbuilder.aws/"},
+      {title:"Google Cloud Skills Boost — Fundamentals", desc:"Google's official free path covering compute, containers, and storage on GCP.", tag:"Free course", url:"https://www.cloudskillsboost.google/"},
+    ]},
+    {title:"Cross-Provider Foundations", resources:[
+      {title:"Linux Foundation — Intro to Cloud Infrastructure Technologies", desc:"Grounds cloud concepts in open-source infrastructure rather than one vendor's product catalog — useful before you specialize.", tag:"Free course", url:"https://training.linuxfoundation.org/"},
+    ]},
+  ],
+  "tech/docker": [
+    {title:"Free Foundations", resources:[
+      {title:"Docker Official Get Started Guide", desc:"The official, always up-to-date walkthrough for building your first images and containers.", tag:"Free docs", url:"https://docs.docker.com/get-started/"},
+      {title:"TechWorld with Nana (YouTube)", desc:"One of the most trusted free DevOps educators — clear, practical Docker tutorials from zero to production use.", tag:"YouTube", url:"https://www.youtube.com/@TechWorldwithNana"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"Play with Docker", desc:"A free, browser-based Docker playground — no install needed to start experimenting.", tag:"Free tool", url:"https://labs.play-with-docker.com/"},
+    ]},
+  ],
+  "tech/kubernetes": [
+    {title:"Free Foundations (do Docker first)", resources:[
+      {title:"Kubernetes Basics — Official Tutorials", desc:"Interactive, in-browser tutorials from the Kubernetes project maintainers themselves.", tag:"Free official docs", url:"https://kubernetes.io/docs/tutorials/kubernetes-basics/"},
+      {title:"TechWorld with Nana — Kubernetes", desc:"The same trusted channel's Kubernetes series, building directly on its Docker content.", tag:"YouTube", url:"https://www.youtube.com/@TechWorldwithNana"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"Play with Kubernetes", desc:"A free, disposable, browser-based cluster playground — experiment without installing anything.", tag:"Free tool", url:"https://labs.play-with-k8s.com/"},
+      {title:"CNCF Kubernetes Resource List", desc:"A curated, maintained list of the best free Kubernetes learning material as the ecosystem evolves.", tag:"Free resource hub", url:"https://www.cncf.io/blog/2026/01/19/top-28-kubernetes-resources-for-2026-learn-and-stay-up-to-date/"},
+    ]},
+  ],
+  "tech/devops": [
+    {title:"Free Foundations", resources:[
+      {title:"Google's Site Reliability Engineering book", desc:"Google's own SRE book, free to read online — the source text the entire discipline is built on.", tag:"Free book", url:"https://sre.google/books/"},
+      {title:"DevOps Roadmap (GitHub)", desc:"A free, community-maintained roadmap linking out to the best resource for every DevOps skill area.", tag:"Free roadmap", url:"https://github.com/milanm/DevOps-Roadmap"},
+    ]},
+  ],
+  "tech/cicd": [
+    {title:"Free Foundations", resources:[
+      {title:"GitHub Actions documentation", desc:"Free, official docs covering CI/CD pipelines using GitHub's built-in, widely-used tooling — practical to set up immediately.", tag:"Free docs", url:"https://docs.github.com/en/actions"},
+      {title:"TechWorld with Nana — CI/CD", desc:"Practical CI/CD pipeline walkthroughs from the same trusted DevOps channel.", tag:"YouTube", url:"https://www.youtube.com/@TechWorldwithNana"},
+    ]},
+  ],
+  "tech/infra": [
+    {title:"Free Foundations", resources:[
+      {title:"Linux Journey", desc:"A free, interactive, browser-based path from basic commands through networking and kernel concepts.", tag:"Free interactive", url:"https://www.linuxjourney.com/"},
+      {title:"The Linux Command Line (book)", desc:"A free, classic, thorough PDF book covering the terminal from basics to shell scripting.", tag:"Free book", url:"https://linuxcommand.org/tlcl.php"},
+    ]},
+    {title:"Networking Specifics", resources:[
+      {title:"freeCodeCamp — Linux Networking Commands", desc:"A free, practical article covering the core networking commands you'll actually use day to day.", tag:"Free article", url:"https://www.freecodecamp.org/news/linux-networking-commands-for-beginners/"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"OverTheWire: Bandit", desc:"A free, gamified wargame that teaches Linux command-line skills through hands-on challenges — genuinely fun.", tag:"Free practice", url:"https://overthewire.org/wargames/bandit/"},
+    ]},
+  ],
+  "tech/python": [
+    {title:"Free Foundations", resources:[
+      {title:"Harvard CS50P (edX)", desc:"University-quality, structured, completely free introduction to Python programming from Harvard.", tag:"Free course", url:"https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python"},
+      {title:"Automate the Boring Stuff with Python", desc:"A free online book that teaches Python by having you automate real tasks from the first few chapters.", tag:"Free book", url:"https://automatetheboringstuff.com/"},
+    ]},
+    {title:"Learning by Video", resources:[
+      {title:"freeCodeCamp (YouTube)", desc:"Long-form, completely free Python courses from absolute beginner to advanced topics.", tag:"YouTube", url:"https://www.youtube.com/@freecodecamp"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"Python Discord", desc:"One of the largest free programming communities — real-time help and discussion as you practice.", tag:"Free community", url:"https://pythondiscord.com/"},
+    ]},
+  ],
+  "cyber/cybersecurity": [
+    {title:"Free Foundations", resources:[
+      {title:"TryHackMe — Pre-Security & Beginner Path", desc:"The most recommended free starting point in 2026: structured, hands-on rooms that teach networking, Linux, and web fundamentals step by step, entirely in-browser.", tag:"Free hands-on", url:"https://tryhackme.com/beginner-path"},
+      {title:"OverTheWire: Bandit", desc:"A free, gamified wargame that builds command-line and Linux confidence — the recommended first step before TryHackMe for absolute beginners.", tag:"Free practice", url:"https://overthewire.org/wargames/bandit/"},
+    ]},
+    {title:"Going Deeper", resources:[
+      {title:"PortSwigger Web Security Academy", desc:"Free, extremely well-regarded, hands-on training specifically on web application vulnerabilities.", tag:"Free hands-on", url:"https://portswigger.net/web-security"},
+      {title:"picoCTF", desc:"Free beginner-friendly capture-the-flag challenges built by Carnegie Mellon, great for practicing concepts in a game format.", tag:"Free CTF", url:"https://picoctf.org/"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"Hack The Box (free tier)", desc:"Open-ended vulnerable machines for practicing skills with less hand-holding once fundamentals feel solid.", tag:"Free tier", url:"https://www.hackthebox.com/"},
+    ]},
+  ],
+  "cyber/detection": [
+    {title:"Free Foundations", resources:[
+      {title:"MITRE ATT&CK Navigator", desc:"The free, interactive, industry-standard knowledge base of real-world adversary tactics and techniques — required reading for detection work.", tag:"Free reference", url:"https://mitre-attack.github.io/attack-navigator/"},
+      {title:"SigmaHQ (GitHub)", desc:"3,000+ free, community-maintained detection rules mapped to MITRE ATT&CK — read real rules to learn how detections are actually written.", tag:"Free rules repo", url:"https://github.com/SigmaHQ/sigma"},
+    ]},
+    {title:"Hands-On Practice", resources:[
+      {title:"LetsDefend", desc:"A free SOC-analyst alert investigation simulator with realistic phishing, malware, and lateral-movement scenarios.", tag:"Free simulator", url:"https://letsdefend.io/"},
+      {title:"Blue Team Labs Online (free tier)", desc:"Weekly free SOC-style challenges for practicing detection and investigation skills.", tag:"Free tier", url:"https://blueteamlabs.online/"},
+    ]},
+    {title:"Real-World Case Studies", resources:[
+      {title:"The DFIR Report", desc:"Free, detailed write-ups of real intrusions — the best way to see how actual adversary tradecraft gets detected and investigated.", tag:"Free case studies", url:"https://thedfirreport.com/"},
+    ]},
+  ],
+  "cyber/cybersecurity": [
+    {title:"Free Foundations", resources:[
+      {title:"TryHackMe — Pre-Security & Beginner Path", desc:"The best default starting point: free, structured, hands-on rooms teaching networking, web, and Linux fundamentals with zero prior experience needed.", tag:"Free hands-on", url:"https://tryhackme.com/path/outline/beginner"},
+      {title:"ISC2 Certified in Cybersecurity (CC)", desc:"A free training course plus a free exam voucher from the field's own certifying body — real credential, no cost.", tag:"Free course + cert", url:"https://www.isc2.org/landing/1mcc"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"OverTheWire: Bandit", desc:"A free, gamified wargame that builds the command-line confidence needed before tackling harder security challenges.", tag:"Free practice", url:"https://overthewire.org/wargames/bandit/"},
+      {title:"PortSwigger Web Security Academy", desc:"Free, extremely well-regarded hands-on labs for web application security specifically.", tag:"Free labs", url:"https://portswigger.net/web-security"},
+    ]},
+  ],
+  "cyber/detection": [
+    {title:"Free Foundations", resources:[
+      {title:"MITRE ATT&CK Framework", desc:"The free, industry-standard knowledge base of attacker techniques that all real detection engineering is built around.", tag:"Free framework", url:"https://attack.mitre.org/"},
+      {title:"SANS Detection Engineering Poster", desc:"A free, practical end-to-end visual guide to the detection engineering life cycle, from raw logs to reliable alerts.", tag:"Free guide", url:"https://www.sans.org/posters/detection-engineering"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"LetsDefend", desc:"A free-tier SOC-analyst simulation platform — investigate real-style alerts and logs as practice.", tag:"Free tier", url:"https://letsdefend.io/"},
+      {title:"CyberDefenders", desc:"Free blue-team labs built around real investigation scenarios and log analysis.", tag:"Free labs", url:"https://cyberdefenders.org/"},
+    ]},
+  ],
+  "other/aviation": [
+    {title:"Aviation Fundamentals", resources:[
+      {title:"FAA Pilot's Handbook of Aeronautical Knowledge", desc:"The free official handbook covering how flight actually works — the foundation FAA training itself is built on.", tag:"Free PDF", url:"https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"},
+      {title:"MIT OpenCourseWare — Aeronautics", desc:"University-level intro courses on flight mechanics and aircraft systems, fully free.", tag:"Free course", url:"https://ocw.mit.edu/"},
+    ]},
+    {title:"Learning by Video", resources:[
+      {title:"Mentour Pilot (YouTube)", desc:"An airline captain breaks down real aviation incidents and procedures in plain language — the most trusted enthusiast channel.", tag:"YouTube", url:"https://www.youtube.com/@MentourPilot"},
+      {title:"Captain Joe (YouTube)", desc:"Structured, tutorial-style explainers on how commercial aircraft actually operate.", tag:"YouTube", url:"https://www.youtube.com/@flywithcaptainjoe"},
+    ]},
+    {title:"Free Structured Courses", resources:[
+      {title:"Embry-Riddle Free Aviation Courses", desc:"Courses from a leading aviation university covering maintenance, safety, and industry fundamentals.", tag:"Free course", url:"https://erau.edu/"},
+      {title:"Class Central — Aviation", desc:"Aggregator of free aviation courses across edX, Coursera and MIT OCW.", tag:"Free course hub", url:"https://www.classcentral.com/subject/aviation"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"Pilot Institute free resources", desc:"Free lessons, podcasts, and an interactive VR preflight trainer to test what you've learned.", tag:"Free tools", url:"https://pilotinstitute.com/"},
+    ]},
+  ],
+  "other/finance": [
+    {title:"Foundations of Budgeting", resources:[
+      {title:"Khan Academy — Personal Finance", desc:"The best free starting point: budgeting, credit, taxes and debt in short, plain-English videos.", tag:"Free course", url:"https://www.khanacademy.org/college-careers-more/personal-finance"},
+    ]},
+    {title:"Understanding Markets & Investing", resources:[
+      {title:"Yale — Financial Markets (Coursera)", desc:"Nobel laureate Robert Shiller's course on how financial markets actually work — free to audit.", tag:"Free to audit", url:"https://www.coursera.org/learn/financial-markets-global"},
+    ]},
+    {title:"Practical Money Management Tools", resources:[
+      {title:"Wave", desc:"Genuinely free budgeting and expense tracking — no trial, no paywall on the core features.", tag:"Free tool", url:"https://www.waveapps.com/"},
+    ]},
+  ],
+  "science/physics": [
+    {title:"Free Foundations", resources:[
+      {title:"Khan Academy — Physics", desc:"Complete free physics curriculum from mechanics to modern physics, with practice problems built in.", tag:"Free course", url:"https://www.khanacademy.org/science/physics"},
+      {title:"MIT OpenCourseWare — Physics", desc:"Full MIT physics course materials, lecture videos, and problem sets, totally free, no enrollment.", tag:"Free course", url:"https://ocw.mit.edu/"},
+      {title:"The Physics Classroom", desc:"A free, beginner-focused site built specifically to teach physics fundamentals step by step.", tag:"Free site", url:"https://www.physicsclassroom.com/"},
+    ]},
+    {title:"Learning by Video", resources:[
+      {title:"Veritasium (YouTube)", desc:"Derek Muller explains tricky physics and engineering ideas through real experiments and interviews.", tag:"YouTube", url:"https://www.youtube.com/@veritasium"},
+      {title:"MinutePhysics (YouTube)", desc:"Fast, hand-drawn explainers that build intuition before you dive into equations.", tag:"YouTube", url:"https://www.youtube.com/@minutephysics"},
+      {title:"PBS Space Time (YouTube)", desc:"Astrophysicist-hosted, structured deep dives into relativity, cosmology and quantum ideas.", tag:"YouTube", url:"https://www.youtube.com/@pbsspacetime"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"Khan Academy practice problems", desc:"Built into the same free course — work through problem sets after each topic to check understanding.", tag:"Free practice", url:"https://www.khanacademy.org/science/physics"},
+    ]},
+  ],
+  "science/neuroscience": [
+    {title:"Free Foundations", resources:[
+      {title:"Duke — Medical Neuroscience (Coursera)", desc:"Widely regarded as the most complete free neuroscience course online; pay only if you want a certificate.", tag:"Free course", url:"https://www.coursera.org/learn/medical-neuroscience"},
+      {title:"Harvard — Fundamentals of Neuroscience (edX)", desc:"A free, beautifully animated series covering the electrical and biological basics of the brain.", tag:"Free course", url:"https://www.edx.org/learn/neuroscience/harvard-university-fundamentals-of-neuroscience-part-1-the-electrical-properties-of-the-neuron"},
+    ]},
+    {title:"Learning by Video", resources:[
+      {title:"2-Minute Neuroscience (YouTube)", desc:"Short, clear videos breaking down individual brain structures and mechanisms one at a time.", tag:"YouTube", url:"https://www.youtube.com/@Neuroscientifically"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"Duke course quizzes", desc:"The Coursera course includes built-in quizzes after each module to reinforce what you've learned.", tag:"Free practice", url:"https://www.coursera.org/learn/medical-neuroscience"},
+    ]},
+  ],
+  "science/human-biology": [
+    {title:"Free Foundations", resources:[
+      {title:"OpenStax — Anatomy & Physiology", desc:"A complete, free, university-level textbook covering every body system in depth.", tag:"Free textbook", url:"https://openstax.org/details/books/anatomy-and-physiology-2e"},
+      {title:"GetBodySmart", desc:"Free interactive diagrams and quizzes that make body systems easier to visualize than a textbook alone.", tag:"Free interactive", url:"https://www.getbodysmart.com/"},
+    ]},
+    {title:"Visual & Interactive Learning", resources:[
+      {title:"Zygote Body", desc:"A free interactive 3D atlas of the human body you can rotate, isolate, and explore layer by layer.", tag:"Free 3D tool", url:"https://www.zygotebody.com/"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"OpenStax end-of-chapter reviews", desc:"Each chapter of the free textbook ends with review questions to test retention.", tag:"Free practice", url:"https://openstax.org/details/books/anatomy-and-physiology-2e"},
+    ]},
+  ],
+  "science/nutrition": [
+    {title:"Free Foundations", resources:[
+      {title:"Stanford — Nutrition Science (Coursera)", desc:"Explores the scientific foundations of nutrition, metabolism, and how evidence informs dietary guidance. Free to audit.", tag:"Free to audit", url:"https://www.coursera.org/"},
+      {title:"Harvard T.H. Chan — Nutrition Source", desc:"A free, evidence-based reference site maintained by one of the top public health schools, cutting through diet fads.", tag:"Free reference", url:"https://www.hsph.harvard.edu/nutritionsource/"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"Nutrition Source healthy eating guides", desc:"Practical, evidence-based guides you can apply directly to your own meals as you learn.", tag:"Free guide", url:"https://www.hsph.harvard.edu/nutritionsource/"},
+    ]},
+  ],
+  "science/gut-health": [
+    {title:"Free Foundations", resources:[
+      {title:"Open University — The Gut Microbiome (OpenLearn)", desc:"A free course on what the gut microbiome is, how it interacts with the body, and what disrupts it — no signup required to start.", tag:"Free course", url:"https://www.open.edu/openlearn/science-maths-technology/the-gut-microbiome-balancing-the-body/content-section-0"},
+      {title:"Stanford — Gut Health and the Microbiome", desc:"A two-week micro-course from leading microbiome researchers on the science behind gut health.", tag:"Course", url:"https://online.stanford.edu/courses/xche0029-gut-health-and-microbiome"},
+    ]},
+    {title:"Staying Evidence-Based", resources:[
+      {title:"NPR — What the evidence really shows about gut health", desc:"A grounded, myth-busting explainer that separates real gut-microbiome science from wellness marketing claims.", tag:"Free article", url:"https://www.npr.org/2026/06/22/nx-s1-5863119/gut-microbiome-gut-health"},
+    ]},
+  ],
+  "other/books": [
+    {title:"Discover Your Next Read", resources:[
+      {title:"Goodreads", desc:"The largest free book-tracking and recommendation community — shelves, ratings, and friend recommendations.", tag:"Free platform", url:"https://www.goodreads.com/"},
+    ]},
+    {title:"Free Classic Literature", resources:[
+      {title:"Project Gutenberg", desc:"70,000+ free public-domain ebooks, from classics to forgotten gems.", tag:"Free ebooks", url:"https://www.gutenberg.org/"},
+      {title:"LibriVox", desc:"Volunteer-read free audiobooks of public-domain classics, paired naturally with Gutenberg's texts.", tag:"Free audiobooks", url:"https://librivox.org/"},
+    ]},
+    {title:"Borrow Modern Books Free", resources:[
+      {title:"Libby", desc:"Connects to your local library card for free ebooks and audiobooks, including current releases.", tag:"Free w/ library card", url:"https://libbyapp.com/"},
+    ]},
+  ],
+};
+
+const FACTS = [
+  "The Pilot's Handbook of Aeronautical Knowledge is free and is the same source material the FAA uses for its own exams.",
+  "Project Gutenberg has offered free public-domain ebooks since 1971 — it's the oldest digital library on the internet.",
+  "Compound interest was reportedly called the 'eighth wonder of the world' — small, consistent savings habits beat timing the market.",
+  "Kabbalah's Tree of Life maps ten interconnected divine attributes (Sefirot) used to describe the structure of creation.",
+  "Docker containers share the host OS kernel, which is why they start in milliseconds — unlike full virtual machines.",
+];
+
+/* ---------------- BUILD NAV ---------------- */
+const nav = document.getElementById('main-nav');
+const cards = document.getElementById('home-cards');
+const recent = document.getElementById('recent-strip');
+
+Object.entries(TOPICS).forEach(([key, t]) => {
+  const item = document.createElement('div');
+  item.className = 'nav-item';
+  item.innerHTML = `
+    <button class="nav-btn">${t.emoji} ${t.label}</button>
+    <div class="dropdown">
+      ${t.subtopics.map((s,i) => `${i>0?'<div class="divider"></div>':''}<a href="#/${key}/${s.slug}">${s.label}</a>`).join('')}
+    </div>`;
+  nav.appendChild(item);
+
+  const card = document.createElement('div');
+  card.className = `card ${t.color}`;
+  card.onclick = () => location.hash = `#/${key}/${t.subtopics[0].slug}`;
+  card.innerHTML = `<span class="emoji">${t.emoji}</span>${t.label}`;
+  cards.appendChild(card);
+});
+
+["Cybersecurity: Free Foundations", "Detection Engineering: Free Foundations", "Python: Free Foundations", "Docker: Practice makes perfect", "Kubernetes: Free Foundations"].forEach(txt=>{
+  const d = document.createElement('div');
+  d.className = 'strip-item';
+  d.textContent = txt;
+  recent.appendChild(d);
+});
+
+/* ---------------- SEARCH TOGGLE ---------------- */
+function toggleSearch(){
+  document.getElementById('search-input').classList.toggle('open');
+  document.getElementById('search-input').focus();
+}
+
+/* ---------------- DAILY FACT WIDGET ---------------- */
+let streak = 0, readToday = false;
+try{
+  streak = parseInt(localStorage.getItem('hub-streak')) || 0;
+  readToday = localStorage.getItem('hub-read-date') === new Date().toDateString();
+}catch(e){}
+document.getElementById('streak-badge').textContent = streak;
+document.getElementById('fact-text').textContent = FACTS[new Date().getDate() % FACTS.length];
+if(readToday){ const b=document.getElementById('mark-read'); b.textContent='✓ Read today'; b.classList.add('done'); }
+
+function toggleFact(){ document.getElementById('fact-card').classList.toggle('open'); }
+function shuffleFact(){
+  const el = document.getElementById('fact-text');
+  let next;
+  do{ next = FACTS[Math.floor(Math.random()*FACTS.length)]; } while(next === el.textContent && FACTS.length > 1);
+  el.textContent = next;
+}
+function markRead(){
+  if(readToday) return;
+  streak += 1; readToday = true;
+  document.getElementById('streak-badge').textContent = streak;
+  const b = document.getElementById('mark-read');
+  b.textContent = '✓ Read today'; b.classList.add('done');
+  try{
+    localStorage.setItem('hub-streak', streak);
+    localStorage.setItem('hub-read-date', new Date().toDateString());
+  }catch(e){}
+  setTimeout(()=>document.getElementById('fact-card').classList.remove('open'), 900);
+}
+
+/* ---------------- ROUTING ---------------- */
+function render(){
+  const hash = location.hash.replace('#/','');
+  const home = document.getElementById('home-page');
+  const page = document.getElementById('topic-page');
+  if(!hash){ home.style.display='block'; page.style.display='none'; return; }
+  home.style.display='none'; page.style.display='block';
+
+  const [catKey, subSlug] = hash.split('/');
+  const cat = TOPICS[catKey];
+  if(!cat) return;
+  const sub = cat.subtopics.find(s=>s.slug===subSlug) || cat.subtopics[0];
+
+  document.getElementById('breadcrumb').innerHTML =
+    `<a href="#/">Home</a> &nbsp;›&nbsp; ${cat.emoji} ${cat.label} &nbsp;›&nbsp; ${sub.label}`;
+
+  const sidebar = document.getElementById('sidebar');
+  const contentCol = document.getElementById('content-col');
+  const key = `${catKey}/${sub.slug}`;
+  const concepts = CONTENT[key];
+
+  if(!concepts){
+    sidebar.innerHTML = `<h5>${sub.label}</h5><div class="sidebar-item">Being researched...</div>`;
+    contentCol.innerHTML = `<div class="placeholder">📚 This topic hasn't been researched and built yet.<br>Ask to have "${sub.label}" populated next.</div>`;
+    return;
+  }
+
+  sidebar.innerHTML = `<h5>${sub.label}</h5>` + concepts.map((c,i)=>`
+    <div class="sidebar-item" data-target="concept-${i}">
+      <span class="checkbox" onclick="toggleCheck(event,this)"></span>
+      <span>${i+1}. ${c.title}</span>
+    </div>`).join('');
+
+  contentCol.innerHTML = concepts.map((c,i)=>`
+    <div class="concept" id="concept-${i}">
+      <h3>${i+1}. ${c.title}</h3>
+      ${c.resources.map(r=>`
+        <a class="resource" href="${r.url}" target="_blank" rel="noopener">
+          <div class="r-info">
+            <div class="r-title">${r.title}</div>
+            <div class="r-desc">${r.desc}</div>
+          </div>
+          <span class="tag">${r.tag}</span>
+        </a>`).join('')}
+    </div>`).join('');
+
+  // scroll-highlight
+  const items = sidebar.querySelectorAll('.sidebar-item');
+  const targets = contentCol.querySelectorAll('.concept');
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){
+        items.forEach(it=>it.classList.remove('active'));
+        const idx = [...targets].indexOf(en.target);
+        if(items[idx]) items[idx].classList.add('active');
+      }
+    });
+  }, {rootMargin:'-30% 0px -60% 0px'});
+  targets.forEach(t=>obs.observe(t));
+
+  items.forEach(it=>{
+    it.addEventListener('click', (e)=>{
+      if(e.target.classList.contains('checkbox')) return;
+      document.getElementById(it.dataset.target).scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
+
+function toggleCheck(e, el){
+  e.stopPropagation();
+  el.classList.toggle('checked');
+  el.textContent = el.classList.contains('checked') ? '✓' : '';
+}
+
+window.addEventListener('hashchange', render);
+render();
+</script>
+
+</body>
+</html>
