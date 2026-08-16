@@ -51,9 +51,12 @@
   }
   .nav-item:hover .nav-btn{background:var(--cream-deep);}
   .dropdown{
-    display:none; position:absolute; top:110%; left:0;
+    display:none; position:absolute; top:100%; left:0; margin-top:6px;
     background:#fff; border-radius:18px; box-shadow:var(--shadow);
     min-width:230px; padding:8px 0; overflow:hidden;
+  }
+  .nav-item::after{
+    content:''; position:absolute; top:100%; left:0; right:0; height:10px;
   }
   .nav-item:hover .dropdown{display:block;}
   .dropdown a{
@@ -76,6 +79,20 @@
     transition:width .2s ease, opacity .2s ease, padding .2s ease;
   }
   .search-input.open{width:200px; opacity:1; padding:9px 16px;}
+  .search-box{position:relative;}
+  .hero-search-box{max-width:320px; margin:0 auto;}
+  .search-results{
+    display:none; position:absolute; top:110%; left:0; right:0; z-index:150;
+    background:#fff; border-radius:16px; box-shadow:var(--shadow); overflow:hidden;
+    max-height:280px; overflow-y:auto;
+  }
+  .search-results.open{display:block;}
+  .search-result-item{
+    display:block; padding:11px 16px; font-size:0.85rem; cursor:pointer; text-align:left;
+  }
+  .search-result-item:hover{background:var(--cream);}
+  .search-result-item small{display:block; color:var(--text-soft); font-size:0.72rem; margin-top:2px;}
+  .search-empty{padding:14px 16px; font-size:0.82rem; color:var(--text-soft); text-align:left;}
 
   /* ---------- HOMEPAGE ---------- */
   .hero{text-align:center; padding:70px 20px 40px;}
@@ -105,7 +122,9 @@
   .strip-item{
     flex:0 0 auto; background:#fff; border-radius:18px; padding:14px 20px;
     box-shadow:var(--shadow); font-size:0.9rem; white-space:nowrap;
+    cursor:pointer; transition:transform .15s ease;
   }
+  .strip-item:hover{transform:translateY(-2px);}
 
   footer{
     text-align:center; padding:40px 20px; color:var(--text-soft); font-size:0.85rem;
@@ -206,11 +225,14 @@
 <body>
 
 <header>
-  <div class="logo">🌱 Learning Hub</div>
+  <a class="logo" href="#/">🌱 Learning Hub</a>
   <nav id="main-nav"></nav>
   <div class="search-wrap">
     <button class="search-icon" onclick="toggleSearch()">🔍</button>
-    <input class="search-input" id="search-input" placeholder="Search sources...">
+    <div class="search-box">
+      <input class="search-input" id="search-input" placeholder="Search sources...">
+      <div class="search-results" id="search-results"></div>
+    </div>
   </div>
 </header>
 
@@ -218,8 +240,10 @@
   <section class="hero">
     <h1>My Learning Hub</h1>
     <p>The best sources, curated by topic, for everything I want to learn.</p>
-    <input class="search-input open" placeholder="Search topics or resources...">
-  </section>
+    <div class="search-box hero-search-box">
+      <input class="search-input open" id="hero-search-input" placeholder="Search topics or resources...">
+      <div class="search-results" id="hero-search-results"></div>
+    </div>  </section>
 
   <div class="cards" id="home-cards"></div>
 
@@ -269,6 +293,8 @@ const TOPICS = {
       {slug:"torah-history", label:"Torah & Jewish history"},
       {slug:"mythology", label:"Mythology"},
       {slug:"kabbalah", label:"Kabbalah / mysticism"},
+      {slug:"world-religions", label:"World religions"},
+      {slug:"archaeology", label:"Archaeology"},
     ]
   },
   science: {
@@ -279,6 +305,8 @@ const TOPICS = {
       {slug:"human-biology", label:"Human biology"},
       {slug:"nutrition", label:"Nutrition"},
       {slug:"gut-health", label:"Gut health"},
+      {slug:"astronomy", label:"Astronomy"},
+      {slug:"genetics", label:"Genetics"},
     ]
   },
   tech: {
@@ -292,6 +320,8 @@ const TOPICS = {
       {slug:"cicd", label:"CI/CD"},
       {slug:"infra", label:"Infrastructure / Linux / networking"},
       {slug:"python", label:"Python / programming"},
+      {slug:"git", label:"Git & version control"},
+      {slug:"ai-ml", label:"AI & machine learning"},
     ]
   },
   cyber: {
@@ -299,6 +329,8 @@ const TOPICS = {
     subtopics: [
       {slug:"cybersecurity", label:"Cybersecurity"},
       {slug:"detection", label:"Detection engineering"},
+      {slug:"pentesting", label:"Penetration testing"},
+      {slug:"cryptography", label:"Cryptography"},
     ]
   },
   other: {
@@ -307,6 +339,8 @@ const TOPICS = {
       {slug:"aviation", label:"Aircraft / aviation"},
       {slug:"finance", label:"Personal finance"},
       {slug:"books", label:"Books / literature"},
+      {slug:"travel", label:"Travel"},
+      {slug:"productivity", label:"Productivity"},
     ]
   },
 };
@@ -429,6 +463,73 @@ const CONTENT = {
     {title:"Practice makes perfect", resources:[
       {title:"LetsDefend", desc:"A free-tier SOC-analyst simulation platform — investigate real-style alerts and logs as practice.", tag:"Free tier", url:"https://letsdefend.io/"},
       {title:"CyberDefenders", desc:"Free blue-team labs built around real investigation scenarios and log analysis.", tag:"Free labs", url:"https://cyberdefenders.org/"},
+    ]},
+  ],
+  "general/geography": [
+    {title:"Free Foundations", resources:[
+      {title:"Class Central — Geography", desc:"An aggregator of free geography courses from top universities, covering physical, human, and regional geography.", tag:"Free course hub", url:"https://www.classcentral.com/subject/geography"},
+      {title:"Royal Geographical Society free resources", desc:"Free interactive animations and explainers built to make foundational geography concepts stick.", tag:"Free resources", url:"https://www.rgs.org/"},
+    ]},
+    {title:"Interactive Map Learning", resources:[
+      {title:"Seterra", desc:"A genuinely fun, free map-quiz game covering countries, capitals, flags, rivers and mountains across every continent.", tag:"Free game", url:"https://online.seterra.net/en"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"CIA World Factbook", desc:"The free, definitive reference for every country's geography, terrain, and physical data — great for looking things up as you learn.", tag:"Free reference", url:"https://www.cia.gov/the-world-factbook/"},
+    ]},
+  ],
+  "general/countries": [
+    {title:"Country Reference", resources:[
+      {title:"CIA World Factbook", desc:"Free, detailed profile of every country — government, economy, geography and demographics in one place.", tag:"Free reference", url:"https://www.cia.gov/the-world-factbook/"},
+    ]},
+    {title:"Learn by Quiz", resources:[
+      {title:"Seterra — Countries & Capitals", desc:"Free customizable quizzes for memorizing every country and capital, region by region.", tag:"Free game", url:"https://online.seterra.net/en"},
+    ]},
+    {title:"Explore Visually", resources:[
+      {title:"GeoGuessr (free tier)", desc:"Drops you into real Street View locations worldwide — a genuinely engaging way to learn to recognize countries by sight.", tag:"Free tier", url:"https://www.geoguessr.com/"},
+    ]},
+  ],
+  "general/israeli-history": [
+    {title:"Free University Courses", resources:[
+      {title:"Tel Aviv University — History of Modern Israel (Coursera)", desc:"A two-part free-to-audit course covering Israel from 19th-century Zionism through today, taught by Professor Eyal Naveh.", tag:"Free to audit", url:"https://www.coursera.org/learn/history-israel"},
+      {title:"NYU — Ancient Israel (Open Culture)", desc:"A free, full 25-lecture course building ancient Israelite history from primary evidence, including the Bible.", tag:"Free course", url:"https://www.openculture.com/ancient-israel-a-free-online-course-from-nyu"},
+    ]},
+    {title:"Reference & Context", resources:[
+      {title:"Wonder Israel — Free Israel Course Directory", desc:"A curated, regularly updated list of every free Coursera/edX course on Israeli history, archaeology, and society.", tag:"Free resource hub", url:"https://wonderisrael.com/free-courses-on-israel/"},
+    ]},
+  ],
+  "general/israeli-wars": [
+    {title:"Overview & Timeline", resources:[
+      {title:"Britannica — Arab-Israeli Wars", desc:"A free, reliable overview of each major conflict from 1948 to today, with clear cause-and-effect context.", tag:"Free reference", url:"https://www.britannica.com/event/Arab-Israeli-wars"},
+    ]},
+    {title:"Deep Reference, War by War", resources:[
+      {title:"Jewish Virtual Library — Israel's Wars & Operations", desc:"Free, detailed articles on each individual war and operation, organized chronologically from 1948 onward.", tag:"Free reference", url:"https://jewishvirtuallibrary.org/israel-s-wars-and-operations"},
+    ]},
+  ],
+  "general/torah-history": [
+    {title:"Primary Texts, Free", resources:[
+      {title:"Sefaria", desc:"The largest free library of Jewish texts online — Torah, Talmud, Mishnah, and commentaries in Hebrew and English, fully interlinked.", tag:"Free library", url:"https://www.sefaria.org/"},
+    ]},
+    {title:"Explanatory Learning", resources:[
+      {title:"My Jewish Learning", desc:"Free, well-structured explanatory articles that walk through Torah portions and Jewish history topics in plain language.", tag:"Free site", url:"https://www.myjewishlearning.com/"},
+    ]},
+    {title:"Practice makes perfect", resources:[
+      {title:"Sefaria's Weekly Torah Portion Guide", desc:"A free structured way to read the Torah consistently, one weekly portion at a time, with linked commentary.", tag:"Free guide", url:"https://www.sefaria.org/sheets/503077"},
+    ]},
+  ],
+  "general/mythology": [
+    {title:"Free Foundations", resources:[
+      {title:"Mythology School", desc:"A free, research-based resource covering Greek, Norse, Egyptian and other mythologies through articles, timelines and quizzes.", tag:"Free site", url:"https://www.mythologyschool.com/"},
+    ]},
+    {title:"University-Level Free", resources:[
+      {title:"MIT OpenCourseWare — Symbolism & Mythology", desc:"A free university course on how myth and symbol are structured and woven into culture and daily life.", tag:"Free course", url:"https://ocw.mit.edu/"},
+    ]},
+  ],
+  "general/kabbalah": [
+    {title:"Free Foundations", resources:[
+      {title:"Chabad.org — Beginning Kabbalah", desc:"A free, structured introduction to Kabbalistic concepts written specifically for newcomers to the subject.", tag:"Free site", url:"https://www.chabad.org/kabbalah/article_cdo/aid/380738/jewish/Beginners.htm"},
+    ]},
+    {title:"Primary Texts", resources:[
+      {title:"Sefaria — The Zohar", desc:"The core text of Kabbalah, free to read with English translation alongside the original, on the same platform you'd use for Torah study.", tag:"Free library", url:"https://www.sefaria.org/texts"},
     ]},
   ],
   "other/aviation": [
@@ -560,10 +661,17 @@ Object.entries(TOPICS).forEach(([key, t]) => {
   cards.appendChild(card);
 });
 
-["Cybersecurity: Free Foundations", "Detection Engineering: Free Foundations", "Python: Free Foundations", "Docker: Practice makes perfect", "Kubernetes: Free Foundations"].forEach(txt=>{
-  const d = document.createElement('div');
+[
+  {label:"Cybersecurity: Free Foundations", hash:"cyber/cybersecurity"},
+  {label:"Detection Engineering: Free Foundations", hash:"cyber/detection"},
+  {label:"Python: Free Foundations", hash:"tech/python"},
+  {label:"Docker: Practice makes perfect", hash:"tech/docker"},
+  {label:"Torah History: Primary Texts", hash:"general/torah-history"},
+].forEach(item=>{
+  const d = document.createElement('a');
   d.className = 'strip-item';
-  d.textContent = txt;
+  d.href = `#/${item.hash}`;
+  d.textContent = item.label;
   recent.appendChild(d);
 });
 
@@ -572,6 +680,50 @@ function toggleSearch(){
   document.getElementById('search-input').classList.toggle('open');
   document.getElementById('search-input').focus();
 }
+
+/* ---------------- SEARCH ---------------- */
+function buildSearchIndex(){
+  const idx = [];
+  Object.entries(TOPICS).forEach(([catKey, cat])=>{
+    cat.subtopics.forEach(sub=>{
+      idx.push({
+        label: sub.label, sub: `${cat.emoji} ${cat.label}`, hash: `${catKey}/${sub.slug}`,
+        text: `${sub.label} ${cat.label}`.toLowerCase()
+      });
+      const concepts = CONTENT[`${catKey}/${sub.slug}`];
+      if(concepts){
+        concepts.forEach(c=>{
+          c.resources.forEach(r=>{
+            idx.push({
+              label: r.title, sub: `${sub.label} — ${c.title}`, hash: `${catKey}/${sub.slug}`,
+              text: `${r.title} ${r.desc} ${sub.label} ${cat.label} ${c.title}`.toLowerCase()
+            });
+          });
+        });
+      }
+    });
+  });
+  return idx;
+}
+const SEARCH_INDEX = buildSearchIndex();
+
+function wireSearch(inputId, resultsId){
+  const input = document.getElementById(inputId);
+  const results = document.getElementById(resultsId);
+  input.addEventListener('input', ()=>{
+    const q = input.value.trim().toLowerCase();
+    if(!q){ results.classList.remove('open'); results.innerHTML=''; return; }
+    const matches = SEARCH_INDEX.filter(item => item.text.includes(q)).slice(0, 8);
+    results.innerHTML = matches.length
+      ? matches.map(m => `<a class="search-result-item" href="#/${m.hash}">${m.label}<small>${m.sub}</small></a>`).join('')
+      : `<div class="search-empty">No matches yet — try another word.</div>`;
+    results.classList.add('open');
+  });
+  input.addEventListener('blur', ()=> setTimeout(()=>results.classList.remove('open'), 150));
+  input.addEventListener('focus', ()=>{ if(input.value.trim()) results.classList.add('open'); });
+}
+wireSearch('search-input', 'search-results');
+wireSearch('hero-search-input', 'hero-search-results');
 
 /* ---------------- DAILY FACT WIDGET ---------------- */
 let streak = 0, readToday = false;
