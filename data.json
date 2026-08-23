@@ -293,6 +293,109 @@
               {"title": "CyberDefenders", "desc": "Free blue-team labs built around real investigation scenarios.", "tag": "Free labs", "url": "https://cyberdefenders.org/", "login": true}
             ]}
           ]
+        },
+        "network-analysis": {
+          "label": "Network traffic analysis",
+          "practice": {"title": "Malware Traffic Analysis (real pcaps)", "url": "https://www.malware-traffic-analysis.net/", "login": false, "desc": "Free real attacker packet captures to practice reading and analyzing traffic on."},
+          "concepts": [
+            {"title": "Beginner", "resources": [
+              {"title": "Professor Messer Net+", "desc": "Full free video course covering networking fundamentals, no account needed.", "tag": "Free", "url": "https://www.professormesser.com/", "login": false},
+              {"title": "Julia Evans Networking Zine", "desc": "A free preview of a beautifully illustrated networking zine (full version paid).", "tag": "Free preview", "url": "https://wizardzines.com/zines/networking/", "login": false},
+              {"title": "Wireshark Official Training", "desc": "Official docs and sample packet captures for learning the industry-standard traffic analyzer.", "tag": "Free", "url": "https://www.wireshark.org/docs/", "login": false},
+              {"title": "TryHackMe — Wireshark", "desc": "Hands-on Wireshark room with a free tier.", "tag": "Freemium", "url": "https://tryhackme.com/", "login": true},
+              {"title": "NetworkMiner", "desc": "Free version of a network forensic analysis tool for extracting artifacts from traffic.", "tag": "Free version", "url": "https://www.netresec.com/?page=NetworkMiner", "login": false}
+            ]},
+            {"title": "Intermediate", "resources": [
+              {"title": "Malware Traffic Analysis", "desc": "Real attacker packet captures to practice on, widely used by the security community.", "tag": "Free", "url": "https://www.malware-traffic-analysis.net/", "login": false},
+              {"title": "Zeek Official Docs", "desc": "Reference documentation for the Zeek network security monitor.", "tag": "Free", "url": "https://docs.zeek.org/", "login": false},
+              {"title": "TryHackMe — Zeek", "desc": "Hands-on Zeek room with a free tier.", "tag": "Freemium", "url": "https://tryhackme.com/", "login": true},
+              {"title": "Zeek Training", "desc": "Official free training materials from the Zeek project.", "tag": "Free", "url": "https://zeek.org/", "login": false},
+              {"title": "Suricata Docs", "desc": "Reference documentation for the Suricata IDS/IPS engine.", "tag": "Free", "url": "https://docs.suricata.io/", "login": false},
+              {"title": "TryHackMe — Snort", "desc": "Hands-on Snort IDS room with a free tier.", "tag": "Freemium", "url": "https://tryhackme.com/", "login": true},
+              {"title": "ntopng Community", "desc": "Free community edition of a real-time network traffic monitoring tool.", "tag": "Free", "url": "https://www.ntop.org/products/traffic-analysis/ntop/", "login": false}
+            ]},
+            {"title": "Advanced", "resources": [
+              {"title": "Emerging Threats Rules", "desc": "Real, community-maintained IDS rule sets used in production security tools.", "tag": "Free", "url": "https://community.emergingthreats.net/", "login": false},
+              {"title": "SiLK (CERT)", "desc": "Download and docs for CERT's flow-analysis tool suite.", "tag": "Free", "url": "https://tools.netsa.cert.org/silk/", "login": false}
+            ]}
+          ]
+        },
+        "siem-detection": {
+          "label": "SIEM & detection",
+          "practice": {"title": "Boss of the SOC (BOTS)", "url": "https://github.com/splunk/botsv3", "login": true, "desc": "The best-regarded free hands-on Splunk detection dataset, built around real investigation scenarios."},
+          "concepts": [
+            {"title": "Beginner", "resources": [
+              {"title": "Splunk Free Training — Fundamentals 1", "desc": "A fully free, official Splunk course; free account required.", "tag": "Free", "url": "https://www.splunk.com/en_us/training/free-courses/splunk-fundamentals-1.html", "login": true},
+              {"title": "TryHackMe — Splunk 101", "desc": "Hands-on introductory Splunk room with a free tier.", "tag": "Freemium", "url": "https://tryhackme.com/", "login": true}
+            ]},
+            {"title": "Intermediate", "resources": [
+              {"title": "Boss of the SOC (BOTS)", "desc": "The best free Splunk hands-on detection dataset, based on real-world scenarios.", "tag": "Free", "url": "https://github.com/splunk/botsv3", "login": true},
+              {"title": "Elastic Free Training", "desc": "Official free training from Elastic; free account required.", "tag": "Free", "url": "https://www.elastic.co/training/free", "login": true},
+              {"title": "TryHackMe — ELK 101", "desc": "Hands-on Elastic/ELK stack room with a free tier.", "tag": "Freemium", "url": "https://tryhackme.com/", "login": true},
+              {"title": "Microsoft Learn — Sentinel", "desc": "Free Microsoft training path for Microsoft Sentinel SIEM; free MS account needed.", "tag": "Free", "url": "https://learn.microsoft.com/en-us/training/paths/sc-200-utilize-microsoft-sentinel/", "login": true},
+              {"title": "Must Learn KQL (GitHub)", "desc": "A completely free, no-login series and eBook teaching Kusto Query Language for detection.", "tag": "Free", "url": "https://github.com/rod-trent/MustLearnKQL", "login": false},
+              {"title": "Azure Free Account", "desc": "Free-tier Azure account (credit card required) to practice Sentinel and cloud SIEM hands-on.", "tag": "Free tier", "url": "https://azure.microsoft.com/en-us/free/", "login": true}
+            ]},
+            {"title": "Advanced", "resources": [
+              {"title": "Elastic Security Labs", "desc": "Free research blog on detection engineering from the Elastic security research team.", "tag": "Free", "url": "https://www.elastic.co/security-labs", "login": false}
+            ]}
+          ]
+        },
+        "threat-hunting": {
+          "label": "Threat hunting",
+          "practice": {"title": "BlueTeamLabs Online", "url": "https://blueteamlabs.online/", "login": true, "desc": "Free-tier hands-on threat hunting and blue-team challenges."},
+          "concepts": [
+            {"title": "Beginner", "resources": [
+              {"title": "ATT&CK Navigator", "desc": "A free visual tool for mapping and tracking attacker techniques, no login needed.", "tag": "Free", "url": "https://mitre-attack.github.io/attack-navigator/", "login": false},
+              {"title": "TryHackMe — MITRE", "desc": "Hands-on MITRE ATT&CK room with a free tier.", "tag": "Freemium", "url": "https://tryhackme.com/", "login": true}
+            ]},
+            {"title": "Intermediate", "resources": [
+              {"title": "MITRE ATT&CK", "desc": "The free, industry-standard knowledge base threat hunting is built around.", "tag": "Free", "url": "https://attack.mitre.org/", "login": false},
+              {"title": "TaHiTI Methodology (PDF)", "desc": "A free, structured Dutch financial-sector threat hunting methodology, direct PDF download.", "tag": "Free", "url": "https://www.betaalvereniging.nl/wp-content/uploads/2026/03/TaHiTI-Threat-Hunting-Methodology-whitepaper.pdf", "login": false},
+              {"title": "SANS Threat Hunting (YouTube)", "desc": "Free YouTube content from SANS instructors on practical threat hunting.", "tag": "Free", "url": "https://www.youtube.com/@SANSDigitalForensics", "login": false},
+              {"title": "BlueTeamLabs Online", "desc": "Free-tier hands-on threat hunting challenges.", "tag": "Freemium", "url": "https://blueteamlabs.online/", "login": true}
+            ]},
+            {"title": "Advanced", "resources": [
+              {"title": "Cyb3rWard0g Blog", "desc": "An expert threat-hunting blog; some posts are on Medium and may be paywalled.", "tag": "Free (some paywall)", "url": "https://cyberwardog.blogspot.com/", "login": false}
+            ]}
+          ]
+        },
+        "threat-intel": {
+          "label": "Threat intelligence",
+          "practice": {"title": "OSINT Framework", "url": "https://osintframework.com/", "login": false, "desc": "A free, no-login directory of OSINT tools to practice real threat intel gathering."},
+          "concepts": [
+            {"title": "Beginner", "resources": [
+              {"title": "AlienVault OTX", "desc": "A free, account-based open threat intelligence exchange.", "tag": "Free", "url": "https://otx.alienvault.com/", "login": true},
+              {"title": "OSINT Framework", "desc": "A free, no-login directory linking out to OSINT tools by category.", "tag": "Free", "url": "https://osintframework.com/", "login": false},
+              {"title": "URLscan.io", "desc": "Free URL scanning and analysis, no login for basic lookups.", "tag": "Free", "url": "https://urlscan.io/", "login": false}
+            ]},
+            {"title": "Intermediate", "resources": [
+              {"title": "Shodan", "desc": "Search engine for internet-connected devices; free tier is limited and requires login.", "tag": "Freemium", "url": "https://www.shodan.io/", "login": true},
+              {"title": "Censys", "desc": "Internet-wide scanning and asset search with a free tier.", "tag": "Freemium", "url": "https://censys.io/", "login": true},
+              {"title": "RiskIQ Community", "desc": "A free community account for internet-wide threat intelligence data.", "tag": "Free", "url": "https://community.riskiq.com/", "login": true},
+              {"title": "DomainTools Research Blog", "desc": "Free threat intelligence research blog, no login needed to read.", "tag": "Free", "url": "https://www.domaintools.com/resources/blog/", "login": false}
+            ]},
+            {"title": "Advanced", "resources": [
+              {"title": "MISP Platform", "desc": "Free, self-hosted, open-source threat intelligence sharing platform.", "tag": "Free, open source", "url": "https://www.misp-project.org/", "login": false},
+              {"title": "OpenCTI", "desc": "Free, self-hosted, open-source threat intelligence platform.", "tag": "Free, open source", "url": "https://opencti.io/", "login": false}
+            ]}
+          ]
+        },
+        "security-scripting": {
+          "label": "Security scripting",
+          "practice": {"title": "Regex101", "url": "https://regex101.com/", "login": false, "desc": "Free, instant, no-login regex practice with live explanation of every match."},
+          "concepts": [
+            {"title": "Beginner", "resources": [
+              {"title": "Regex101", "desc": "Free, no-login, instant regex testing and practice tool.", "tag": "Free", "url": "https://regex101.com/", "login": false},
+              {"title": "RegexOne", "desc": "A free, no-login interactive regex tutorial for beginners.", "tag": "Free", "url": "https://regexone.com/", "login": false},
+              {"title": "CS50P Python (Harvard)", "desc": "Free Python course with a free certificate option; account needed.", "tag": "Free", "url": "https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python", "login": true},
+              {"title": "Automate the Boring Stuff", "desc": "A fully free online book teaching Python scripting for real tasks.", "tag": "Free", "url": "https://automatetheboringstuff.com/", "login": false}
+            ]},
+            {"title": "Intermediate", "resources": [
+              {"title": "Rexegg.com", "desc": "A deep, free regex reference for more advanced pattern-writing.", "tag": "Free", "url": "https://www.rexegg.com/", "login": false},
+              {"title": "Scapy Docs", "desc": "Free reference docs for Scapy, a Python library for crafting and analyzing network packets.", "tag": "Free", "url": "https://scapy.readthedocs.io/", "login": false}
+            ]}
+          ]
         }
       }
     },
