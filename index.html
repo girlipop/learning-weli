@@ -214,6 +214,44 @@
   }
   .like-btn:hover{transform:scale(1.15);}
   .liked-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:16px;}
+  .book-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:22px; perspective:800px;}
+  .book-cover-card{display:block; text-align:center; cursor:pointer; background:none; border:none; font-family:inherit; padding:0;}
+  .book-cover-card img{
+    width:100%; aspect-ratio:2/3; object-fit:cover; border-radius:6px 10px 10px 6px;
+    box-shadow:var(--shadow); background:var(--cream-deep);
+    transition:transform .35s cubic-bezier(.2,.8,.3,1.2), box-shadow .35s ease;
+    transform-style:preserve-3d;
+  }
+  .book-cover-card:hover img{
+    transform:rotateY(-18deg) scale(1.08) translateY(-6px);
+    box-shadow:12px 14px 24px rgba(0,0,0,0.28);
+  }
+  .book-cover-title{font-size:0.82rem; font-weight:600; margin-top:8px; line-height:1.25;}
+  .book-cover-author{font-size:0.74rem; color:var(--text-soft); margin-top:2px;}
+
+  /* ---------- BOOK PREVIEW MODAL ---------- */
+  #book-modal-overlay{
+    display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:300;
+    align-items:center; justify-content:center; padding:20px;
+  }
+  #book-modal-overlay.open{display:flex;}
+  #book-modal{
+    background:var(--cream); border-radius:22px; max-width:640px; width:100%;
+    max-height:88vh; overflow-y:auto; padding:24px; box-shadow:var(--shadow); position:relative;
+  }
+  #book-modal-close{
+    position:absolute; top:16px; right:16px; width:32px; height:32px; border-radius:50%;
+    border:none; background:var(--cream-deep); cursor:pointer; font-size:1rem;
+  }
+  #book-modal h3{margin:0 0 4px;}
+  #book-modal .modal-author{color:var(--text-soft); font-size:0.9rem; margin-bottom:14px;}
+  #book-modal .modal-desc{font-size:0.88rem; margin-bottom:16px;}
+  #book-viewer-canvas{width:100%; height:420px; border-radius:14px; overflow:hidden; background:var(--cream-deep);}
+  #book-modal .preview-note{font-size:0.76rem; color:var(--text-soft); margin-top:10px;}
+  #book-modal .fallback-link{
+    display:inline-block; margin-top:14px; padding:9px 18px; border-radius:var(--radius);
+    background:var(--sage-deep); font-size:0.85rem; box-shadow:var(--shadow);
+  }
   .topic-layout{display:flex; gap:36px; align-items:flex-start;}
   .sidebar{
     flex:0 0 240px; position:sticky; top:90px;
@@ -340,6 +378,7 @@
 let TOPICS = null;   // built from data.json categories
 let CONTENT = {};    // built from data.json concepts
 let PRACTICE = {};   // built from data.json practice
+let DISPLAY = {};    // built from data.json display mode (e.g. 'bookgrid')
 let FACTS = [];       // flattened from data.json facts
 
 const nav = document.getElementById('main-nav');
@@ -358,6 +397,7 @@ async function loadData(){
       TOPICS[catKey].subtopics.push({ slug, label: sub.label });
       if(sub.concepts) CONTENT[`${catKey}/${slug}`] = sub.concepts;
       if(sub.practice) PRACTICE[`${catKey}/${slug}`] = sub.practice;
+      if(sub.display) DISPLAY[`${catKey}/${slug}`] = sub.display;
     });
   });
   Object.values(data.facts).forEach(list => FACTS.push(...list));
@@ -581,6 +621,33 @@ function render(){
   if(!concepts){
     sidebar.innerHTML = `<h5>${sub.label}</h5><div class="sidebar-item">Being researched...</div>`;
     contentCol.innerHTML = `<div class="placeholder">📚 This topic hasn't been researched and built yet.<br>Ask to have "${sub.label}" populated next.</div>`;
+    return;
+  }
+
+  if(DISPLAY[key] === 'bookgrid'){
+    sidebar.innerHTML = `<h5>${sub.label}</h5>` + concepts.map((c,i)=>`
+      <div class="sidebar-item" data-target="genre-${i}">
+        <span>${i+1}. ${c.title}</span>
+      </div>`).join('');
+
+    contentCol.innerHTML = concepts.map((c,i)=>`
+      <div class="concept" id="genre-${i}">
+        <h3>${i+1}. ${c.title}</h3>
+        <div class="book-grid">
+          ${c.books.map(b=>`
+            <a class="book-cover-card" href="${b.url}" target="_blank" rel="noopener">
+              <img src="${b.cover}" alt="${b.title}" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22180%22><rect width=%22120%22 height=%22180%22 fill=%22%23e5ddc9%22/></svg>'">
+              <div class="book-cover-title">${b.title}</div>
+              <div class="book-cover-author">${b.author}</div>
+            </a>`).join('')}
+        </div>
+      </div>`).join('');
+
+    const gTargets = contentCol.querySelectorAll('.concept');
+    const gItems = sidebar.querySelectorAll('.sidebar-item');
+    gItems.forEach(it=>{
+      it.addEventListener('click', ()=> document.getElementById(it.dataset.target).scrollIntoView({behavior:'smooth'}));
+    });
     return;
   }
 
