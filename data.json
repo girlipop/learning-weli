@@ -1,455 +1,2113 @@
 {
   "categories": {
     "general": {
-      "label": "General", "emoji": "🌍",
+      "label": "General",
+      "emoji": "🌍",
       "subtopics": {
         "geography": {
           "label": "Geography",
-          "practice": {"title": "Seterra Map Quizzes", "url": "https://online.seterra.net/en", "login": false, "desc": "Interactive map quizzes covering countries, capitals, rivers and mountains."},
+          "practice": {
+            "title": "Seterra Map Quizzes",
+            "url": "https://online.seterra.net/en",
+            "login": false,
+            "desc": "Interactive map quizzes covering countries, capitals, rivers and mountains."
+          },
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "Class Central — Geography", "desc": "Aggregator of free geography courses from top universities.", "tag": "Free course hub", "url": "https://www.classcentral.com/subject/geography", "login": false},
-              {"title": "Royal Geographical Society free resources", "desc": "Free interactive animations and explainers for foundational geography concepts.", "tag": "Free resources", "url": "https://www.rgs.org/", "login": false},
-              {"title": "World Atlas", "desc": "Free reference maps and country/region profiles, great for browsing while learning.", "tag": "Free reference", "url": "https://www.worldatlas.com/", "login": false}
-            ]},
-            {"title": "Interactive Map Learning", "resources": [
-              {"title": "Seterra", "desc": "Free, fun map-quiz game covering countries, capitals, flags, rivers and mountains.", "tag": "Free game", "url": "https://online.seterra.net/en", "login": false}
-            ]},
-            {"title": "Practice makes perfect", "resources": [
-              {"title": "CIA World Factbook", "desc": "The definitive free reference for every country's geography and physical data.", "tag": "Free reference", "url": "https://www.cia.gov/the-world-factbook/", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Class Central — Geography",
+                  "desc": "Aggregator of free geography courses from top universities.",
+                  "tag": "Free course hub",
+                  "url": "https://www.classcentral.com/subject/geography",
+                  "login": false
+                },
+                {
+                  "title": "Royal Geographical Society free resources",
+                  "desc": "Free interactive animations and explainers for foundational geography concepts.",
+                  "tag": "Free resources",
+                  "url": "https://www.rgs.org/",
+                  "login": false
+                },
+                {
+                  "title": "World Atlas",
+                  "desc": "Free reference maps and country/region profiles, great for browsing while learning.",
+                  "tag": "Free reference",
+                  "url": "https://www.worldatlas.com/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Interactive Map Learning",
+              "resources": [
+                {
+                  "title": "Seterra",
+                  "desc": "Free, fun map-quiz game covering countries, capitals, flags, rivers and mountains.",
+                  "tag": "Free game",
+                  "url": "https://online.seterra.net/en",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Practice makes perfect",
+              "resources": [
+                {
+                  "title": "CIA World Factbook",
+                  "desc": "The definitive free reference for every country's geography and physical data.",
+                  "tag": "Free reference",
+                  "url": "https://www.cia.gov/the-world-factbook/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "countries": {
           "label": "Countries around the world",
-          "practice": {"title": "Seterra — Countries & Capitals", "url": "https://online.seterra.net/en", "login": false, "desc": "Free customizable quizzes for memorizing every country and capital."},
+          "practice": {
+            "title": "Seterra — Countries & Capitals",
+            "url": "https://online.seterra.net/en",
+            "login": false,
+            "desc": "Free customizable quizzes for memorizing every country and capital."
+          },
           "concepts": [
-            {"title": "Country Reference", "resources": [
-              {"title": "CIA World Factbook", "desc": "Free, detailed profile of every country — government, economy, geography and demographics.", "tag": "Free reference", "url": "https://www.cia.gov/the-world-factbook/", "login": false},
-              {"title": "Nations Online Project", "desc": "Free encyclopedia-style overview of every country, region, and territory in the world.", "tag": "Free reference", "url": "https://www.nationsonline.org/", "login": false}
-            ]},
-            {"title": "Learn by Quiz", "resources": [
-              {"title": "Seterra — Countries & Capitals", "desc": "Free customizable quizzes for memorizing every country and capital, region by region.", "tag": "Free game", "url": "https://online.seterra.net/en", "login": false}
-            ]},
-            {"title": "Explore Visually", "resources": [
-              {"title": "GeoGuessr (free tier)", "desc": "Drops you into real Street View locations worldwide to learn to recognize countries by sight.", "tag": "Free tier", "url": "https://www.geoguessr.com/", "login": true}
-            ]}
+            {
+              "title": "Country Reference",
+              "resources": [
+                {
+                  "title": "CIA World Factbook",
+                  "desc": "Free, detailed profile of every country — government, economy, geography and demographics.",
+                  "tag": "Free reference",
+                  "url": "https://www.cia.gov/the-world-factbook/",
+                  "login": false
+                },
+                {
+                  "title": "Nations Online Project",
+                  "desc": "Free encyclopedia-style overview of every country, region, and territory in the world.",
+                  "tag": "Free reference",
+                  "url": "https://www.nationsonline.org/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Learn by Quiz",
+              "resources": [
+                {
+                  "title": "Seterra — Countries & Capitals",
+                  "desc": "Free customizable quizzes for memorizing every country and capital, region by region.",
+                  "tag": "Free game",
+                  "url": "https://online.seterra.net/en",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Explore Visually",
+              "resources": [
+                {
+                  "title": "GeoGuessr (free tier)",
+                  "desc": "Drops you into real Street View locations worldwide to learn to recognize countries by sight.",
+                  "tag": "Free tier",
+                  "url": "https://www.geoguessr.com/",
+                  "login": true
+                }
+              ]
+            }
           ]
         },
         "israeli-history": {
           "label": "Israeli history",
-          "practice": {"title": "FunTrivia — Israel History Quizzes", "url": "https://www.funtrivia.com/quizzes/history/asian/israel.html", "login": false, "desc": "Free multiple-choice trivia quizzes covering Israeli history from ancient times to today."},
+          "practice": {
+            "title": "FunTrivia — Israel History Quizzes",
+            "url": "https://www.funtrivia.com/quizzes/history/asian/israel.html",
+            "login": false,
+            "desc": "Free multiple-choice trivia quizzes covering Israeli history from ancient times to today."
+          },
           "concepts": [
-            {"title": "Free University Courses", "resources": [
-              {"title": "Tel Aviv University — History of Modern Israel (Coursera)", "desc": "Two-part free-to-audit course covering Israel from 19th-century Zionism through today.", "tag": "Free to audit", "url": "https://www.coursera.org/learn/history-israel", "login": true},
-              {"title": "NYU — Ancient Israel (Open Culture)", "desc": "Free 25-lecture course building ancient Israelite history from primary evidence.", "tag": "Free course", "url": "https://www.openculture.com/ancient-israel-a-free-online-course-from-nyu", "login": false}
-            ]},
-            {"title": "Reference & Context", "resources": [
-              {"title": "Wonder Israel — Free Israel Course Directory", "desc": "Curated list of free Coursera/edX courses on Israeli history, archaeology and society.", "tag": "Free resource hub", "url": "https://wonderisrael.com/free-courses-on-israel/", "login": false},
-              {"title": "Jewish Virtual Library — Israel History", "desc": "Free, detailed reference articles spanning ancient to modern Israeli history.", "tag": "Free reference", "url": "https://jewishvirtuallibrary.org/", "login": false}
-            ]}
+            {
+              "title": "Free University Courses",
+              "resources": [
+                {
+                  "title": "Tel Aviv University — History of Modern Israel (Coursera)",
+                  "desc": "Two-part free-to-audit course covering Israel from 19th-century Zionism through today.",
+                  "tag": "Free to audit",
+                  "url": "https://www.coursera.org/learn/history-israel",
+                  "login": true
+                },
+                {
+                  "title": "NYU — Ancient Israel (Open Culture)",
+                  "desc": "Free 25-lecture course building ancient Israelite history from primary evidence.",
+                  "tag": "Free course",
+                  "url": "https://www.openculture.com/ancient-israel-a-free-online-course-from-nyu",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Reference & Context",
+              "resources": [
+                {
+                  "title": "Wonder Israel — Free Israel Course Directory",
+                  "desc": "Curated list of free Coursera/edX courses on Israeli history, archaeology and society.",
+                  "tag": "Free resource hub",
+                  "url": "https://wonderisrael.com/free-courses-on-israel/",
+                  "login": false
+                },
+                {
+                  "title": "Jewish Virtual Library — Israel History",
+                  "desc": "Free, detailed reference articles spanning ancient to modern Israeli history.",
+                  "tag": "Free reference",
+                  "url": "https://jewishvirtuallibrary.org/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "israeli-wars": {
           "label": "Israeli wars & military history",
-          "practice": {"title": "FunTrivia — Arab-Israeli Wars Quizzes", "url": "https://www.funtrivia.com/quizzes/history/war_history/arab-israeli_wars.html", "login": false, "desc": "Free trivia quizzes on the 1948, 1956, 1967 and 1973 wars specifically."},
+          "practice": {
+            "title": "FunTrivia — Arab-Israeli Wars Quizzes",
+            "url": "https://www.funtrivia.com/quizzes/history/war_history/arab-israeli_wars.html",
+            "login": false,
+            "desc": "Free trivia quizzes on the 1948, 1956, 1967 and 1973 wars specifically."
+          },
           "concepts": [
-            {"title": "Overview & Timeline", "resources": [
-              {"title": "Britannica — Arab-Israeli Wars", "desc": "Free, reliable overview of each major conflict from 1948 to today.", "tag": "Free reference", "url": "https://www.britannica.com/event/Arab-Israeli-wars", "login": false}
-            ]},
-            {"title": "Deep Reference, War by War", "resources": [
-              {"title": "Jewish Virtual Library — Israel's Wars & Operations", "desc": "Free, detailed articles on each individual war and operation, organized chronologically.", "tag": "Free reference", "url": "https://jewishvirtuallibrary.org/israel-s-wars-and-operations", "login": false}
-            ]}
+            {
+              "title": "Overview & Timeline",
+              "resources": [
+                {
+                  "title": "Britannica — Arab-Israeli Wars",
+                  "desc": "Free, reliable overview of each major conflict from 1948 to today.",
+                  "tag": "Free reference",
+                  "url": "https://www.britannica.com/event/Arab-Israeli-wars",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Deep Reference, War by War",
+              "resources": [
+                {
+                  "title": "Jewish Virtual Library — Israel's Wars & Operations",
+                  "desc": "Free, detailed articles on each individual war and operation, organized chronologically.",
+                  "tag": "Free reference",
+                  "url": "https://jewishvirtuallibrary.org/israel-s-wars-and-operations",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "torah-history": {
           "label": "Torah & Jewish history",
-          "practice": {"title": "Sefaria's Weekly Torah Portion Guide", "url": "https://www.sefaria.org/sheets/503077", "login": false, "desc": "A structured way to read the Torah consistently, one weekly portion at a time."},
+          "practice": {
+            "title": "Sefaria's Weekly Torah Portion Guide",
+            "url": "https://www.sefaria.org/sheets/503077",
+            "login": false,
+            "desc": "A structured way to read the Torah consistently, one weekly portion at a time."
+          },
           "concepts": [
-            {"title": "Primary Texts, Free", "resources": [
-              {"title": "Sefaria", "desc": "The largest free library of Jewish texts — Torah, Talmud, Mishnah and commentaries in Hebrew and English.", "tag": "Free library", "url": "https://www.sefaria.org/", "login": false},
-              {"title": "Aleph Beta", "desc": "Polished free video lessons offering close readings of Torah text and Jewish history.", "tag": "Free videos", "url": "https://www.alephbeta.org/", "login": false}
-            ]},
-            {"title": "Explanatory Learning", "resources": [
-              {"title": "My Jewish Learning", "desc": "Free, well-structured explanatory articles on Torah portions and Jewish history topics.", "tag": "Free site", "url": "https://www.myjewishlearning.com/", "login": false}
-            ]}
+            {
+              "title": "Primary Texts, Free",
+              "resources": [
+                {
+                  "title": "Sefaria",
+                  "desc": "The largest free library of Jewish texts — Torah, Talmud, Mishnah and commentaries in Hebrew and English.",
+                  "tag": "Free library",
+                  "url": "https://www.sefaria.org/",
+                  "login": false
+                },
+                {
+                  "title": "Aleph Beta",
+                  "desc": "Polished free video lessons offering close readings of Torah text and Jewish history.",
+                  "tag": "Free videos",
+                  "url": "https://www.alephbeta.org/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Explanatory Learning",
+              "resources": [
+                {
+                  "title": "My Jewish Learning",
+                  "desc": "Free, well-structured explanatory articles on Torah portions and Jewish history topics.",
+                  "tag": "Free site",
+                  "url": "https://www.myjewishlearning.com/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "mythology": {
           "label": "Mythology",
-          "practice": {"title": "Mythology School Quizzes", "url": "https://www.mythologyschool.com/", "login": false, "desc": "Built-in quizzes across Greek, Norse, Egyptian and other mythologies."},
+          "practice": {
+            "title": "Mythology School Quizzes",
+            "url": "https://www.mythologyschool.com/",
+            "login": false,
+            "desc": "Built-in quizzes across Greek, Norse, Egyptian and other mythologies."
+          },
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "Mythology School", "desc": "Free, research-based articles, timelines and quizzes across world mythologies.", "tag": "Free site", "url": "https://www.mythologyschool.com/", "login": false},
-              {"title": "Crash Course World Mythology (YouTube)", "desc": "A free, structured video series covering mythology traditions from around the globe.", "tag": "YouTube", "url": "https://www.youtube.com/@crashcourse", "login": false}
-            ]},
-            {"title": "University-Level Free", "resources": [
-              {"title": "MIT OpenCourseWare — Symbolism & Mythology", "desc": "Free university course on how myth and symbol are structured and woven into culture.", "tag": "Free course", "url": "https://ocw.mit.edu/", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Mythology School",
+                  "desc": "Free, research-based articles, timelines and quizzes across world mythologies.",
+                  "tag": "Free site",
+                  "url": "https://www.mythologyschool.com/",
+                  "login": false
+                },
+                {
+                  "title": "Crash Course World Mythology (YouTube)",
+                  "desc": "A free, structured video series covering mythology traditions from around the globe.",
+                  "tag": "YouTube",
+                  "url": "https://www.youtube.com/@crashcourse",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "University-Level Free",
+              "resources": [
+                {
+                  "title": "MIT OpenCourseWare — Symbolism & Mythology",
+                  "desc": "Free university course on how myth and symbol are structured and woven into culture.",
+                  "tag": "Free course",
+                  "url": "https://ocw.mit.edu/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "kabbalah": {
           "label": "Kabbalah / mysticism",
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "Chabad.org — Beginning Kabbalah", "desc": "Free, structured introduction to Kabbalistic concepts for newcomers.", "tag": "Free site", "url": "https://www.chabad.org/kabbalah/article_cdo/aid/380738/jewish/Beginners.htm", "login": false},
-              {"title": "My Jewish Learning — Kabbalah", "desc": "Free explanatory articles on Kabbalah's core ideas and history.", "tag": "Free site", "url": "https://www.myjewishlearning.com/", "login": false}
-            ]},
-            {"title": "Primary Texts", "resources": [
-              {"title": "Sefaria — The Zohar", "desc": "The core text of Kabbalah, free to read with English translation.", "tag": "Free library", "url": "https://www.sefaria.org/texts", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Chabad.org — Beginning Kabbalah",
+                  "desc": "Free, structured introduction to Kabbalistic concepts for newcomers.",
+                  "tag": "Free site",
+                  "url": "https://www.chabad.org/kabbalah/article_cdo/aid/380738/jewish/Beginners.htm",
+                  "login": false
+                },
+                {
+                  "title": "My Jewish Learning — Kabbalah",
+                  "desc": "Free explanatory articles on Kabbalah's core ideas and history.",
+                  "tag": "Free site",
+                  "url": "https://www.myjewishlearning.com/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Primary Texts",
+              "resources": [
+                {
+                  "title": "Sefaria — The Zohar",
+                  "desc": "The core text of Kabbalah, free to read with English translation.",
+                  "tag": "Free library",
+                  "url": "https://www.sefaria.org/texts",
+                  "login": false
+                }
+              ]
+            }
+          ]
+        },
+        "world-religions": {
+          "label": "World religions",
+          "practice": {
+            "title": "Alison Course Assessments",
+            "url": "https://alison.com/course/comparative-study-of-religions",
+            "login": true,
+            "desc": "Built-in quizzes within Alison's free comparative religion course to test what you've learned."
+          },
+          "concepts": [
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Open Culture — Free Religion Courses",
+                  "desc": "A free hub linking to real university religion courses, including Harvard's Judaism and Islam MOOCs.",
+                  "tag": "Free course hub",
+                  "url": "https://www.openculture.com/religion-free-courses-online",
+                  "login": false
+                },
+                {
+                  "title": "Alison — Comparative Study of Religions",
+                  "desc": "A free course exploring the ideas, history and practice of major world religions.",
+                  "tag": "Free",
+                  "url": "https://alison.com/course/comparative-study-of-religions",
+                  "login": true
+                }
+              ]
+            }
+          ]
+        },
+        "archaeology": {
+          "label": "Archaeology",
+          "concepts": [
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "University of Reading — Archaeology: From Dig to Lab and Beyond (FutureLearn)",
+                  "desc": "A free course following a real excavation near Stonehenge from dig to lab analysis.",
+                  "tag": "Freemium",
+                  "url": "https://www.futurelearn.com/courses/archaeology",
+                  "login": true
+                },
+                {
+                  "title": "Alison — Introduction to Archaeology",
+                  "desc": "A free, beginner-friendly overview of archaeological methods, dating techniques and interpretation.",
+                  "tag": "Free",
+                  "url": "https://alison.com/course/introduction-to-archaeology",
+                  "login": true
+                }
+              ]
+            }
           ]
         }
       }
     },
     "science": {
-      "label": "Science", "emoji": "🔬",
+      "label": "Science",
+      "emoji": "🔬",
       "subtopics": {
         "physics": {
           "label": "Physics",
-          "practice": {"title": "Khan Academy Practice Problems", "url": "https://www.khanacademy.org/science/physics", "login": true, "desc": "Built-in practice sets after every physics topic, with instant feedback."},
+          "practice": {
+            "title": "Khan Academy Practice Problems",
+            "url": "https://www.khanacademy.org/science/physics",
+            "login": true,
+            "desc": "Built-in practice sets after every physics topic, with instant feedback."
+          },
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "Khan Academy — Physics", "desc": "Complete free physics curriculum from mechanics to modern physics.", "tag": "Free course", "url": "https://www.khanacademy.org/science/physics", "login": false},
-              {"title": "MIT OpenCourseWare — Physics", "desc": "Full MIT physics course materials, lecture videos and problem sets.", "tag": "Free course", "url": "https://ocw.mit.edu/", "login": false},
-              {"title": "The Physics Classroom", "desc": "A free, beginner-focused site built specifically to teach physics fundamentals.", "tag": "Free site", "url": "https://www.physicsclassroom.com/", "login": false}
-            ]},
-            {"title": "Learning by Video", "resources": [
-              {"title": "Veritasium (YouTube)", "desc": "Real-experiment explainers of tricky physics and engineering ideas.", "tag": "YouTube", "url": "https://www.youtube.com/@veritasium", "login": false},
-              {"title": "MinutePhysics (YouTube)", "desc": "Fast, hand-drawn explainers that build intuition before the equations.", "tag": "YouTube", "url": "https://www.youtube.com/@minutephysics", "login": false},
-              {"title": "PBS Space Time (YouTube)", "desc": "Astrophysicist-hosted deep dives into relativity, cosmology and quantum ideas.", "tag": "YouTube", "url": "https://www.youtube.com/@pbsspacetime", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Khan Academy — Physics",
+                  "desc": "Complete free physics curriculum from mechanics to modern physics.",
+                  "tag": "Free course",
+                  "url": "https://www.khanacademy.org/science/physics",
+                  "login": false
+                },
+                {
+                  "title": "MIT OpenCourseWare — Physics",
+                  "desc": "Full MIT physics course materials, lecture videos and problem sets.",
+                  "tag": "Free course",
+                  "url": "https://ocw.mit.edu/",
+                  "login": false
+                },
+                {
+                  "title": "The Physics Classroom",
+                  "desc": "A free, beginner-focused site built specifically to teach physics fundamentals.",
+                  "tag": "Free site",
+                  "url": "https://www.physicsclassroom.com/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Learning by Video",
+              "resources": [
+                {
+                  "title": "Veritasium (YouTube)",
+                  "desc": "Real-experiment explainers of tricky physics and engineering ideas.",
+                  "tag": "YouTube",
+                  "url": "https://www.youtube.com/@veritasium",
+                  "login": false
+                },
+                {
+                  "title": "MinutePhysics (YouTube)",
+                  "desc": "Fast, hand-drawn explainers that build intuition before the equations.",
+                  "tag": "YouTube",
+                  "url": "https://www.youtube.com/@minutephysics",
+                  "login": false
+                },
+                {
+                  "title": "PBS Space Time (YouTube)",
+                  "desc": "Astrophysicist-hosted deep dives into relativity, cosmology and quantum ideas.",
+                  "tag": "YouTube",
+                  "url": "https://www.youtube.com/@pbsspacetime",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "neuroscience": {
           "label": "Neuroscience",
-          "practice": {"title": "Duke Coursera Course Quizzes", "url": "https://www.coursera.org/learn/medical-neuroscience", "login": true, "desc": "Built-in quizzes after each module of the free neuroscience course."},
+          "practice": {
+            "title": "Duke Coursera Course Quizzes",
+            "url": "https://www.coursera.org/learn/medical-neuroscience",
+            "login": true,
+            "desc": "Built-in quizzes after each module of the free neuroscience course."
+          },
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "Duke — Medical Neuroscience (Coursera)", "desc": "Widely regarded as the most complete free neuroscience course online.", "tag": "Free course", "url": "https://www.coursera.org/learn/medical-neuroscience", "login": true},
-              {"title": "Harvard — Fundamentals of Neuroscience (edX)", "desc": "Free, animated series on the electrical and biological basics of the brain.", "tag": "Free course", "url": "https://www.edx.org/learn/neuroscience/harvard-university-fundamentals-of-neuroscience-part-1-the-electrical-properties-of-the-neuron", "login": true}
-            ]},
-            {"title": "Learning by Video", "resources": [
-              {"title": "2-Minute Neuroscience (YouTube)", "desc": "Short, clear videos on individual brain structures and mechanisms.", "tag": "YouTube", "url": "https://www.youtube.com/@Neuroscientifically", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Duke — Medical Neuroscience (Coursera)",
+                  "desc": "Widely regarded as the most complete free neuroscience course online.",
+                  "tag": "Free course",
+                  "url": "https://www.coursera.org/learn/medical-neuroscience",
+                  "login": true
+                },
+                {
+                  "title": "Harvard — Fundamentals of Neuroscience (edX)",
+                  "desc": "Free, animated series on the electrical and biological basics of the brain.",
+                  "tag": "Free course",
+                  "url": "https://www.edx.org/learn/neuroscience/harvard-university-fundamentals-of-neuroscience-part-1-the-electrical-properties-of-the-neuron",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Learning by Video",
+              "resources": [
+                {
+                  "title": "2-Minute Neuroscience (YouTube)",
+                  "desc": "Short, clear videos on individual brain structures and mechanisms.",
+                  "tag": "YouTube",
+                  "url": "https://www.youtube.com/@Neuroscientifically",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "human-biology": {
           "label": "Human biology",
-          "practice": {"title": "OpenStax End-of-Chapter Reviews", "url": "https://openstax.org/details/books/anatomy-and-physiology-2e", "login": false, "desc": "Free review questions after every chapter of the anatomy & physiology textbook."},
+          "practice": {
+            "title": "OpenStax End-of-Chapter Reviews",
+            "url": "https://openstax.org/details/books/anatomy-and-physiology-2e",
+            "login": false,
+            "desc": "Free review questions after every chapter of the anatomy & physiology textbook."
+          },
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "OpenStax — Anatomy & Physiology", "desc": "A complete, free, university-level textbook covering every body system.", "tag": "Free textbook", "url": "https://openstax.org/details/books/anatomy-and-physiology-2e", "login": false},
-              {"title": "GetBodySmart", "desc": "Free interactive diagrams and quizzes for visualizing body systems.", "tag": "Free interactive", "url": "https://www.getbodysmart.com/", "login": false}
-            ]},
-            {"title": "Visual & Interactive Learning", "resources": [
-              {"title": "Zygote Body", "desc": "Free interactive 3D atlas of the human body, rotate and explore layer by layer.", "tag": "Free 3D tool", "url": "https://www.zygotebody.com/", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "OpenStax — Anatomy & Physiology",
+                  "desc": "A complete, free, university-level textbook covering every body system.",
+                  "tag": "Free textbook",
+                  "url": "https://openstax.org/details/books/anatomy-and-physiology-2e",
+                  "login": false
+                },
+                {
+                  "title": "GetBodySmart",
+                  "desc": "Free interactive diagrams and quizzes for visualizing body systems.",
+                  "tag": "Free interactive",
+                  "url": "https://www.getbodysmart.com/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Visual & Interactive Learning",
+              "resources": [
+                {
+                  "title": "Zygote Body",
+                  "desc": "Free interactive 3D atlas of the human body, rotate and explore layer by layer.",
+                  "tag": "Free 3D tool",
+                  "url": "https://www.zygotebody.com/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "nutrition": {
           "label": "Nutrition",
-          "practice": {"title": "Free Interactive Nutrition Quiz", "url": "https://www.foodandhealth.com/free-nutrition-quiz-interactive", "login": false, "desc": "A free 9-question quiz on MyPlate, sugar, sodium and healthy fats — no sign-up needed."},
+          "practice": {
+            "title": "Free Interactive Nutrition Quiz",
+            "url": "https://www.foodandhealth.com/free-nutrition-quiz-interactive",
+            "login": false,
+            "desc": "A free 9-question quiz on MyPlate, sugar, sodium and healthy fats — no sign-up needed."
+          },
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "Stanford — Nutrition Science (Coursera)", "desc": "Explores the scientific foundations of nutrition and metabolism. Free to audit.", "tag": "Free to audit", "url": "https://www.coursera.org/", "login": true},
-              {"title": "Harvard T.H. Chan — Nutrition Source", "desc": "Free, evidence-based reference site cutting through diet fads.", "tag": "Free reference", "url": "https://www.hsph.harvard.edu/nutritionsource/", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Stanford — Nutrition Science (Coursera)",
+                  "desc": "Explores the scientific foundations of nutrition and metabolism. Free to audit.",
+                  "tag": "Free to audit",
+                  "url": "https://www.coursera.org/",
+                  "login": true
+                },
+                {
+                  "title": "Harvard T.H. Chan — Nutrition Source",
+                  "desc": "Free, evidence-based reference site cutting through diet fads.",
+                  "tag": "Free reference",
+                  "url": "https://www.hsph.harvard.edu/nutritionsource/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "gut-health": {
           "label": "Gut health",
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "Open University — The Gut Microbiome (OpenLearn)", "desc": "Free course on the gut microbiome and what disrupts it, no signup to start.", "tag": "Free course", "url": "https://www.open.edu/openlearn/science-maths-technology/the-gut-microbiome-balancing-the-body/content-section-0", "login": false},
-              {"title": "Stanford — Gut Health and the Microbiome", "desc": "Two-week micro-course from leading microbiome researchers.", "tag": "Course", "url": "https://online.stanford.edu/courses/xche0029-gut-health-and-microbiome", "login": true}
-            ]},
-            {"title": "Staying Evidence-Based", "resources": [
-              {"title": "NPR — What the evidence really shows about gut health", "desc": "A grounded, myth-busting explainer separating real science from wellness marketing.", "tag": "Free article", "url": "https://www.npr.org/2026/06/22/nx-s1-5863119/gut-microbiome-gut-health", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Open University — The Gut Microbiome (OpenLearn)",
+                  "desc": "Free course on the gut microbiome and what disrupts it, no signup to start.",
+                  "tag": "Free course",
+                  "url": "https://www.open.edu/openlearn/science-maths-technology/the-gut-microbiome-balancing-the-body/content-section-0",
+                  "login": false
+                },
+                {
+                  "title": "Stanford — Gut Health and the Microbiome",
+                  "desc": "Two-week micro-course from leading microbiome researchers.",
+                  "tag": "Course",
+                  "url": "https://online.stanford.edu/courses/xche0029-gut-health-and-microbiome",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Staying Evidence-Based",
+              "resources": [
+                {
+                  "title": "NPR — What the evidence really shows about gut health",
+                  "desc": "A grounded, myth-busting explainer separating real science from wellness marketing.",
+                  "tag": "Free article",
+                  "url": "https://www.npr.org/2026/06/22/nx-s1-5863119/gut-microbiome-gut-health",
+                  "login": false
+                }
+              ]
+            }
+          ]
+        },
+        "astronomy": {
+          "label": "Astronomy",
+          "practice": {
+            "title": "Stellarium",
+            "url": "https://stellarium.org/",
+            "login": false,
+            "desc": "Free, no-login planetarium software that turns your screen into a real-time map of the night sky."
+          },
+          "concepts": [
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "NASA",
+                  "desc": "Free, authoritative reference and imagery covering every area of astronomy and space exploration.",
+                  "tag": "Free reference",
+                  "url": "https://www.nasa.gov/",
+                  "login": false
+                },
+                {
+                  "title": "University of Edinburgh — Astrobiology (Coursera)",
+                  "desc": "A well-regarded free-to-audit course on the search for life beyond Earth.",
+                  "tag": "Free to audit",
+                  "url": "https://www.coursera.org/",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Interactive Sky Watching",
+              "resources": [
+                {
+                  "title": "Stellarium",
+                  "desc": "Free, realistic planetarium software for desktop and mobile, no login required.",
+                  "tag": "Free",
+                  "url": "https://stellarium.org/",
+                  "login": false
+                }
+              ]
+            }
+          ]
+        },
+        "genetics": {
+          "label": "Genetics",
+          "practice": {
+            "title": "Khan Academy Genetics Exercises",
+            "url": "https://www.khanacademy.org/science/biology/classical-genetics",
+            "login": true,
+            "desc": "Built-in practice problems on inheritance, DNA and genetic variation."
+          },
+          "concepts": [
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Khan Academy — Genetics",
+                  "desc": "Free video lectures, practice questions and interactive exercises covering genetics fundamentals.",
+                  "tag": "Free course",
+                  "url": "https://www.khanacademy.org/science/biology/classical-genetics",
+                  "login": false
+                },
+                {
+                  "title": "Learn.Genetics (University of Utah)",
+                  "desc": "Free interactive tools and multimedia resources on DNA, genes and genomics from a respected university center.",
+                  "tag": "Free interactive",
+                  "url": "https://learn.genetics.utah.edu/",
+                  "login": false
+                }
+              ]
+            }
           ]
         }
       }
     },
     "tech": {
-      "label": "Tech", "emoji": "💻",
+      "label": "Tech",
+      "emoji": "💻",
       "subtopics": {
         "technology": {
           "label": "Technology",
           "concepts": [
-            {"title": "Staying Current, Not Overwhelmed", "resources": [
-              {"title": "TLDR Newsletter", "desc": "Byte-sized daily summaries of the most important tech and AI news.", "tag": "Free newsletter", "url": "https://tldr.tech/", "login": true},
-              {"title": "The Verge", "desc": "Broad, readable tech news covering gadgets, AI, and industry shifts.", "tag": "Free site", "url": "https://www.theverge.com/", "login": false},
-              {"title": "Hacker News", "desc": "Free, community-curated feed of the tech industry's most discussed stories.", "tag": "Free site", "url": "https://news.ycombinator.com/", "login": false}
-            ]}
+            {
+              "title": "Staying Current, Not Overwhelmed",
+              "resources": [
+                {
+                  "title": "TLDR Newsletter",
+                  "desc": "Byte-sized daily summaries of the most important tech and AI news.",
+                  "tag": "Free newsletter",
+                  "url": "https://tldr.tech/",
+                  "login": true
+                },
+                {
+                  "title": "The Verge",
+                  "desc": "Broad, readable tech news covering gadgets, AI, and industry shifts.",
+                  "tag": "Free site",
+                  "url": "https://www.theverge.com/",
+                  "login": false
+                },
+                {
+                  "title": "Hacker News",
+                  "desc": "Free, community-curated feed of the tech industry's most discussed stories.",
+                  "tag": "Free site",
+                  "url": "https://news.ycombinator.com/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "cloud": {
           "label": "Cloud computing",
-          "practice": {"title": "Microsoft Learn Sandboxes", "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/", "login": true, "desc": "Free interactive, in-browser sandbox exercises built into the Azure Fundamentals path."},
+          "practice": {
+            "title": "Microsoft Learn Sandboxes",
+            "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/",
+            "login": true,
+            "desc": "Free interactive, in-browser sandbox exercises built into the Azure Fundamentals path."
+          },
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "Microsoft Learn — Azure Fundamentals (AZ-900)", "desc": "Free, structured, official Microsoft training path.", "tag": "Free course", "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/", "login": true},
-              {"title": "AWS Skill Builder", "desc": "Amazon's own free training portal covering core AWS services.", "tag": "Free course", "url": "https://skillbuilder.aws/", "login": true},
-              {"title": "Google Cloud Skills Boost — Fundamentals", "desc": "Google's official free path covering compute, containers, and storage.", "tag": "Free course", "url": "https://www.cloudskillsboost.google/", "login": true}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Microsoft Learn — Azure Fundamentals (AZ-900)",
+                  "desc": "Free, structured, official Microsoft training path.",
+                  "tag": "Free course",
+                  "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/",
+                  "login": true
+                },
+                {
+                  "title": "AWS Skill Builder",
+                  "desc": "Amazon's own free training portal covering core AWS services.",
+                  "tag": "Free course",
+                  "url": "https://skillbuilder.aws/",
+                  "login": true
+                },
+                {
+                  "title": "Google Cloud Skills Boost — Fundamentals",
+                  "desc": "Google's official free path covering compute, containers, and storage.",
+                  "tag": "Free course",
+                  "url": "https://www.cloudskillsboost.google/",
+                  "login": true
+                }
+              ]
+            }
           ]
         },
         "docker": {
           "label": "Docker",
-          "practice": {"title": "Play with Docker", "url": "https://labs.play-with-docker.com/", "login": true, "desc": "A free, browser-based Docker playground — no local install needed."},
+          "practice": {
+            "title": "Play with Docker",
+            "url": "https://labs.play-with-docker.com/",
+            "login": true,
+            "desc": "A free, browser-based Docker playground — no local install needed."
+          },
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "Docker Official Get Started Guide", "desc": "Official, always up-to-date walkthrough for building your first images and containers.", "tag": "Free docs", "url": "https://docs.docker.com/get-started/", "login": false},
-              {"title": "TechWorld with Nana (YouTube)", "desc": "Clear, practical Docker tutorials from zero to production use.", "tag": "YouTube", "url": "https://www.youtube.com/@TechWorldwithNana", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Docker Official Get Started Guide",
+                  "desc": "Official, always up-to-date walkthrough for building your first images and containers.",
+                  "tag": "Free docs",
+                  "url": "https://docs.docker.com/get-started/",
+                  "login": false
+                },
+                {
+                  "title": "TechWorld with Nana (YouTube)",
+                  "desc": "Clear, practical Docker tutorials from zero to production use.",
+                  "tag": "YouTube",
+                  "url": "https://www.youtube.com/@TechWorldwithNana",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "kubernetes": {
           "label": "Kubernetes",
-          "practice": {"title": "Play with Kubernetes", "url": "https://labs.play-with-k8s.com/", "login": true, "desc": "A free, disposable, browser-based cluster playground."},
+          "practice": {
+            "title": "Play with Kubernetes",
+            "url": "https://labs.play-with-k8s.com/",
+            "login": true,
+            "desc": "A free, disposable, browser-based cluster playground."
+          },
           "concepts": [
-            {"title": "Free Foundations (do Docker first)", "resources": [
-              {"title": "Kubernetes Basics — Official Tutorials", "desc": "Interactive, in-browser tutorials from the Kubernetes project maintainers.", "tag": "Free official docs", "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/", "login": false},
-              {"title": "TechWorld with Nana — Kubernetes", "desc": "The same trusted channel's Kubernetes series.", "tag": "YouTube", "url": "https://www.youtube.com/@TechWorldwithNana", "login": false},
-              {"title": "CNCF Kubernetes Resource List", "desc": "A curated, maintained list of the best free Kubernetes learning material.", "tag": "Free resource hub", "url": "https://www.cncf.io/blog/2026/01/19/top-28-kubernetes-resources-for-2026-learn-and-stay-up-to-date/", "login": false}
-            ]}
+            {
+              "title": "Free Foundations (do Docker first)",
+              "resources": [
+                {
+                  "title": "Kubernetes Basics — Official Tutorials",
+                  "desc": "Interactive, in-browser tutorials from the Kubernetes project maintainers.",
+                  "tag": "Free official docs",
+                  "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+                  "login": false
+                },
+                {
+                  "title": "TechWorld with Nana — Kubernetes",
+                  "desc": "The same trusted channel's Kubernetes series.",
+                  "tag": "YouTube",
+                  "url": "https://www.youtube.com/@TechWorldwithNana",
+                  "login": false
+                },
+                {
+                  "title": "CNCF Kubernetes Resource List",
+                  "desc": "A curated, maintained list of the best free Kubernetes learning material.",
+                  "tag": "Free resource hub",
+                  "url": "https://www.cncf.io/blog/2026/01/19/top-28-kubernetes-resources-for-2026-learn-and-stay-up-to-date/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "devops": {
           "label": "SRE / DevOps",
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "Google's Site Reliability Engineering book", "desc": "Google's own SRE book, free to read online.", "tag": "Free book", "url": "https://sre.google/books/", "login": false},
-              {"title": "DevOps Roadmap (GitHub)", "desc": "Free, community-maintained roadmap linking to the best resource for every DevOps skill area.", "tag": "Free roadmap", "url": "https://github.com/milanm/DevOps-Roadmap", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Google's Site Reliability Engineering book",
+                  "desc": "Google's own SRE book, free to read online.",
+                  "tag": "Free book",
+                  "url": "https://sre.google/books/",
+                  "login": false
+                },
+                {
+                  "title": "DevOps Roadmap (GitHub)",
+                  "desc": "Free, community-maintained roadmap linking to the best resource for every DevOps skill area.",
+                  "tag": "Free roadmap",
+                  "url": "https://github.com/milanm/DevOps-Roadmap",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "cicd": {
           "label": "CI/CD",
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "GitHub Actions documentation", "desc": "Free, official docs covering CI/CD pipelines using GitHub's built-in tooling.", "tag": "Free docs", "url": "https://docs.github.com/en/actions", "login": false},
-              {"title": "TechWorld with Nana — CI/CD", "desc": "Practical CI/CD pipeline walkthroughs.", "tag": "YouTube", "url": "https://www.youtube.com/@TechWorldwithNana", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "GitHub Actions documentation",
+                  "desc": "Free, official docs covering CI/CD pipelines using GitHub's built-in tooling.",
+                  "tag": "Free docs",
+                  "url": "https://docs.github.com/en/actions",
+                  "login": false
+                },
+                {
+                  "title": "TechWorld with Nana — CI/CD",
+                  "desc": "Practical CI/CD pipeline walkthroughs.",
+                  "tag": "YouTube",
+                  "url": "https://www.youtube.com/@TechWorldwithNana",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "infra": {
           "label": "Infrastructure / Linux / networking",
-          "practice": {"title": "OverTheWire: Bandit", "url": "https://overthewire.org/wargames/bandit/", "login": false, "desc": "A free, gamified wargame that teaches Linux command-line skills through hands-on challenges."},
+          "practice": {
+            "title": "OverTheWire: Bandit",
+            "url": "https://overthewire.org/wargames/bandit/",
+            "login": false,
+            "desc": "A free, gamified wargame that teaches Linux command-line skills through hands-on challenges."
+          },
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "Linux Journey", "desc": "Free, interactive, browser-based path from basic commands through networking.", "tag": "Free interactive", "url": "https://www.linuxjourney.com/", "login": false},
-              {"title": "The Linux Command Line (book)", "desc": "A free, classic, thorough PDF book covering the terminal.", "tag": "Free book", "url": "https://linuxcommand.org/tlcl.php", "login": false}
-            ]},
-            {"title": "Networking Specifics", "resources": [
-              {"title": "freeCodeCamp — Linux Networking Commands", "desc": "A free, practical article on core networking commands you'll actually use.", "tag": "Free article", "url": "https://www.freecodecamp.org/news/linux-networking-commands-for-beginners/", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Linux Journey",
+                  "desc": "Free, interactive, browser-based path from basic commands through networking.",
+                  "tag": "Free interactive",
+                  "url": "https://www.linuxjourney.com/",
+                  "login": false
+                },
+                {
+                  "title": "The Linux Command Line (book)",
+                  "desc": "A free, classic, thorough PDF book covering the terminal.",
+                  "tag": "Free book",
+                  "url": "https://linuxcommand.org/tlcl.php",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Networking Specifics",
+              "resources": [
+                {
+                  "title": "freeCodeCamp — Linux Networking Commands",
+                  "desc": "A free, practical article on core networking commands you'll actually use.",
+                  "tag": "Free article",
+                  "url": "https://www.freecodecamp.org/news/linux-networking-commands-for-beginners/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "python": {
           "label": "Python / programming",
-          "practice": {"title": "Exercism.io", "url": "https://exercism.org/", "login": true, "desc": "Free, mentor-backed coding exercises in Python with instant feedback."},
+          "practice": {
+            "title": "Exercism.io",
+            "url": "https://exercism.org/",
+            "login": true,
+            "desc": "Free, mentor-backed coding exercises in Python with instant feedback."
+          },
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "Harvard CS50P (edX)", "desc": "University-quality, free introduction to Python programming from Harvard.", "tag": "Free course", "url": "https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python", "login": true},
-              {"title": "Automate the Boring Stuff with Python", "desc": "A free online book teaching Python via real automation tasks.", "tag": "Free book", "url": "https://automatetheboringstuff.com/", "login": false}
-            ]},
-            {"title": "Learning by Video", "resources": [
-              {"title": "freeCodeCamp (YouTube)", "desc": "Long-form, completely free Python courses from beginner to advanced.", "tag": "YouTube", "url": "https://www.youtube.com/@freecodecamp", "login": false}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Harvard CS50P (edX)",
+                  "desc": "University-quality, free introduction to Python programming from Harvard.",
+                  "tag": "Free course",
+                  "url": "https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python",
+                  "login": true
+                },
+                {
+                  "title": "Automate the Boring Stuff with Python",
+                  "desc": "A free online book teaching Python via real automation tasks.",
+                  "tag": "Free book",
+                  "url": "https://automatetheboringstuff.com/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Learning by Video",
+              "resources": [
+                {
+                  "title": "freeCodeCamp (YouTube)",
+                  "desc": "Long-form, completely free Python courses from beginner to advanced.",
+                  "tag": "YouTube",
+                  "url": "https://www.youtube.com/@freecodecamp",
+                  "login": false
+                }
+              ]
+            }
+          ]
+        },
+        "git": {
+          "label": "Git & version control",
+          "practice": {
+            "title": "Learn Git Branching",
+            "url": "https://learngitbranching.js.org/",
+            "login": false,
+            "desc": "A free, exceptionally good browser-based sandbox for learning Git branching and merging visually."
+          },
+          "concepts": [
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Learn Git Branching",
+                  "desc": "A free, visual, browser-based way to learn Git through paced examples and exercises — no install needed.",
+                  "tag": "Free interactive",
+                  "url": "https://learngitbranching.js.org/",
+                  "login": false
+                },
+                {
+                  "title": "Atlassian Git Tutorials",
+                  "desc": "Free, comprehensive written tutorials covering Git basics through advanced workflows.",
+                  "tag": "Free docs",
+                  "url": "https://www.atlassian.com/git/tutorials",
+                  "login": false
+                },
+                {
+                  "title": "GitHub Skills",
+                  "desc": "Free interactive courses built directly into GitHub with instant automated feedback.",
+                  "tag": "Free interactive",
+                  "url": "https://skills.github.com/",
+                  "login": true
+                }
+              ]
+            }
+          ]
+        },
+        "ai-ml": {
+          "label": "AI & machine learning",
+          "practice": {
+            "title": "Kaggle Learn",
+            "url": "https://www.kaggle.com/learn",
+            "login": true,
+            "desc": "Free, hands-on micro-courses where you train your first real model in a notebook within an hour."
+          },
+          "concepts": [
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Google's Machine Learning Crash Course",
+                  "desc": "Free, interactive course with real exercises, recently refreshed with generative AI and embeddings content.",
+                  "tag": "Free course",
+                  "url": "https://developers.google.com/machine-learning/crash-course",
+                  "login": false
+                },
+                {
+                  "title": "Harvard CS50AI (edX)",
+                  "desc": "A serious, free, university-level foundation in AI covering search, neural networks and NLP.",
+                  "tag": "Free course",
+                  "url": "https://www.edx.org/",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Practice makes perfect",
+              "resources": [
+                {
+                  "title": "Kaggle Learn",
+                  "desc": "Free, hands-on micro-courses — train your first model in a notebook, then move to intermediate ML.",
+                  "tag": "Free",
+                  "url": "https://www.kaggle.com/learn",
+                  "login": true
+                }
+              ]
+            }
           ]
         }
       }
     },
     "cyber": {
-      "label": "Cyber", "emoji": "🔐",
+      "label": "Cyber",
+      "emoji": "🔐",
       "subtopics": {
         "cybersecurity": {
           "label": "Cybersecurity",
-          "practice": {"title": "OverTheWire: Bandit + PortSwigger Academy", "url": "https://overthewire.org/wargames/bandit/", "login": false, "desc": "Free hands-on wargames and web-security labs to practice real skills."},
+          "practice": {
+            "title": "OverTheWire: Bandit + PortSwigger Academy",
+            "url": "https://overthewire.org/wargames/bandit/",
+            "login": false,
+            "desc": "Free hands-on wargames and web-security labs to practice real skills."
+          },
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "TryHackMe — Pre-Security & Beginner Path", "desc": "Free, structured, hands-on rooms teaching networking, web, and Linux fundamentals.", "tag": "Free hands-on", "url": "https://tryhackme.com/path/outline/beginner", "login": true},
-              {"title": "ISC2 Certified in Cybersecurity (CC)", "desc": "Free training course plus a free exam voucher from the field's certifying body.", "tag": "Free course + cert", "url": "https://www.isc2.org/landing/1mcc", "login": true},
-              {"title": "Cybrary", "desc": "Large free tier of introductory cybersecurity courses and skill paths.", "tag": "Free tier", "url": "https://www.cybrary.it/", "login": true}
-            ]},
-            {"title": "Practice makes perfect", "resources": [
-              {"title": "OverTheWire: Bandit", "desc": "A free, gamified wargame building command-line confidence.", "tag": "Free practice", "url": "https://overthewire.org/wargames/bandit/", "login": false},
-              {"title": "PortSwigger Web Security Academy", "desc": "Free, extremely well-regarded hands-on labs for web application security.", "tag": "Free labs", "url": "https://portswigger.net/web-security", "login": true}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "TryHackMe — Pre-Security & Beginner Path",
+                  "desc": "Free, structured, hands-on rooms teaching networking, web, and Linux fundamentals.",
+                  "tag": "Free hands-on",
+                  "url": "https://tryhackme.com/path/outline/beginner",
+                  "login": true
+                },
+                {
+                  "title": "ISC2 Certified in Cybersecurity (CC)",
+                  "desc": "Free training course plus a free exam voucher from the field's certifying body.",
+                  "tag": "Free course + cert",
+                  "url": "https://www.isc2.org/landing/1mcc",
+                  "login": true
+                },
+                {
+                  "title": "Cybrary",
+                  "desc": "Large free tier of introductory cybersecurity courses and skill paths.",
+                  "tag": "Free tier",
+                  "url": "https://www.cybrary.it/",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Practice makes perfect",
+              "resources": [
+                {
+                  "title": "OverTheWire: Bandit",
+                  "desc": "A free, gamified wargame building command-line confidence.",
+                  "tag": "Free practice",
+                  "url": "https://overthewire.org/wargames/bandit/",
+                  "login": false
+                },
+                {
+                  "title": "PortSwigger Web Security Academy",
+                  "desc": "Free, extremely well-regarded hands-on labs for web application security.",
+                  "tag": "Free labs",
+                  "url": "https://portswigger.net/web-security",
+                  "login": true
+                }
+              ]
+            }
           ]
         },
         "detection": {
           "label": "Detection engineering",
-          "practice": {"title": "LetsDefend", "url": "https://letsdefend.io/", "login": true, "desc": "Free-tier SOC-analyst simulation — investigate real-style alerts and logs."},
+          "practice": {
+            "title": "LetsDefend",
+            "url": "https://letsdefend.io/",
+            "login": true,
+            "desc": "Free-tier SOC-analyst simulation — investigate real-style alerts and logs."
+          },
           "concepts": [
-            {"title": "Free Foundations", "resources": [
-              {"title": "MITRE ATT&CK Framework", "desc": "The free, industry-standard knowledge base of attacker techniques.", "tag": "Free framework", "url": "https://attack.mitre.org/", "login": false},
-              {"title": "SANS Detection Engineering Poster", "desc": "A free, practical guide to the detection engineering life cycle.", "tag": "Free guide", "url": "https://www.sans.org/posters/detection-engineering", "login": false}
-            ]},
-            {"title": "Practice makes perfect", "resources": [
-              {"title": "LetsDefend", "desc": "A free-tier SOC-analyst simulation platform.", "tag": "Free tier", "url": "https://letsdefend.io/", "login": true},
-              {"title": "CyberDefenders", "desc": "Free blue-team labs built around real investigation scenarios.", "tag": "Free labs", "url": "https://cyberdefenders.org/", "login": true}
-            ]}
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "MITRE ATT&CK Framework",
+                  "desc": "The free, industry-standard knowledge base of attacker techniques.",
+                  "tag": "Free framework",
+                  "url": "https://attack.mitre.org/",
+                  "login": false
+                },
+                {
+                  "title": "SANS Detection Engineering Poster",
+                  "desc": "A free, practical guide to the detection engineering life cycle.",
+                  "tag": "Free guide",
+                  "url": "https://www.sans.org/posters/detection-engineering",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Practice makes perfect",
+              "resources": [
+                {
+                  "title": "LetsDefend",
+                  "desc": "A free-tier SOC-analyst simulation platform.",
+                  "tag": "Free tier",
+                  "url": "https://letsdefend.io/",
+                  "login": true
+                },
+                {
+                  "title": "CyberDefenders",
+                  "desc": "Free blue-team labs built around real investigation scenarios.",
+                  "tag": "Free labs",
+                  "url": "https://cyberdefenders.org/",
+                  "login": true
+                }
+              ]
+            }
           ]
         },
         "network-analysis": {
           "label": "Network traffic analysis",
-          "practice": {"title": "Malware Traffic Analysis (real pcaps)", "url": "https://www.malware-traffic-analysis.net/", "login": false, "desc": "Free real attacker packet captures to practice reading and analyzing traffic on."},
+          "practice": {
+            "title": "Malware Traffic Analysis (real pcaps)",
+            "url": "https://www.malware-traffic-analysis.net/",
+            "login": false,
+            "desc": "Free real attacker packet captures to practice reading and analyzing traffic on."
+          },
           "concepts": [
-            {"title": "Beginner", "resources": [
-              {"title": "Professor Messer Net+", "desc": "Full free video course covering networking fundamentals, no account needed.", "tag": "Free", "url": "https://www.professormesser.com/", "login": false},
-              {"title": "Julia Evans Networking Zine", "desc": "A free preview of a beautifully illustrated networking zine (full version paid).", "tag": "Free preview", "url": "https://wizardzines.com/zines/networking/", "login": false},
-              {"title": "Wireshark Official Training", "desc": "Official docs and sample packet captures for learning the industry-standard traffic analyzer.", "tag": "Free", "url": "https://www.wireshark.org/docs/", "login": false},
-              {"title": "TryHackMe — Wireshark", "desc": "Hands-on Wireshark room with a free tier.", "tag": "Freemium", "url": "https://tryhackme.com/", "login": true},
-              {"title": "NetworkMiner", "desc": "Free version of a network forensic analysis tool for extracting artifacts from traffic.", "tag": "Free version", "url": "https://www.netresec.com/?page=NetworkMiner", "login": false}
-            ]},
-            {"title": "Intermediate", "resources": [
-              {"title": "Malware Traffic Analysis", "desc": "Real attacker packet captures to practice on, widely used by the security community.", "tag": "Free", "url": "https://www.malware-traffic-analysis.net/", "login": false},
-              {"title": "Zeek Official Docs", "desc": "Reference documentation for the Zeek network security monitor.", "tag": "Free", "url": "https://docs.zeek.org/", "login": false},
-              {"title": "TryHackMe — Zeek", "desc": "Hands-on Zeek room with a free tier.", "tag": "Freemium", "url": "https://tryhackme.com/", "login": true},
-              {"title": "Zeek Training", "desc": "Official free training materials from the Zeek project.", "tag": "Free", "url": "https://zeek.org/", "login": false},
-              {"title": "Suricata Docs", "desc": "Reference documentation for the Suricata IDS/IPS engine.", "tag": "Free", "url": "https://docs.suricata.io/", "login": false},
-              {"title": "TryHackMe — Snort", "desc": "Hands-on Snort IDS room with a free tier.", "tag": "Freemium", "url": "https://tryhackme.com/", "login": true},
-              {"title": "ntopng Community", "desc": "Free community edition of a real-time network traffic monitoring tool.", "tag": "Free", "url": "https://www.ntop.org/products/traffic-analysis/ntop/", "login": false}
-            ]},
-            {"title": "Advanced", "resources": [
-              {"title": "Emerging Threats Rules", "desc": "Real, community-maintained IDS rule sets used in production security tools.", "tag": "Free", "url": "https://community.emergingthreats.net/", "login": false},
-              {"title": "SiLK (CERT)", "desc": "Download and docs for CERT's flow-analysis tool suite.", "tag": "Free", "url": "https://tools.netsa.cert.org/silk/", "login": false}
-            ]}
+            {
+              "title": "Beginner",
+              "resources": [
+                {
+                  "title": "Professor Messer Net+",
+                  "desc": "Full free video course covering networking fundamentals, no account needed.",
+                  "tag": "Free",
+                  "url": "https://www.professormesser.com/",
+                  "login": false
+                },
+                {
+                  "title": "Julia Evans Networking Zine",
+                  "desc": "A free preview of a beautifully illustrated networking zine (full version paid).",
+                  "tag": "Free preview",
+                  "url": "https://wizardzines.com/zines/networking/",
+                  "login": false
+                },
+                {
+                  "title": "Wireshark Official Training",
+                  "desc": "Official docs and sample packet captures for learning the industry-standard traffic analyzer.",
+                  "tag": "Free",
+                  "url": "https://www.wireshark.org/docs/",
+                  "login": false
+                },
+                {
+                  "title": "TryHackMe — Wireshark",
+                  "desc": "Hands-on Wireshark room with a free tier.",
+                  "tag": "Freemium",
+                  "url": "https://tryhackme.com/",
+                  "login": true
+                },
+                {
+                  "title": "NetworkMiner",
+                  "desc": "Free version of a network forensic analysis tool for extracting artifacts from traffic.",
+                  "tag": "Free version",
+                  "url": "https://www.netresec.com/?page=NetworkMiner",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Intermediate",
+              "resources": [
+                {
+                  "title": "Malware Traffic Analysis",
+                  "desc": "Real attacker packet captures to practice on, widely used by the security community.",
+                  "tag": "Free",
+                  "url": "https://www.malware-traffic-analysis.net/",
+                  "login": false
+                },
+                {
+                  "title": "Zeek Official Docs",
+                  "desc": "Reference documentation for the Zeek network security monitor.",
+                  "tag": "Free",
+                  "url": "https://docs.zeek.org/",
+                  "login": false
+                },
+                {
+                  "title": "TryHackMe — Zeek",
+                  "desc": "Hands-on Zeek room with a free tier.",
+                  "tag": "Freemium",
+                  "url": "https://tryhackme.com/",
+                  "login": true
+                },
+                {
+                  "title": "Zeek Training",
+                  "desc": "Official free training materials from the Zeek project.",
+                  "tag": "Free",
+                  "url": "https://zeek.org/",
+                  "login": false
+                },
+                {
+                  "title": "Suricata Docs",
+                  "desc": "Reference documentation for the Suricata IDS/IPS engine.",
+                  "tag": "Free",
+                  "url": "https://docs.suricata.io/",
+                  "login": false
+                },
+                {
+                  "title": "TryHackMe — Snort",
+                  "desc": "Hands-on Snort IDS room with a free tier.",
+                  "tag": "Freemium",
+                  "url": "https://tryhackme.com/",
+                  "login": true
+                },
+                {
+                  "title": "ntopng Community",
+                  "desc": "Free community edition of a real-time network traffic monitoring tool.",
+                  "tag": "Free",
+                  "url": "https://www.ntop.org/products/traffic-analysis/ntop/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Advanced",
+              "resources": [
+                {
+                  "title": "Emerging Threats Rules",
+                  "desc": "Real, community-maintained IDS rule sets used in production security tools.",
+                  "tag": "Free",
+                  "url": "https://community.emergingthreats.net/",
+                  "login": false
+                },
+                {
+                  "title": "SiLK (CERT)",
+                  "desc": "Download and docs for CERT's flow-analysis tool suite.",
+                  "tag": "Free",
+                  "url": "https://tools.netsa.cert.org/silk/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "siem-detection": {
           "label": "SIEM & detection",
-          "practice": {"title": "Boss of the SOC (BOTS)", "url": "https://github.com/splunk/botsv3", "login": true, "desc": "The best-regarded free hands-on Splunk detection dataset, built around real investigation scenarios."},
+          "practice": {
+            "title": "Boss of the SOC (BOTS)",
+            "url": "https://github.com/splunk/botsv3",
+            "login": true,
+            "desc": "The best-regarded free hands-on Splunk detection dataset, built around real investigation scenarios."
+          },
           "concepts": [
-            {"title": "Beginner", "resources": [
-              {"title": "Splunk Free Training — Fundamentals 1", "desc": "A fully free, official Splunk course; free account required.", "tag": "Free", "url": "https://www.splunk.com/en_us/training/free-courses/splunk-fundamentals-1.html", "login": true},
-              {"title": "TryHackMe — Splunk 101", "desc": "Hands-on introductory Splunk room with a free tier.", "tag": "Freemium", "url": "https://tryhackme.com/", "login": true}
-            ]},
-            {"title": "Intermediate", "resources": [
-              {"title": "Boss of the SOC (BOTS)", "desc": "The best free Splunk hands-on detection dataset, based on real-world scenarios.", "tag": "Free", "url": "https://github.com/splunk/botsv3", "login": true},
-              {"title": "Elastic Free Training", "desc": "Official free training from Elastic; free account required.", "tag": "Free", "url": "https://www.elastic.co/training/free", "login": true},
-              {"title": "TryHackMe — ELK 101", "desc": "Hands-on Elastic/ELK stack room with a free tier.", "tag": "Freemium", "url": "https://tryhackme.com/", "login": true},
-              {"title": "Microsoft Learn — Sentinel", "desc": "Free Microsoft training path for Microsoft Sentinel SIEM; free MS account needed.", "tag": "Free", "url": "https://learn.microsoft.com/en-us/training/paths/sc-200-utilize-microsoft-sentinel/", "login": true},
-              {"title": "Must Learn KQL (GitHub)", "desc": "A completely free, no-login series and eBook teaching Kusto Query Language for detection.", "tag": "Free", "url": "https://github.com/rod-trent/MustLearnKQL", "login": false},
-              {"title": "Azure Free Account", "desc": "Free-tier Azure account (credit card required) to practice Sentinel and cloud SIEM hands-on.", "tag": "Free tier", "url": "https://azure.microsoft.com/en-us/free/", "login": true}
-            ]},
-            {"title": "Advanced", "resources": [
-              {"title": "Elastic Security Labs", "desc": "Free research blog on detection engineering from the Elastic security research team.", "tag": "Free", "url": "https://www.elastic.co/security-labs", "login": false}
-            ]}
+            {
+              "title": "Beginner",
+              "resources": [
+                {
+                  "title": "Splunk Free Training — Fundamentals 1",
+                  "desc": "A fully free, official Splunk course; free account required.",
+                  "tag": "Free",
+                  "url": "https://www.splunk.com/en_us/training/free-courses/splunk-fundamentals-1.html",
+                  "login": true
+                },
+                {
+                  "title": "TryHackMe — Splunk 101",
+                  "desc": "Hands-on introductory Splunk room with a free tier.",
+                  "tag": "Freemium",
+                  "url": "https://tryhackme.com/",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Intermediate",
+              "resources": [
+                {
+                  "title": "Boss of the SOC (BOTS)",
+                  "desc": "The best free Splunk hands-on detection dataset, based on real-world scenarios.",
+                  "tag": "Free",
+                  "url": "https://github.com/splunk/botsv3",
+                  "login": true
+                },
+                {
+                  "title": "Elastic Free Training",
+                  "desc": "Official free training from Elastic; free account required.",
+                  "tag": "Free",
+                  "url": "https://www.elastic.co/training/free",
+                  "login": true
+                },
+                {
+                  "title": "TryHackMe — ELK 101",
+                  "desc": "Hands-on Elastic/ELK stack room with a free tier.",
+                  "tag": "Freemium",
+                  "url": "https://tryhackme.com/",
+                  "login": true
+                },
+                {
+                  "title": "Microsoft Learn — Sentinel",
+                  "desc": "Free Microsoft training path for Microsoft Sentinel SIEM; free MS account needed.",
+                  "tag": "Free",
+                  "url": "https://learn.microsoft.com/en-us/training/paths/sc-200-utilize-microsoft-sentinel/",
+                  "login": true
+                },
+                {
+                  "title": "Must Learn KQL (GitHub)",
+                  "desc": "A completely free, no-login series and eBook teaching Kusto Query Language for detection.",
+                  "tag": "Free",
+                  "url": "https://github.com/rod-trent/MustLearnKQL",
+                  "login": false
+                },
+                {
+                  "title": "Azure Free Account",
+                  "desc": "Free-tier Azure account (credit card required) to practice Sentinel and cloud SIEM hands-on.",
+                  "tag": "Free tier",
+                  "url": "https://azure.microsoft.com/en-us/free/",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Advanced",
+              "resources": [
+                {
+                  "title": "Elastic Security Labs",
+                  "desc": "Free research blog on detection engineering from the Elastic security research team.",
+                  "tag": "Free",
+                  "url": "https://www.elastic.co/security-labs",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "threat-hunting": {
           "label": "Threat hunting",
-          "practice": {"title": "BlueTeamLabs Online", "url": "https://blueteamlabs.online/", "login": true, "desc": "Free-tier hands-on threat hunting and blue-team challenges."},
+          "practice": {
+            "title": "BlueTeamLabs Online",
+            "url": "https://blueteamlabs.online/",
+            "login": true,
+            "desc": "Free-tier hands-on threat hunting and blue-team challenges."
+          },
           "concepts": [
-            {"title": "Beginner", "resources": [
-              {"title": "ATT&CK Navigator", "desc": "A free visual tool for mapping and tracking attacker techniques, no login needed.", "tag": "Free", "url": "https://mitre-attack.github.io/attack-navigator/", "login": false},
-              {"title": "TryHackMe — MITRE", "desc": "Hands-on MITRE ATT&CK room with a free tier.", "tag": "Freemium", "url": "https://tryhackme.com/", "login": true}
-            ]},
-            {"title": "Intermediate", "resources": [
-              {"title": "MITRE ATT&CK", "desc": "The free, industry-standard knowledge base threat hunting is built around.", "tag": "Free", "url": "https://attack.mitre.org/", "login": false},
-              {"title": "TaHiTI Methodology (PDF)", "desc": "A free, structured Dutch financial-sector threat hunting methodology, direct PDF download.", "tag": "Free", "url": "https://www.betaalvereniging.nl/wp-content/uploads/2026/03/TaHiTI-Threat-Hunting-Methodology-whitepaper.pdf", "login": false},
-              {"title": "SANS Threat Hunting (YouTube)", "desc": "Free YouTube content from SANS instructors on practical threat hunting.", "tag": "Free", "url": "https://www.youtube.com/@SANSDigitalForensics", "login": false},
-              {"title": "BlueTeamLabs Online", "desc": "Free-tier hands-on threat hunting challenges.", "tag": "Freemium", "url": "https://blueteamlabs.online/", "login": true}
-            ]},
-            {"title": "Advanced", "resources": [
-              {"title": "Cyb3rWard0g Blog", "desc": "An expert threat-hunting blog; some posts are on Medium and may be paywalled.", "tag": "Free (some paywall)", "url": "https://cyberwardog.blogspot.com/", "login": false}
-            ]}
+            {
+              "title": "Beginner",
+              "resources": [
+                {
+                  "title": "ATT&CK Navigator",
+                  "desc": "A free visual tool for mapping and tracking attacker techniques, no login needed.",
+                  "tag": "Free",
+                  "url": "https://mitre-attack.github.io/attack-navigator/",
+                  "login": false
+                },
+                {
+                  "title": "TryHackMe — MITRE",
+                  "desc": "Hands-on MITRE ATT&CK room with a free tier.",
+                  "tag": "Freemium",
+                  "url": "https://tryhackme.com/",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Intermediate",
+              "resources": [
+                {
+                  "title": "MITRE ATT&CK",
+                  "desc": "The free, industry-standard knowledge base threat hunting is built around.",
+                  "tag": "Free",
+                  "url": "https://attack.mitre.org/",
+                  "login": false
+                },
+                {
+                  "title": "TaHiTI Methodology (PDF)",
+                  "desc": "A free, structured Dutch financial-sector threat hunting methodology, direct PDF download.",
+                  "tag": "Free",
+                  "url": "https://www.betaalvereniging.nl/wp-content/uploads/2026/03/TaHiTI-Threat-Hunting-Methodology-whitepaper.pdf",
+                  "login": false
+                },
+                {
+                  "title": "SANS Threat Hunting (YouTube)",
+                  "desc": "Free YouTube content from SANS instructors on practical threat hunting.",
+                  "tag": "Free",
+                  "url": "https://www.youtube.com/@SANSDigitalForensics",
+                  "login": false
+                },
+                {
+                  "title": "BlueTeamLabs Online",
+                  "desc": "Free-tier hands-on threat hunting challenges.",
+                  "tag": "Freemium",
+                  "url": "https://blueteamlabs.online/",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Advanced",
+              "resources": [
+                {
+                  "title": "Cyb3rWard0g Blog",
+                  "desc": "An expert threat-hunting blog; some posts are on Medium and may be paywalled.",
+                  "tag": "Free (some paywall)",
+                  "url": "https://cyberwardog.blogspot.com/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "threat-intel": {
           "label": "Threat intelligence",
-          "practice": {"title": "OSINT Framework", "url": "https://osintframework.com/", "login": false, "desc": "A free, no-login directory of OSINT tools to practice real threat intel gathering."},
+          "practice": {
+            "title": "OSINT Framework",
+            "url": "https://osintframework.com/",
+            "login": false,
+            "desc": "A free, no-login directory of OSINT tools to practice real threat intel gathering."
+          },
           "concepts": [
-            {"title": "Beginner", "resources": [
-              {"title": "AlienVault OTX", "desc": "A free, account-based open threat intelligence exchange.", "tag": "Free", "url": "https://otx.alienvault.com/", "login": true},
-              {"title": "OSINT Framework", "desc": "A free, no-login directory linking out to OSINT tools by category.", "tag": "Free", "url": "https://osintframework.com/", "login": false},
-              {"title": "URLscan.io", "desc": "Free URL scanning and analysis, no login for basic lookups.", "tag": "Free", "url": "https://urlscan.io/", "login": false}
-            ]},
-            {"title": "Intermediate", "resources": [
-              {"title": "Shodan", "desc": "Search engine for internet-connected devices; free tier is limited and requires login.", "tag": "Freemium", "url": "https://www.shodan.io/", "login": true},
-              {"title": "Censys", "desc": "Internet-wide scanning and asset search with a free tier.", "tag": "Freemium", "url": "https://censys.io/", "login": true},
-              {"title": "RiskIQ Community", "desc": "A free community account for internet-wide threat intelligence data.", "tag": "Free", "url": "https://community.riskiq.com/", "login": true},
-              {"title": "DomainTools Research Blog", "desc": "Free threat intelligence research blog, no login needed to read.", "tag": "Free", "url": "https://www.domaintools.com/resources/blog/", "login": false}
-            ]},
-            {"title": "Advanced", "resources": [
-              {"title": "MISP Platform", "desc": "Free, self-hosted, open-source threat intelligence sharing platform.", "tag": "Free, open source", "url": "https://www.misp-project.org/", "login": false},
-              {"title": "OpenCTI", "desc": "Free, self-hosted, open-source threat intelligence platform.", "tag": "Free, open source", "url": "https://opencti.io/", "login": false}
-            ]}
+            {
+              "title": "Beginner",
+              "resources": [
+                {
+                  "title": "AlienVault OTX",
+                  "desc": "A free, account-based open threat intelligence exchange.",
+                  "tag": "Free",
+                  "url": "https://otx.alienvault.com/",
+                  "login": true
+                },
+                {
+                  "title": "OSINT Framework",
+                  "desc": "A free, no-login directory linking out to OSINT tools by category.",
+                  "tag": "Free",
+                  "url": "https://osintframework.com/",
+                  "login": false
+                },
+                {
+                  "title": "URLscan.io",
+                  "desc": "Free URL scanning and analysis, no login for basic lookups.",
+                  "tag": "Free",
+                  "url": "https://urlscan.io/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Intermediate",
+              "resources": [
+                {
+                  "title": "Shodan",
+                  "desc": "Search engine for internet-connected devices; free tier is limited and requires login.",
+                  "tag": "Freemium",
+                  "url": "https://www.shodan.io/",
+                  "login": true
+                },
+                {
+                  "title": "Censys",
+                  "desc": "Internet-wide scanning and asset search with a free tier.",
+                  "tag": "Freemium",
+                  "url": "https://censys.io/",
+                  "login": true
+                },
+                {
+                  "title": "RiskIQ Community",
+                  "desc": "A free community account for internet-wide threat intelligence data.",
+                  "tag": "Free",
+                  "url": "https://community.riskiq.com/",
+                  "login": true
+                },
+                {
+                  "title": "DomainTools Research Blog",
+                  "desc": "Free threat intelligence research blog, no login needed to read.",
+                  "tag": "Free",
+                  "url": "https://www.domaintools.com/resources/blog/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Advanced",
+              "resources": [
+                {
+                  "title": "MISP Platform",
+                  "desc": "Free, self-hosted, open-source threat intelligence sharing platform.",
+                  "tag": "Free, open source",
+                  "url": "https://www.misp-project.org/",
+                  "login": false
+                },
+                {
+                  "title": "OpenCTI",
+                  "desc": "Free, self-hosted, open-source threat intelligence platform.",
+                  "tag": "Free, open source",
+                  "url": "https://opencti.io/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "security-scripting": {
           "label": "Security scripting",
-          "practice": {"title": "Regex101", "url": "https://regex101.com/", "login": false, "desc": "Free, instant, no-login regex practice with live explanation of every match."},
+          "practice": {
+            "title": "Regex101",
+            "url": "https://regex101.com/",
+            "login": false,
+            "desc": "Free, instant, no-login regex practice with live explanation of every match."
+          },
           "concepts": [
-            {"title": "Beginner", "resources": [
-              {"title": "Regex101", "desc": "Free, no-login, instant regex testing and practice tool.", "tag": "Free", "url": "https://regex101.com/", "login": false},
-              {"title": "RegexOne", "desc": "A free, no-login interactive regex tutorial for beginners.", "tag": "Free", "url": "https://regexone.com/", "login": false},
-              {"title": "CS50P Python (Harvard)", "desc": "Free Python course with a free certificate option; account needed.", "tag": "Free", "url": "https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python", "login": true},
-              {"title": "Automate the Boring Stuff", "desc": "A fully free online book teaching Python scripting for real tasks.", "tag": "Free", "url": "https://automatetheboringstuff.com/", "login": false}
-            ]},
-            {"title": "Intermediate", "resources": [
-              {"title": "Rexegg.com", "desc": "A deep, free regex reference for more advanced pattern-writing.", "tag": "Free", "url": "https://www.rexegg.com/", "login": false},
-              {"title": "Scapy Docs", "desc": "Free reference docs for Scapy, a Python library for crafting and analyzing network packets.", "tag": "Free", "url": "https://scapy.readthedocs.io/", "login": false}
-            ]}
+            {
+              "title": "Beginner",
+              "resources": [
+                {
+                  "title": "Regex101",
+                  "desc": "Free, no-login, instant regex testing and practice tool.",
+                  "tag": "Free",
+                  "url": "https://regex101.com/",
+                  "login": false
+                },
+                {
+                  "title": "RegexOne",
+                  "desc": "A free, no-login interactive regex tutorial for beginners.",
+                  "tag": "Free",
+                  "url": "https://regexone.com/",
+                  "login": false
+                },
+                {
+                  "title": "CS50P Python (Harvard)",
+                  "desc": "Free Python course with a free certificate option; account needed.",
+                  "tag": "Free",
+                  "url": "https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python",
+                  "login": true
+                },
+                {
+                  "title": "Automate the Boring Stuff",
+                  "desc": "A fully free online book teaching Python scripting for real tasks.",
+                  "tag": "Free",
+                  "url": "https://automatetheboringstuff.com/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Intermediate",
+              "resources": [
+                {
+                  "title": "Rexegg.com",
+                  "desc": "A deep, free regex reference for more advanced pattern-writing.",
+                  "tag": "Free",
+                  "url": "https://www.rexegg.com/",
+                  "login": false
+                },
+                {
+                  "title": "Scapy Docs",
+                  "desc": "Free reference docs for Scapy, a Python library for crafting and analyzing network packets.",
+                  "tag": "Free",
+                  "url": "https://scapy.readthedocs.io/",
+                  "login": false
+                }
+              ]
+            }
+          ]
+        },
+        "pentesting": {
+          "label": "Penetration testing",
+          "practice": {
+            "title": "Hack The Box",
+            "url": "https://www.hackthebox.com/",
+            "login": true,
+            "desc": "Free-tier hands-on penetration testing labs used widely across the security community."
+          },
+          "concepts": [
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "freeCodeCamp — Full Network Penetration Testing Course",
+                  "desc": "A free, complete 15-hour video course covering practical ethical hacking from the ground up.",
+                  "tag": "Free",
+                  "url": "https://www.freecodecamp.org/news/full-penetration-testing-course/",
+                  "login": false
+                },
+                {
+                  "title": "Hack The Box",
+                  "desc": "A free-tier platform for practicing penetration testing in a controlled, legal environment.",
+                  "tag": "Freemium",
+                  "url": "https://www.hackthebox.com/",
+                  "login": true
+                }
+              ]
+            }
+          ]
+        },
+        "cryptography": {
+          "label": "Cryptography",
+          "practice": {
+            "title": "CryptoHack",
+            "url": "https://cryptohack.org/",
+            "login": true,
+            "desc": "Free, CTF-style interactive cryptography challenges that teach real cryptographic concepts by breaking them."
+          },
+          "concepts": [
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Khan Academy — Cryptography",
+                  "desc": "Free course covering ciphers, cryptographic hash functions, and modern encryption concepts.",
+                  "tag": "Free course",
+                  "url": "https://www.khanacademy.org/computing/computer-science/cryptography",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Practice makes perfect",
+              "resources": [
+                {
+                  "title": "CryptoHack",
+                  "desc": "Free interactive cryptography challenges, learn by breaking real cryptographic puzzles.",
+                  "tag": "Free",
+                  "url": "https://cryptohack.org/",
+                  "login": true
+                }
+              ]
+            }
           ]
         }
       }
     },
     "other": {
-      "label": "Other", "emoji": "✈️",
+      "label": "Other",
+      "emoji": "✈️",
       "subtopics": {
         "aviation": {
           "label": "Aircraft / aviation",
-          "practice": {"title": "Pilot Institute VR Preflight Trainer", "url": "https://pilotinstitute.com/", "login": false, "desc": "Free interactive VR-style preflight trainer to test what you've learned."},
+          "practice": {
+            "title": "Pilot Institute VR Preflight Trainer",
+            "url": "https://pilotinstitute.com/",
+            "login": false,
+            "desc": "Free interactive VR-style preflight trainer to test what you've learned."
+          },
           "concepts": [
-            {"title": "Aviation Fundamentals", "resources": [
-              {"title": "FAA Pilot's Handbook of Aeronautical Knowledge", "desc": "The free official handbook covering how flight actually works.", "tag": "Free PDF", "url": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak", "login": false},
-              {"title": "MIT OpenCourseWare — Aeronautics", "desc": "University-level intro courses on flight mechanics and aircraft systems.", "tag": "Free course", "url": "https://ocw.mit.edu/", "login": false}
-            ]},
-            {"title": "Learning by Video", "resources": [
-              {"title": "Mentour Pilot (YouTube)", "desc": "An airline captain breaks down real aviation incidents and procedures.", "tag": "YouTube", "url": "https://www.youtube.com/@MentourPilot", "login": false},
-              {"title": "Captain Joe (YouTube)", "desc": "Tutorial-style explainers on how commercial aircraft operate.", "tag": "YouTube", "url": "https://www.youtube.com/@flywithcaptainjoe", "login": false}
-            ]},
-            {"title": "Stay Connected to the Skies", "resources": [
-              {"title": "Flightradar24", "desc": "Free live flight tracking — see real aircraft and routes in real time.", "tag": "Free tool", "url": "https://www.flightradar24.com/", "login": false}
-            ]}
+            {
+              "title": "Aviation Fundamentals",
+              "resources": [
+                {
+                  "title": "FAA Pilot's Handbook of Aeronautical Knowledge",
+                  "desc": "The free official handbook covering how flight actually works.",
+                  "tag": "Free PDF",
+                  "url": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak",
+                  "login": false
+                },
+                {
+                  "title": "MIT OpenCourseWare — Aeronautics",
+                  "desc": "University-level intro courses on flight mechanics and aircraft systems.",
+                  "tag": "Free course",
+                  "url": "https://ocw.mit.edu/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Learning by Video",
+              "resources": [
+                {
+                  "title": "Mentour Pilot (YouTube)",
+                  "desc": "An airline captain breaks down real aviation incidents and procedures.",
+                  "tag": "YouTube",
+                  "url": "https://www.youtube.com/@MentourPilot",
+                  "login": false
+                },
+                {
+                  "title": "Captain Joe (YouTube)",
+                  "desc": "Tutorial-style explainers on how commercial aircraft operate.",
+                  "tag": "YouTube",
+                  "url": "https://www.youtube.com/@flywithcaptainjoe",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Stay Connected to the Skies",
+              "resources": [
+                {
+                  "title": "Flightradar24",
+                  "desc": "Free live flight tracking — see real aircraft and routes in real time.",
+                  "tag": "Free tool",
+                  "url": "https://www.flightradar24.com/",
+                  "login": false
+                }
+              ]
+            }
           ]
         },
         "finance": {
           "label": "Personal finance",
-          "practice": {"title": "Khan Academy Personal Finance Exercises", "url": "https://www.khanacademy.org/college-careers-more/personal-finance", "login": true, "desc": "Built-in practice exercises within the free personal finance course."},
+          "practice": {
+            "title": "Khan Academy Personal Finance Exercises",
+            "url": "https://www.khanacademy.org/college-careers-more/personal-finance",
+            "login": true,
+            "desc": "Built-in practice exercises within the free personal finance course."
+          },
           "concepts": [
-            {"title": "Foundations of Budgeting", "resources": [
-              {"title": "Khan Academy — Personal Finance", "desc": "The best free starting point: budgeting, credit, taxes and debt.", "tag": "Free course", "url": "https://www.khanacademy.org/college-careers-more/personal-finance", "login": false},
-              {"title": "Investopedia", "desc": "Free, extensive reference for every personal finance and investing term or concept.", "tag": "Free reference", "url": "https://www.investopedia.com/", "login": false}
-            ]},
-            {"title": "Understanding Markets & Investing", "resources": [
-              {"title": "Yale — Financial Markets (Coursera)", "desc": "Nobel laureate Robert Shiller's course on how financial markets work.", "tag": "Free to audit", "url": "https://www.coursera.org/learn/financial-markets-global", "login": true}
-            ]},
-            {"title": "Practical Money Management Tools", "resources": [
-              {"title": "Wave", "desc": "Genuinely free budgeting and expense tracking.", "tag": "Free tool", "url": "https://www.waveapps.com/", "login": true}
-            ]}
+            {
+              "title": "Foundations of Budgeting",
+              "resources": [
+                {
+                  "title": "Khan Academy — Personal Finance",
+                  "desc": "The best free starting point: budgeting, credit, taxes and debt.",
+                  "tag": "Free course",
+                  "url": "https://www.khanacademy.org/college-careers-more/personal-finance",
+                  "login": false
+                },
+                {
+                  "title": "Investopedia",
+                  "desc": "Free, extensive reference for every personal finance and investing term or concept.",
+                  "tag": "Free reference",
+                  "url": "https://www.investopedia.com/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Understanding Markets & Investing",
+              "resources": [
+                {
+                  "title": "Yale — Financial Markets (Coursera)",
+                  "desc": "Nobel laureate Robert Shiller's course on how financial markets work.",
+                  "tag": "Free to audit",
+                  "url": "https://www.coursera.org/learn/financial-markets-global",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Practical Money Management Tools",
+              "resources": [
+                {
+                  "title": "Wave",
+                  "desc": "Genuinely free budgeting and expense tracking.",
+                  "tag": "Free tool",
+                  "url": "https://www.waveapps.com/",
+                  "login": true
+                }
+              ]
+            }
           ]
         },
         "books": {
           "label": "Books / literature",
-          "practice": {"title": "Goodreads Reading Challenge", "url": "https://www.goodreads.com/", "login": true, "desc": "Set a yearly reading goal and track progress as an ongoing practice habit."},
+          "practice": {
+            "title": "Goodreads Reading Challenge",
+            "url": "https://www.goodreads.com/",
+            "login": true,
+            "desc": "Set a yearly reading goal and track progress as an ongoing practice habit."
+          },
           "concepts": [
-            {"title": "Discover Your Next Read", "resources": [
-              {"title": "Goodreads", "desc": "The largest free book-tracking and recommendation community.", "tag": "Free platform", "url": "https://www.goodreads.com/", "login": true},
-              {"title": "The StoryGraph", "desc": "A free, mood-based alternative to Goodreads for tracking and discovering books.", "tag": "Free platform", "url": "https://www.thestorygraph.com/", "login": true}
-            ]},
-            {"title": "Free Classic Literature", "resources": [
-              {"title": "Project Gutenberg", "desc": "70,000+ free public-domain ebooks.", "tag": "Free ebooks", "url": "https://www.gutenberg.org/", "login": false},
-              {"title": "LibriVox", "desc": "Volunteer-read free audiobooks of public-domain classics.", "tag": "Free audiobooks", "url": "https://librivox.org/", "login": false}
-            ]},
-            {"title": "Borrow Modern Books Free", "resources": [
-              {"title": "Libby", "desc": "Connects to your local library card for free ebooks and audiobooks.", "tag": "Free w/ library card", "url": "https://libbyapp.com/", "login": true}
-            ]}
+            {
+              "title": "Discover Your Next Read",
+              "resources": [
+                {
+                  "title": "Goodreads",
+                  "desc": "The largest free book-tracking and recommendation community.",
+                  "tag": "Free platform",
+                  "url": "https://www.goodreads.com/",
+                  "login": true
+                },
+                {
+                  "title": "The StoryGraph",
+                  "desc": "A free, mood-based alternative to Goodreads for tracking and discovering books.",
+                  "tag": "Free platform",
+                  "url": "https://www.thestorygraph.com/",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Free Classic Literature",
+              "resources": [
+                {
+                  "title": "Project Gutenberg",
+                  "desc": "70,000+ free public-domain ebooks.",
+                  "tag": "Free ebooks",
+                  "url": "https://www.gutenberg.org/",
+                  "login": false
+                },
+                {
+                  "title": "LibriVox",
+                  "desc": "Volunteer-read free audiobooks of public-domain classics.",
+                  "tag": "Free audiobooks",
+                  "url": "https://librivox.org/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Borrow Modern Books Free",
+              "resources": [
+                {
+                  "title": "Libby",
+                  "desc": "Connects to your local library card for free ebooks and audiobooks.",
+                  "tag": "Free w/ library card",
+                  "url": "https://libbyapp.com/",
+                  "login": true
+                }
+              ]
+            }
+          ]
+        },
+        "travel": {
+          "label": "Travel",
+          "concepts": [
+            {
+              "title": "Free Planning Tools",
+              "resources": [
+                {
+                  "title": "Google Flights / Google Travel",
+                  "desc": "Free flight and trip search aggregating options into one planning interface.",
+                  "tag": "Free",
+                  "url": "https://www.google.com/travel/flights",
+                  "login": false
+                },
+                {
+                  "title": "Wanderlog",
+                  "desc": "Free visual trip planner combining maps and itinerary-building with collaborative planning.",
+                  "tag": "Free",
+                  "url": "https://wanderlog.com/",
+                  "login": true
+                },
+                {
+                  "title": "Rome2Rio",
+                  "desc": "Free route planner showing every way to get between two points — flights, trains, buses and driving.",
+                  "tag": "Free",
+                  "url": "https://www.rome2rio.com/",
+                  "login": false
+                }
+              ]
+            }
+          ]
+        },
+        "productivity": {
+          "label": "Productivity",
+          "practice": {
+            "title": "Tomato Timer",
+            "url": "https://tomato-timer.com/",
+            "login": false,
+            "desc": "A free, no-login browser Pomodoro timer to practice focused work sessions."
+          },
+          "concepts": [
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "UC Irvine — Work Smarter, Not Harder (Coursera)",
+                  "desc": "A well-regarded free-to-audit course on time management and personal productivity.",
+                  "tag": "Free to audit",
+                  "url": "https://www.coursera.org/",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Practice makes perfect",
+              "resources": [
+                {
+                  "title": "Tomato Timer",
+                  "desc": "A free, simple, no-login Pomodoro timer to build focused work habits immediately.",
+                  "tag": "Free",
+                  "url": "https://tomato-timer.com/",
+                  "login": false
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "spanish": {
+      "label": "Spanish",
+      "emoji": "🇪🇸",
+      "subtopics": {
+        "basics": {
+          "label": "Spanish basics",
+          "practice": {
+            "title": "Duolingo",
+            "url": "https://www.duolingo.com/course/es/en/Learn-Spanish",
+            "login": true,
+            "desc": "Free, gamified, bite-sized daily Spanish lessons with instant feedback."
+          },
+          "concepts": [
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Language Transfer — Complete Spanish",
+                  "desc": "A completely free, full audio course teaching Spanish through guided thinking rather than memorization, no login needed.",
+                  "tag": "Free",
+                  "url": "https://www.languagetransfer.org/",
+                  "login": false
+                },
+                {
+                  "title": "SpanishDict",
+                  "desc": "Free dictionary, verb conjugator and beginner lessons — the most-used free Spanish reference site.",
+                  "tag": "Free",
+                  "url": "https://www.spanishdict.com/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Fun & Gamified",
+              "resources": [
+                {
+                  "title": "Duolingo",
+                  "desc": "Free, gamified daily lessons that build vocabulary and grammar through short, game-like exercises.",
+                  "tag": "Free",
+                  "url": "https://www.duolingo.com/course/es/en/Learn-Spanish",
+                  "login": true
+                }
+              ]
+            }
+          ]
+        },
+        "grammar-verbs": {
+          "label": "Grammar & verbs",
+          "practice": {
+            "title": "Conjuguemos",
+            "url": "https://conjuguemos.com/",
+            "login": false,
+            "desc": "A free, no-login verb conjugation practice game widely used in Spanish classrooms."
+          },
+          "concepts": [
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "SpanishDict Grammar Guides",
+                  "desc": "Free, clear grammar explanations covering everything from basic conjugation to subjunctive mood.",
+                  "tag": "Free",
+                  "url": "https://www.spanishdict.com/guide",
+                  "login": false
+                },
+                {
+                  "title": "StudySpanish.com",
+                  "desc": "Free lessons with vowel pronunciation, grammar tutorials and verb drills; free account tracks your progress.",
+                  "tag": "Free",
+                  "url": "https://www.studyspanish.com/",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "title": "Practice makes perfect",
+              "resources": [
+                {
+                  "title": "Conjuguemos",
+                  "desc": "A free, gamified verb conjugation practice tool, no login required.",
+                  "tag": "Free",
+                  "url": "https://conjuguemos.com/",
+                  "login": false
+                }
+              ]
+            }
+          ]
+        },
+        "conversation": {
+          "label": "Conversation practice",
+          "practice": {
+            "title": "HelloTalk",
+            "url": "https://www.hellotalk.com/",
+            "login": true,
+            "desc": "A free language exchange app connecting you with real Spanish speakers for conversation practice."
+          },
+          "concepts": [
+            {
+              "title": "Free Foundations",
+              "resources": [
+                {
+                  "title": "Coffee Break Spanish",
+                  "desc": "A free, well-loved podcast that builds real conversational Spanish episode by episode.",
+                  "tag": "Free podcast",
+                  "url": "https://coffeebreaklanguages.com/coffeebreakspanish/",
+                  "login": false
+                }
+              ]
+            },
+            {
+              "title": "Real Conversation Practice",
+              "resources": [
+                {
+                  "title": "HelloTalk",
+                  "desc": "Free app connecting you with native Spanish speakers for real conversation exchange.",
+                  "tag": "Free",
+                  "url": "https://www.hellotalk.com/",
+                  "login": true
+                },
+                {
+                  "title": "Tandem",
+                  "desc": "Another free language exchange app for practicing real conversation with native speakers.",
+                  "tag": "Free",
+                  "url": "https://www.tandem.net/",
+                  "login": true
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "books-recs": {
+      "label": "Books",
+      "emoji": "📚",
+      "subtopics": {
+        "self-development": {
+          "label": "Self development",
+          "practice": {
+            "title": "Goodreads Reading Challenge",
+            "url": "https://www.goodreads.com/",
+            "login": true,
+            "desc": "Set a yearly reading goal and track your progress through this recommended list."
+          },
+          "concepts": [
+            {
+              "title": "Recommended Reads",
+              "resources": [
+                {
+                  "title": "Atomic Habits — James Clear",
+                  "desc": "A widely recommended, practical framework for building good habits and breaking bad ones.",
+                  "tag": "Recommended",
+                  "url": "https://openlibrary.org/search?q=atomic+habits+james+clear",
+                  "login": false
+                },
+                {
+                  "title": "The 7 Habits of Highly Effective People — Stephen Covey",
+                  "desc": "A classic, enduring framework for personal effectiveness and principle-centered living.",
+                  "tag": "Recommended",
+                  "url": "https://openlibrary.org/search?q=7+habits+of+highly+effective+people",
+                  "login": false
+                },
+                {
+                  "title": "Mindset — Carol Dweck",
+                  "desc": "The research behind growth vs. fixed mindsets and how belief shapes achievement.",
+                  "tag": "Recommended",
+                  "url": "https://openlibrary.org/search?q=mindset+carol+dweck",
+                  "login": false
+                },
+                {
+                  "title": "Deep Work — Cal Newport",
+                  "desc": "A well-regarded case for focused, distraction-free work in a noisy world.",
+                  "tag": "Recommended",
+                  "url": "https://openlibrary.org/search?q=deep+work+cal+newport",
+                  "login": false
+                }
+              ]
+            }
+          ]
+        },
+        "finance": {
+          "label": "Personal finance",
+          "practice": {
+            "title": "Goodreads Reading Challenge",
+            "url": "https://www.goodreads.com/",
+            "login": true,
+            "desc": "Set a yearly reading goal and track your progress through this recommended list."
+          },
+          "concepts": [
+            {
+              "title": "Recommended Reads",
+              "resources": [
+                {
+                  "title": "The Psychology of Money — Morgan Housel",
+                  "desc": "A widely praised look at how behavior, not math, drives most financial outcomes.",
+                  "tag": "Recommended",
+                  "url": "https://openlibrary.org/search?q=psychology+of+money+morgan+housel",
+                  "login": false
+                },
+                {
+                  "title": "Rich Dad Poor Dad — Robert Kiyosaki",
+                  "desc": "A foundational, if debated, personal finance classic on assets, liabilities and financial mindset.",
+                  "tag": "Recommended",
+                  "url": "https://openlibrary.org/search?q=rich+dad+poor+dad",
+                  "login": false
+                },
+                {
+                  "title": "I Will Teach You to Be Rich — Ramit Sethi",
+                  "desc": "A practical, step-by-step approach to budgeting, saving and automating personal finance.",
+                  "tag": "Recommended",
+                  "url": "https://openlibrary.org/search?q=i+will+teach+you+to+be+rich",
+                  "login": false
+                },
+                {
+                  "title": "The Total Money Makeover — Dave Ramsey",
+                  "desc": "A widely followed, no-nonsense plan for getting out of debt and building savings.",
+                  "tag": "Recommended",
+                  "url": "https://openlibrary.org/search?q=total+money+makeover+dave+ramsey",
+                  "login": false
+                }
+              ]
+            }
           ]
         }
       }
@@ -475,7 +2133,27 @@
       "Iceland has no standing army, navy, or air force — one of very few countries without one.",
       "The Zohar, Kabbalah's central text, is written mostly in Aramaic, not Hebrew.",
       "Bhutan measures national progress using 'Gross National Happiness' instead of GDP.",
-      "The 1948 Arab-Israeli War is referred to by Israelis as the War of Independence and by Palestinians as the Nakba."
+      "The 1948 Arab-Israeli War is referred to by Israelis as the War of Independence and by Palestinians as the Nakba.",
+      "The Great Wall of China is not visible to the naked eye from space, despite the popular myth.",
+      "Israel is one of only a handful of countries in the world that entered the 21st century with more forest cover than it had a century earlier, due to large-scale afforestation.",
+      "The Hebrew calendar is lunisolar, meaning it adds a leap month roughly every three years to stay aligned with the solar year.",
+      "The 1979 Egypt-Israel peace treaty was the first peace agreement between Israel and an Arab nation.",
+      "The world's smallest recognized country by population is Vatican City, with under 1,000 residents.",
+      "The Talmud describes two major components: the Mishnah (compiled law) and the Gemara (commentary and debate on the Mishnah).",
+      "Zeus, king of the Greek gods, was said to have overthrown his own father, Cronus, to take power.",
+      "The Kabbalistic concept of 'tikkun olam' — repairing the world — has become a widely used phrase in modern Jewish social action.",
+      "Masada, an ancient fortress in Israel, is famous for a mass siege during the First Jewish-Roman War around 73 CE.",
+      "France is the most visited country in the world by international tourist arrivals.",
+      "The Dome of the Rock in Jerusalem, completed in 691 CE, is one of the oldest surviving works of Islamic architecture.",
+      "In Norse mythology, Yggdrasil is a giant ash tree said to connect all nine worlds.",
+      "The 1993 Oslo Accords were the first direct agreement between Israel and the Palestine Liberation Organization.",
+      "Timbuktu, in modern Mali, was once a major center of Islamic scholarship and manuscript production.",
+      "The word 'Israel' itself is generally understood to mean 'one who struggles with God,' from the biblical account of Jacob.",
+      "Machu Picchu was unknown to the wider world until it was brought to international attention in 1911.",
+      "The Egyptian god Anubis, associated with mummification, is often depicted with the head of a jackal.",
+      "Antarctica is the only continent with no native human population and no official time zone of its own.",
+      "The Balfour Declaration of 1917 was a public statement by the British government expressing support for a Jewish homeland in Palestine.",
+      "Mount Kilimanjaro in Tanzania is the highest peak in Africa and one of the tallest free-standing mountains in the world."
     ],
     "science": [
       "Light from the Sun takes about 8 minutes and 20 seconds to reach Earth.",
@@ -495,7 +2173,25 @@
       "Sound cannot travel through the vacuum of space because it needs a medium like air or water.",
       "Your gut microbiome composition is largely established within the first few years of life.",
       "Quantum entanglement lets two particles share a state instantly regardless of distance, a phenomenon Einstein called 'spooky'.",
-      "Excess sodium doesn't just affect blood pressure — it also directly disrupts the balance of gut bacteria."
+      "Excess sodium doesn't just affect blood pressure — it also directly disrupts the balance of gut bacteria.",
+      "The James Webb Space Telescope observes primarily in infrared light, letting it see through cosmic dust that blocks visible light.",
+      "Octopuses have three hearts, and two of them stop beating when the animal swims.",
+      "A full-grown blue whale's heart is roughly the size of a small car.",
+      "The Krebs cycle, central to cellular respiration, takes place inside the mitochondria of your cells.",
+      "Bananas are naturally slightly radioactive due to their potassium-40 content, though far too little to be harmful.",
+      "The human genome contains roughly 20,000 protein-coding genes, far fewer than scientists initially expected.",
+      "Saturn's rings are made almost entirely of ice particles, with a small amount of rocky debris.",
+      "Serotonin, often linked to mood, is produced mostly in the gut, not the brain.",
+      "The speed of light is fast enough to circle the Earth about seven and a half times in one second.",
+      "Identical twins do not have perfectly identical fingerprints, since fingerprint patterns form partly from random factors in the womb.",
+      "A group of gut bacteria can influence how effectively certain drugs work, an emerging field called pharmacomicrobiomics.",
+      "The strongest muscle in the human body relative to its size is the masseter, used for chewing.",
+      "Jupiter's Great Red Spot is a storm that has been raging for at least 150 years, and possibly much longer.",
+      "Sleep deprivation impairs the blood-brain barrier's ability to clear waste products from the brain overnight.",
+      "The observable universe is estimated to be about 93 billion light-years in diameter.",
+      "Your gut microbiome can influence your circadian rhythm, and disrupted sleep can in turn alter your gut bacteria.",
+      "Diamonds and pencil graphite are both made of pure carbon, just arranged in different structures.",
+      "Vitamin C cannot be synthesized by the human body, unlike most other mammals, which is why it must come from diet."
     ],
     "tech": [
       "Docker containers share the host OS kernel, which is why they start in milliseconds compared to full virtual machines.",
@@ -512,7 +2208,22 @@
       "The first version of Docker was released in 2013 and rapidly changed how software is packaged and deployed.",
       "Infrastructure as Code lets you version-control your servers the same way you version-control application code.",
       "TCP/IP, the foundation of internet networking, was developed in the 1970s for ARPANET.",
-      "A 'container image' and a 'running container' are different things — an image is the blueprint, a container is the live instance."
+      "A 'container image' and a 'running container' are different things — an image is the blueprint, a container is the live instance.",
+      "Kubernetes' name comes from the Greek word for 'helmsman' or 'pilot', which is why its logo is a ship's wheel.",
+      "The first version of Python was released by Guido van Rossum in 1991.",
+      "A 'YAML' file, common in DevOps and CI/CD pipelines, stands for 'YAML Ain't Markup Language' — a recursive acronym.",
+      "The concept of 'Infrastructure as Code' lets teams treat server configuration the same way they treat application code: versioned, reviewed, and tested.",
+      "Amazon originally built AWS to solve its own internal infrastructure scaling problems before offering it publicly in 2006.",
+      "A 'blue-green deployment' strategy keeps two identical production environments so you can switch traffic instantly if something breaks.",
+      "The Linux kernel is one of the largest collaborative open-source software projects in history, with contributions from thousands of developers.",
+      "Container orchestration tools like Kubernetes automatically restart failed containers without any human intervention.",
+      "The term 'DevOps' was popularized starting around 2009, blending 'development' and 'operations' into a single practice.",
+      "A single line of misconfigured YAML in a CI/CD pipeline has caused real production outages at major tech companies.",
+      "GitHub was founded in 2008 and is now one of the largest hosts of source code in the world.",
+      "Regular expressions (regex) trace their theoretical roots back to 1950s mathematical work on formal language theory.",
+      "The concept of 'immutable infrastructure' means servers are never modified after deployment — they're replaced entirely instead.",
+      "Docker Hub hosts millions of publicly available container images that anyone can pull and run.",
+      "Machine learning models can 'overfit' — memorizing training data so precisely that they perform worse on new, unseen data."
     ],
     "cyber": [
       "The MITRE ATT&CK framework catalogs real-world attacker techniques observed across thousands of documented incidents.",
@@ -524,7 +2235,17 @@
       "Social engineering attacks succeed far more often by exploiting human trust than by exploiting technical vulnerabilities.",
       "Capture The Flag (CTF) competitions let security learners practice real attack and defense skills in a legal, gamified setting.",
       "Log correlation across multiple systems is often what turns a suspicious-but-explainable event into a confirmed detection.",
-      "Encryption doesn't hide that a message exists — it hides what the message says; that distinction matters in threat modeling."
+      "Encryption doesn't hide that a message exists — it hides what the message says; that distinction matters in threat modeling.",
+      "A 'honeypot' is a decoy system deliberately left vulnerable to lure and study attackers safely.",
+      "The average time it takes organizations to detect a data breach is often measured in months, not days.",
+      "SIEM stands for Security Information and Event Management — combining log collection with real-time analysis.",
+      "Kerberos, a widely used network authentication protocol, is named after the three-headed dog from Greek mythology.",
+      "Ransomware attacks often specifically target and disable backup systems first, before encrypting production data.",
+      "The concept of 'defense in depth' means layering multiple independent security controls, so no single failure compromises everything.",
+      "Public key cryptography, invented in the 1970s, made secure communication possible without ever sharing a secret key in advance.",
+      "A 'false positive' in detection engineering is an alert that looks like an attack but is actually legitimate activity — a major source of analyst fatigue.",
+      "The Advanced Encryption Standard (AES) was selected by the U.S. government in 2001 after an open, multi-year public competition.",
+      "Threat intelligence feeds often score indicators by 'confidence level' since not every reported malicious IP or domain is equally reliable."
     ],
     "other": [
       "A Boeing 747's wingspan is longer than the Wright brothers' first flight distance in 1903.",
@@ -536,7 +2257,39 @@
       "An emergency fund covering 3–6 months of expenses is one of the most consistently recommended personal finance basics.",
       "The black box flight recorder is actually painted bright orange, not black, to make it easier to find after an incident.",
       "Reading fiction has been linked in studies to improved empathy, since it exercises perspective-taking on a regular basis.",
-      "A credit score isn't a single universal number — different bureaus and models can calculate it differently for the same person."
+      "A credit score isn't a single universal number — different bureaus and models can calculate it differently for the same person.",
+      "The 'black box' flight recorder data is actually stored in two separate devices: the flight data recorder and the cockpit voice recorder.",
+      "Jet fuel is chemically closer to kerosene than to the gasoline used in cars.",
+      "The '50/30/20' budgeting rule allocates 50% of income to needs, 30% to wants, and 20% to savings and debt repayment.",
+      "The Wright brothers' first powered flight in 1903 covered less distance than the wingspan of a modern Boeing 747.",
+      "A round-trip flight often costs less than a one-way flight on the same route, due to airline pricing algorithms.",
+      "Warren Buffett has said reading is one of the single highest-leverage habits for long-term decision-making.",
+      "The habit of writing down goals, rather than just thinking them, is consistently linked to higher follow-through in behavioral research.",
+      "Audiobooks and reading print books activate overlapping but not identical areas of the brain.",
+      "Commercial pilots are required to log a minimum number of flight hours long before they can fly for a major airline.",
+      "The term 'passive income,' popular in personal finance content, still almost always requires real upfront work or capital to set up."
+    ],
+    "spanish": [
+      "Spanish is the second most-spoken native language in the world by number of native speakers, after Mandarin Chinese.",
+      "Spanish and English share thousands of 'cognates' — words that look and mean almost the same in both languages, like 'información' and 'information'.",
+      "Spanish has two words for 'to be' — 'ser' and 'estar' — depending on whether something is permanent or temporary.",
+      "The Spanish alphabet traditionally included the extra letter 'ñ', which doesn't exist in the English alphabet.",
+      "More people speak Spanish natively in Mexico than in Spain itself.",
+      "Spanish verb conjugations change based on who's doing the action, which is why pronouns like 'yo' or 'tú' are often dropped entirely in speech.",
+      "The subjunctive mood, tricky for many learners, is used far more often in everyday Spanish than in everyday English.",
+      "Spanish 'false friends' — words that look like English words but mean something different — include 'embarazada' (pregnant, not embarrassed).",
+      "There are over 20 countries where Spanish is an official language, spanning Europe, the Americas, and Africa.",
+      "Rolling the Spanish 'rr' sound is a physical skill most learners have to specifically practice, since it doesn't exist in English."
+    ],
+    "books-recs": [
+      "'Atomic Habits' by James Clear popularized the idea that habits compound like interest — tiny 1% improvements add up dramatically over time.",
+      "Stephen Covey's '7 Habits' framework distinguishes between things that are urgent and things that are actually important.",
+      "Carol Dweck's research on 'growth mindset' has been influential enough to reshape how many schools approach praise and feedback.",
+      "'The Psychology of Money' argues that financial success is more about behavior than intelligence or financial knowledge.",
+      "'Rich Dad Poor Dad' popularized the framework of distinguishing assets (that pay you) from liabilities (that cost you).",
+      "Cal Newport's 'Deep Work' argues that the ability to focus without distraction is becoming both rarer and more valuable.",
+      "Dave Ramsey's 'debt snowball' method, from 'The Total Money Makeover', pays off smallest debts first for psychological momentum, even if it isn't always mathematically optimal.",
+      "Ramit Sethi's 'I Will Teach You to Be Rich' emphasizes automating your finances so good decisions happen without constant willpower."
     ]
   }
 }
