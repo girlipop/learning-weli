@@ -20,9 +20,42 @@
     --lavender-deep:#D2C7EA;
     --peach:#F6E3CE;     /* Other */
     --peach-deep:#F0D0AE;
+    --mint:#D9F0E3;      /* Spanish */
+    --mint-deep:#BFE6D2;
+    --butter:#F5EACB;    /* Books */
+    --butter-deep:#EDD9A0;
     --radius:999px;
     --shadow:0 4px 14px rgba(59,52,44,0.12);
   }
+  :root[data-theme="dark"]{
+    --cream:#1C1917;
+    --cream-deep:#282320;
+    --text:#EDE6DA;
+    --text-soft:#A89F91;
+    --pink:#4A3540;      /* General */
+    --pink-deep:#5E4451;
+    --sage:#31402F;      /* Science */
+    --sage-deep:#3E5239;
+    --blue:#2C3E4E;      /* Tech */
+    --blue-deep:#374D61;
+    --lavender:#3A3350;  /* Cyber */
+    --lavender-deep:#4A4066;
+    --peach:#4A382A;     /* Other */
+    --peach-deep:#5C4632;
+    --mint:#254237;      /* Spanish */
+    --mint-deep:#2F5445;
+    --butter:#4A3F26;    /* Books */
+    --butter-deep:#5C4E2E;
+    --shadow:0 4px 14px rgba(0,0,0,0.35);
+  }
+  :root[data-theme="dark"] .search-box, :root[data-theme="dark"] .search-results,
+  :root[data-theme="dark"] .dropdown, :root[data-theme="dark"] .concept,
+  :root[data-theme="dark"] .resource, :root[data-theme="dark"] .sidebar,
+  :root[data-theme="dark"] .strip-item, :root[data-theme="dark"] .placeholder,
+  :root[data-theme="dark"] .fact-card, :root[data-theme="dark"] #fact-card{
+    background:#252019 !important;
+  }
+  :root[data-theme="dark"] .resource{background:var(--cream-deep) !important;}
   *{box-sizing:border-box;}
   body{
     margin:0;
@@ -41,12 +74,12 @@
     padding:14px 32px;
   }
   .logo{font-weight:700; font-size:1.2rem; letter-spacing:0.5px;}
-  nav{display:flex; gap:6px;}
+  nav{display:flex; gap:2px; flex-wrap:wrap; justify-content:center;}
   .nav-item{position:relative;}
   .nav-btn{
-    padding:9px 18px; border-radius:var(--radius);
-    font-size:0.95rem; cursor:pointer; border:none; background:transparent;
-    font-family:inherit; color:var(--text);
+    padding:9px 13px; border-radius:var(--radius);
+    font-size:0.88rem; cursor:pointer; border:none; background:transparent;
+    font-family:inherit; color:var(--text); white-space:nowrap;
     transition:background .15s ease;
   }
   .nav-item:hover .nav-btn{background:var(--cream-deep);}
@@ -101,7 +134,7 @@
   .hero .search-input{width:320px; opacity:1; padding:12px 22px; margin:0 auto; display:block; background:#fff; box-shadow:var(--shadow);}
 
   .cards{
-    display:grid; grid-template-columns:repeat(5,1fr); gap:18px;
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:18px;
     max-width:1100px; margin:40px auto; padding:0 24px;
   }
   .card{
@@ -115,6 +148,8 @@
   .card.tech{background:var(--blue);}
   .card.cyber{background:var(--lavender);}
   .card.other{background:var(--peach);}
+  .card.spanish{background:var(--mint);}
+  .card.books-recs{background:var(--butter);}
 
   .strip{max-width:1100px; margin:40px auto; padding:0 24px;}
   .strip h3{font-size:1rem; color:var(--text-soft); margin-bottom:14px;}
@@ -172,6 +207,13 @@
   #topic-page{display:none; max-width:1100px; margin:0 auto; padding:30px 24px 80px;}
   .breadcrumb{font-size:0.85rem; color:var(--text-soft); margin-bottom:20px;}
   .breadcrumb a{color:var(--text-soft); text-decoration:underline;}
+  .like-btn{
+    border:none; background:var(--cream-deep); border-radius:50%; width:30px; height:30px;
+    cursor:pointer; font-size:0.95rem; margin-left:10px; vertical-align:middle;
+    box-shadow:var(--shadow); transition:transform .15s ease;
+  }
+  .like-btn:hover{transform:scale(1.15);}
+  .liked-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:16px;}
   .topic-layout{display:flex; gap:36px; align-items:flex-start;}
   .sidebar{
     flex:0 0 240px; position:sticky; top:90px;
@@ -239,6 +281,8 @@
   <a class="logo" href="#/">🌱 Learning Hub</a>
   <nav id="main-nav"></nav>
   <div class="search-wrap">
+    <a class="search-icon" href="#/liked" title="Liked pages">❤️</a>
+    <button class="search-icon" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
     <button class="search-icon" onclick="toggleSearch()">🔍</button>
     <div class="search-box">
       <input class="search-input" id="search-input" placeholder="Search sources...">
@@ -304,7 +348,7 @@ const recent = document.getElementById('recent-strip');
 const SEARCH_INDEX = [];
 
 async function loadData(){
-  const res = await fetch('data.json');
+  const res = await fetch('data.json?v=' + Date.now());
   const data = await res.json();
 
   TOPICS = {};
@@ -368,6 +412,40 @@ function buildRecentStrip(){
 }
 
 /* ---------------- SEARCH TOGGLE ---------------- */
+/* ---------------- DARK MODE ---------------- */
+function applyTheme(){
+  let theme = 'light';
+  try{ theme = localStorage.getItem('hub-theme') || 'light'; }catch(e){}
+  document.documentElement.setAttribute('data-theme', theme);
+  const btn = document.getElementById('theme-toggle');
+  if(btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+}
+function toggleTheme(){
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  try{ localStorage.setItem('hub-theme', next); }catch(e){}
+  const btn = document.getElementById('theme-toggle');
+  if(btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+}
+applyTheme();
+
+/* ---------------- LIKED PAGES ---------------- */
+function getLiked(){
+  try{ return JSON.parse(localStorage.getItem('hub-liked') || '[]'); }catch(e){ return []; }
+}
+function setLiked(list){
+  try{ localStorage.setItem('hub-liked', JSON.stringify(list)); }catch(e){}
+}
+function isLiked(hash){ return getLiked().includes(hash); }
+function toggleLike(hash){
+  let liked = getLiked();
+  if(liked.includes(hash)) liked = liked.filter(h => h !== hash);
+  else liked.push(hash);
+  setLiked(liked);
+  render();
+}
+
 function toggleSearch(){
   document.getElementById('search-input').classList.toggle('open');
   document.getElementById('search-input').focus();
@@ -455,6 +533,25 @@ function loginBadge(login){
     : `<span class="login-badge login-no">🔓 No login</span>`;
 }
 
+function renderLikedPage(){
+  document.getElementById('breadcrumb').innerHTML = `<a href="#/">Home</a> &nbsp;›&nbsp; ❤️ Liked pages`;
+  document.getElementById('sidebar').innerHTML = '';
+  const liked = getLiked();
+  const contentCol = document.getElementById('content-col');
+  if(!liked.length){
+    contentCol.innerHTML = `<div class="placeholder">🤍 No liked pages yet.<br>Tap the heart on any topic page to save it here.</div>`;
+    return;
+  }
+  contentCol.innerHTML = `<div class="liked-grid">` + liked.map(key=>{
+    const [catKey, subSlug] = key.split('/');
+    const cat = TOPICS[catKey];
+    if(!cat) return '';
+    const sub = cat.subtopics.find(s=>s.slug===subSlug);
+    if(!sub) return '';
+    return `<a class="card ${cat.color}" href="#/${key}"><span class="emoji">${cat.emoji}</span>${sub.label}</a>`;
+  }).join('') + `</div>`;
+}
+
 function render(){
   if(!TOPICS) return;
   const hash = location.hash.replace('#/','');
@@ -463,17 +560,21 @@ function render(){
   if(!hash){ home.style.display='block'; page.style.display='none'; return; }
   home.style.display='none'; page.style.display='block';
 
+  if(hash === 'liked'){ renderLikedPage(); return; }
+
   const [catKey, subSlug] = hash.split('/');
   const cat = TOPICS[catKey];
   if(!cat) return;
   const sub = cat.subtopics.find(s=>s.slug===subSlug) || cat.subtopics[0];
+  const pageKey = `${catKey}/${sub.slug}`;
 
   document.getElementById('breadcrumb').innerHTML =
-    `<a href="#/">Home</a> &nbsp;›&nbsp; ${cat.emoji} ${cat.label} &nbsp;›&nbsp; ${sub.label}`;
+    `<a href="#/">Home</a> &nbsp;›&nbsp; ${cat.emoji} ${cat.label} &nbsp;›&nbsp; ${sub.label}
+     <button class="like-btn${isLiked(pageKey)?' liked':''}" onclick="toggleLike('${pageKey}')" title="Like this page">${isLiked(pageKey)?'❤️':'🤍'}</button>`;
 
   const sidebar = document.getElementById('sidebar');
   const contentCol = document.getElementById('content-col');
-  const key = `${catKey}/${sub.slug}`;
+  const key = pageKey;
   const concepts = CONTENT[key];
   const practice = PRACTICE[key];
 
@@ -487,6 +588,7 @@ function render(){
 
   sidebar.innerHTML = `<h5>${sub.label}</h5>` + allSections.map((c,i)=>`
     <div class="sidebar-item${c.isPractice?' practice-nav':''}" data-target="concept-${i}">
+
       <span class="checkbox" onclick="toggleCheck(event,this)"></span>
       <span>${i+1}. ${c.isPractice?'🎯 Practice':c.title}</span>
     </div>`).join('');
