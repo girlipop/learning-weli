@@ -1883,15 +1883,9 @@
               ]
             }
           ]
-        }
-      }
-    },
-    "spanish": {
-      "label": "Spanish",
-      "emoji": "🇪🇸",
-      "subtopics": {
-        "basics": {
-          "label": "Spanish basics",
+        },
+        "spanish-basics": {
+          "label": "Spanish: Basics",
           "practice": {
             "title": "Duolingo",
             "url": "https://www.duolingo.com/course/es/en/Learn-Spanish",
@@ -1932,8 +1926,8 @@
             }
           ]
         },
-        "grammar-verbs": {
-          "label": "Grammar & verbs",
+        "spanish-grammar": {
+          "label": "Spanish: Grammar & Verbs",
           "practice": {
             "title": "Conjuguemos",
             "url": "https://conjuguemos.com/",
@@ -1974,8 +1968,8 @@
             }
           ]
         },
-        "conversation": {
-          "label": "Conversation practice",
+        "spanish-conversation": {
+          "label": "Spanish: Conversation",
           "practice": {
             "title": "HelloTalk",
             "url": "https://www.hellotalk.com/",
@@ -2015,96 +2009,156 @@
               ]
             }
           ]
-        }
-      }
-    },
-    "books-recs": {
-      "label": "Books",
-      "emoji": "📚",
-      "subtopics": {
-        "self-development": {
-          "label": "Self development",
-          "practice": {
-            "title": "Goodreads Reading Challenge",
-            "url": "https://www.goodreads.com/",
-            "login": true,
-            "desc": "Set a yearly reading goal and track your progress through this recommended list."
-          },
+        },
+        "book-picks": {
+          "label": "Recommended Books",
+          "display": "bookgrid",
           "concepts": [
             {
-              "title": "Recommended Reads",
-              "resources": [
+              "title": "Self Development",
+              "books": [
                 {
-                  "title": "Atomic Habits — James Clear",
-                  "desc": "A widely recommended, practical framework for building good habits and breaking bad ones.",
-                  "tag": "Recommended",
-                  "url": "https://openlibrary.org/search?q=atomic+habits+james+clear",
-                  "login": false
+                  "title": "Atomic Habits",
+                  "author": "James Clear",
+                  "isbn": "9780735211292",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg",
+                  "desc": "A practical framework for building good habits and breaking bad ones.",
+                  "url": "https://openlibrary.org/isbn/9780735211292"
                 },
                 {
-                  "title": "The 7 Habits of Highly Effective People — Stephen Covey",
-                  "desc": "A classic, enduring framework for personal effectiveness and principle-centered living.",
-                  "tag": "Recommended",
-                  "url": "https://openlibrary.org/search?q=7+habits+of+highly+effective+people",
-                  "login": false
+                  "title": "The 7 Habits of Highly Effective People",
+                  "author": "Stephen Covey",
+                  "isbn": "9780743269513",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9780743269513-L.jpg",
+                  "desc": "A classic, enduring framework for personal effectiveness.",
+                  "url": "https://openlibrary.org/isbn/9780743269513"
                 },
                 {
-                  "title": "Mindset — Carol Dweck",
+                  "title": "Mindset",
+                  "author": "Carol Dweck",
+                  "isbn": "9780345472328",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9780345472328-L.jpg",
                   "desc": "The research behind growth vs. fixed mindsets and how belief shapes achievement.",
-                  "tag": "Recommended",
-                  "url": "https://openlibrary.org/search?q=mindset+carol+dweck",
-                  "login": false
+                  "url": "https://openlibrary.org/isbn/9780345472328"
                 },
                 {
-                  "title": "Deep Work — Cal Newport",
-                  "desc": "A well-regarded case for focused, distraction-free work in a noisy world.",
-                  "tag": "Recommended",
-                  "url": "https://openlibrary.org/search?q=deep+work+cal+newport",
-                  "login": false
+                  "title": "Deep Work",
+                  "author": "Cal Newport",
+                  "isbn": "9781455586691",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg",
+                  "desc": "A well-regarded case for focused, distraction-free work.",
+                  "url": "https://openlibrary.org/isbn/9781455586691"
                 }
               ]
-            }
-          ]
-        },
-        "finance": {
-          "label": "Personal finance",
-          "practice": {
-            "title": "Goodreads Reading Challenge",
-            "url": "https://www.goodreads.com/",
-            "login": true,
-            "desc": "Set a yearly reading goal and track your progress through this recommended list."
-          },
-          "concepts": [
+            },
             {
-              "title": "Recommended Reads",
-              "resources": [
+              "title": "Finance",
+              "books": [
                 {
-                  "title": "The Psychology of Money — Morgan Housel",
-                  "desc": "A widely praised look at how behavior, not math, drives most financial outcomes.",
-                  "tag": "Recommended",
-                  "url": "https://openlibrary.org/search?q=psychology+of+money+morgan+housel",
-                  "login": false
+                  "title": "The Psychology of Money",
+                  "author": "Morgan Housel",
+                  "isbn": "9780857197689",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg",
+                  "desc": "How behavior, not math, drives most financial outcomes.",
+                  "url": "https://openlibrary.org/isbn/9780857197689"
                 },
                 {
-                  "title": "Rich Dad Poor Dad — Robert Kiyosaki",
-                  "desc": "A foundational, if debated, personal finance classic on assets, liabilities and financial mindset.",
-                  "tag": "Recommended",
-                  "url": "https://openlibrary.org/search?q=rich+dad+poor+dad",
-                  "login": false
+                  "title": "Rich Dad Poor Dad",
+                  "author": "Robert Kiyosaki",
+                  "isbn": "9781612680194",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9781612680194-L.jpg",
+                  "desc": "A foundational personal finance classic on assets, liabilities and mindset.",
+                  "url": "https://openlibrary.org/isbn/9781612680194"
                 },
                 {
-                  "title": "I Will Teach You to Be Rich — Ramit Sethi",
-                  "desc": "A practical, step-by-step approach to budgeting, saving and automating personal finance.",
-                  "tag": "Recommended",
-                  "url": "https://openlibrary.org/search?q=i+will+teach+you+to+be+rich",
-                  "login": false
+                  "title": "I Will Teach You to Be Rich",
+                  "author": "Ramit Sethi",
+                  "isbn": "9781984877489",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9781984877489-L.jpg",
+                  "desc": "A practical, step-by-step approach to budgeting and automating finances.",
+                  "url": "https://openlibrary.org/isbn/9781984877489"
                 },
                 {
-                  "title": "The Total Money Makeover — Dave Ramsey",
-                  "desc": "A widely followed, no-nonsense plan for getting out of debt and building savings.",
-                  "tag": "Recommended",
-                  "url": "https://openlibrary.org/search?q=total+money+makeover+dave+ramsey",
-                  "login": false
+                  "title": "The Total Money Makeover",
+                  "author": "Dave Ramsey",
+                  "isbn": "9781595555274",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9781595555274-L.jpg",
+                  "desc": "A no-nonsense plan for getting out of debt and building savings.",
+                  "url": "https://openlibrary.org/isbn/9781595555274"
+                }
+              ]
+            },
+            {
+              "title": "Motivation",
+              "books": [
+                {
+                  "title": "Can't Hurt Me",
+                  "author": "David Goggins",
+                  "isbn": "9781544512280",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9781544512280-L.jpg",
+                  "desc": "A raw, intense memoir on mental toughness and pushing past self-imposed limits.",
+                  "url": "https://openlibrary.org/isbn/9781544512280"
+                },
+                {
+                  "title": "The Subtle Art of Not Giving a F*ck",
+                  "author": "Mark Manson",
+                  "isbn": "9780062457714",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9780062457714-L.jpg",
+                  "desc": "A counterintuitive take on what actually makes a good life.",
+                  "url": "https://openlibrary.org/isbn/9780062457714"
+                },
+                {
+                  "title": "Man's Search for Meaning",
+                  "author": "Viktor Frankl",
+                  "isbn": "9780807014295",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9780807014295-L.jpg",
+                  "desc": "A Holocaust survivor's account of finding purpose through the worst circumstances.",
+                  "url": "https://openlibrary.org/isbn/9780807014295"
+                },
+                {
+                  "title": "Grit",
+                  "author": "Angela Duckworth",
+                  "isbn": "9781501111105",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9781501111105-L.jpg",
+                  "desc": "The research on passion and perseverance as the real driver of long-term success.",
+                  "url": "https://openlibrary.org/isbn/9781501111105"
+                }
+              ]
+            },
+            {
+              "title": "Romance",
+              "books": [
+                {
+                  "title": "Fourth Wing",
+                  "author": "Rebecca Yarros",
+                  "isbn": "9781649374042",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9781649374042-L.jpg",
+                  "desc": "A dragon-rider fantasy romance that became one of the biggest breakout hits in the genre.",
+                  "url": "https://openlibrary.org/isbn/9781649374042"
+                },
+                {
+                  "title": "It Ends with Us",
+                  "author": "Colleen Hoover",
+                  "isbn": "9781501110368",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9781501110368-L.jpg",
+                  "desc": "An emotional contemporary romance dealing with love and difficult family patterns.",
+                  "url": "https://openlibrary.org/isbn/9781501110368"
+                },
+                {
+                  "title": "The Love Hypothesis",
+                  "author": "Ali Hazelwood",
+                  "isbn": "9780593336823",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9780593336823-L.jpg",
+                  "desc": "A witty academic fake-dating romance that became a viral favorite.",
+                  "url": "https://openlibrary.org/isbn/9780593336823"
+                },
+                {
+                  "title": "A Court of Thorns and Roses",
+                  "author": "Sarah J. Maas",
+                  "isbn": "9781635575569",
+                  "cover": "https://covers.openlibrary.org/b/isbn/9781635575569-L.jpg",
+                  "desc": "A fantasy romance series that helped popularize the modern 'romantasy' genre.",
+                  "url": "https://openlibrary.org/isbn/9781635575569"
                 }
               ]
             }
@@ -2267,9 +2321,7 @@
       "The habit of writing down goals, rather than just thinking them, is consistently linked to higher follow-through in behavioral research.",
       "Audiobooks and reading print books activate overlapping but not identical areas of the brain.",
       "Commercial pilots are required to log a minimum number of flight hours long before they can fly for a major airline.",
-      "The term 'passive income,' popular in personal finance content, still almost always requires real upfront work or capital to set up."
-    ],
-    "spanish": [
+      "The term 'passive income,' popular in personal finance content, still almost always requires real upfront work or capital to set up.",
       "Spanish is the second most-spoken native language in the world by number of native speakers, after Mandarin Chinese.",
       "Spanish and English share thousands of 'cognates' — words that look and mean almost the same in both languages, like 'información' and 'information'.",
       "Spanish has two words for 'to be' — 'ser' and 'estar' — depending on whether something is permanent or temporary.",
@@ -2279,9 +2331,7 @@
       "The subjunctive mood, tricky for many learners, is used far more often in everyday Spanish than in everyday English.",
       "Spanish 'false friends' — words that look like English words but mean something different — include 'embarazada' (pregnant, not embarrassed).",
       "There are over 20 countries where Spanish is an official language, spanning Europe, the Americas, and Africa.",
-      "Rolling the Spanish 'rr' sound is a physical skill most learners have to specifically practice, since it doesn't exist in English."
-    ],
-    "books-recs": [
+      "Rolling the Spanish 'rr' sound is a physical skill most learners have to specifically practice, since it doesn't exist in English.",
       "'Atomic Habits' by James Clear popularized the idea that habits compound like interest — tiny 1% improvements add up dramatically over time.",
       "Stephen Covey's '7 Habits' framework distinguishes between things that are urgent and things that are actually important.",
       "Carol Dweck's research on 'growth mindset' has been influential enough to reshape how many schools approach praise and feedback.",
