@@ -2165,6 +2165,370 @@
           ]
         }
       }
+    },
+    "jobs": {
+      "label": "Getting a Job",
+      "emoji": "💼",
+      "subtopics": {
+        "freelance-remote": {
+          "label": "Freelance & Remote Job Boards",
+          "concepts": [
+            {
+              "title": "Platforms",
+              "resources": [
+                {
+                  "title": "Upwork",
+                  "desc": "The largest general freelance marketplace, covering almost every skill category.",
+                  "tag": "Free to join",
+                  "url": "https://www.upwork.com",
+                  "login": true
+                },
+                {
+                  "title": "Fiverr",
+                  "desc": "Gig-based freelance marketplace where you list fixed-price services.",
+                  "tag": "Free to join",
+                  "url": "https://www.fiverr.com",
+                  "login": true
+                },
+                {
+                  "title": "Remote.co",
+                  "desc": "Curated, fully-remote job listings across many fields.",
+                  "tag": "Free to browse",
+                  "url": "https://www.remote.co",
+                  "login": false
+                },
+                {
+                  "title": "We Work Remotely",
+                  "desc": "One of the largest and longest-running remote job boards.",
+                  "tag": "Free to browse",
+                  "url": "https://www.weworkremotely.com",
+                  "login": false
+                },
+                {
+                  "title": "FlexJobs",
+                  "desc": "Curated remote and flexible job listings; full access requires a paid subscription.",
+                  "tag": "Paid subscription",
+                  "url": "https://www.flexjobs.com",
+                  "login": true
+                },
+                {
+                  "title": "Remote OK",
+                  "desc": "A large, frequently updated remote job board.",
+                  "tag": "Free to browse",
+                  "url": "https://www.remoteok.io",
+                  "login": false
+                },
+                {
+                  "title": "AngelList (Wellfound)",
+                  "desc": "Connects job seekers directly with startups; now operating as Wellfound.",
+                  "tag": "Free",
+                  "url": "https://www.angel.co/jobs",
+                  "login": true
+                },
+                {
+                  "title": "SimplyHired",
+                  "desc": "General job search aggregator pulling listings from across the web.",
+                  "tag": "Free",
+                  "url": "https://www.simplyhired.com",
+                  "login": false
+                },
+                {
+                  "title": "Working Nomads",
+                  "desc": "Curated remote job listings updated daily.",
+                  "tag": "Free to browse",
+                  "url": "https://www.workingnomads.co",
+                  "login": false
+                },
+                {
+                  "title": "Jobspresso",
+                  "desc": "Hand-picked remote job listings, mainly tech, marketing and customer support.",
+                  "tag": "Free to browse",
+                  "url": "https://www.jobspresso.co",
+                  "login": false
+                },
+                {
+                  "title": "Freelancer",
+                  "desc": "A large general freelance marketplace similar to Upwork.",
+                  "tag": "Free to join",
+                  "url": "https://www.freelancer.com",
+                  "login": true
+                },
+                {
+                  "title": "Guru",
+                  "desc": "Freelance marketplace with flexible payment arrangement options.",
+                  "tag": "Free to join",
+                  "url": "https://www.guru.com",
+                  "login": true
+                },
+                {
+                  "title": "Toptal",
+                  "desc": "An exclusive freelance network with a selective vetting process for top talent.",
+                  "tag": "Free to apply",
+                  "url": "https://www.toptal.com",
+                  "login": true
+                },
+                {
+                  "title": "PeoplePerHour",
+                  "desc": "Freelance marketplace popular for hourly and project-based work.",
+                  "tag": "Free to join",
+                  "url": "https://www.peopleperhour.com",
+                  "login": true
+                },
+                {
+                  "title": "99designs",
+                  "desc": "Freelance marketplace specifically for design and creative work.",
+                  "tag": "Free to join",
+                  "url": "https://www.99designs.com",
+                  "login": true
+                }
+              ]
+            }
+          ]
+        },
+        "job-management": {
+          "label": "Job Search Management Tools",
+          "concepts": [
+            {
+              "title": "Tools",
+              "resources": [
+                {
+                  "title": "Trello",
+                  "desc": "A free kanban board — great for tracking applications by stage (applied, interviewing, offer).",
+                  "tag": "Free tier",
+                  "url": "https://www.trello.com",
+                  "login": true
+                },
+                {
+                  "title": "JobScan",
+                  "desc": "Scans your resume against a job description to improve ATS match rate.",
+                  "tag": "Freemium",
+                  "url": "https://www.jobscan.co",
+                  "login": true
+                },
+                {
+                  "title": "JibberJobber",
+                  "desc": "A free job search CRM for tracking contacts, applications and follow-ups.",
+                  "tag": "Free tier",
+                  "url": "https://www.jibberjobber.com",
+                  "login": true
+                },
+                {
+                  "title": "Huntr",
+                  "desc": "A free, visual job application tracker board.",
+                  "tag": "Free tier",
+                  "url": "https://www.huntr.co",
+                  "login": true
+                },
+                {
+                  "title": "Teal",
+                  "desc": "Free resume builder and job tracker in one tool.",
+                  "tag": "Free tier",
+                  "url": "https://www.tealhq.com",
+                  "login": true
+                },
+                {
+                  "title": "Microsoft To Do",
+                  "desc": "Free task management app for daily job-search to-dos.",
+                  "tag": "Free",
+                  "url": "https://todo.microsoft.com",
+                  "login": true
+                },
+                {
+                  "title": "Evernote",
+                  "desc": "Free-tier note-taking app for organizing research and interview notes.",
+                  "tag": "Free tier",
+                  "url": "https://www.evernote.com",
+                  "login": true
+                },
+                {
+                  "title": "RescueTime",
+                  "desc": "Tracks how you spend time on your computer, useful for staying accountable during a job search.",
+                  "tag": "Freemium",
+                  "url": "https://www.rescuetime.com",
+                  "login": true
+                },
+                {
+                  "title": "Google Keep",
+                  "desc": "Simple, free note and checklist app.",
+                  "tag": "Free",
+                  "url": "https://www.keep.google.com",
+                  "login": true
+                },
+                {
+                  "title": "Notion",
+                  "desc": "Free-tier all-in-one workspace, popular for building a custom job search tracker.",
+                  "tag": "Free tier",
+                  "url": "https://www.notion.so",
+                  "login": true
+                }
+              ]
+            }
+          ]
+        },
+        "technical-prep": {
+          "label": "Technical Interview Prep",
+          "concepts": [
+            {
+              "title": "Practice Platforms",
+              "resources": [
+                {
+                  "title": "LeetCode",
+                  "desc": "The most widely used coding interview practice platform, with a solid free tier.",
+                  "tag": "Free tier",
+                  "url": "https://leetcode.com/",
+                  "login": true
+                },
+                {
+                  "title": "HackerRank",
+                  "desc": "Coding challenges and technical skill assessments used by many employers.",
+                  "tag": "Free tier",
+                  "url": "https://www.hackerrank.com",
+                  "login": true
+                },
+                {
+                  "title": "HackerEarth",
+                  "desc": "Coding practice and employer assessment platform.",
+                  "tag": "Free tier",
+                  "url": "https://www.hackerearth.com",
+                  "login": true
+                },
+                {
+                  "title": "Codewars",
+                  "desc": "Gamified coding practice through community-created challenges (\"kata\").",
+                  "tag": "Free",
+                  "url": "https://www.codewars.com",
+                  "login": true
+                },
+                {
+                  "title": "CodeChef",
+                  "desc": "Competitive programming practice with regular contests.",
+                  "tag": "Free",
+                  "url": "https://www.codechef.com/",
+                  "login": true
+                },
+                {
+                  "title": "CodingNinjas",
+                  "desc": "Coding courses and interview practice, with free and paid content.",
+                  "tag": "Freemium",
+                  "url": "https://www.codingninjas.com",
+                  "login": true
+                },
+                {
+                  "title": "TopCoder",
+                  "desc": "Long-running competitive programming and algorithm practice platform.",
+                  "tag": "Free",
+                  "url": "https://www.topcoder.com/",
+                  "login": true
+                },
+                {
+                  "title": "Coderbyte",
+                  "desc": "Coding challenges geared specifically toward interview prep.",
+                  "tag": "Freemium",
+                  "url": "https://coderbyte.com/",
+                  "login": true
+                },
+                {
+                  "title": "Geektastic",
+                  "desc": "Technical assessment platform, also useful for practicing realistic coding tests.",
+                  "tag": "Freemium",
+                  "url": "https://geektastic.com",
+                  "login": true
+                },
+                {
+                  "title": "FreeCodeCamp",
+                  "desc": "A full, completely free coding curriculum — great supplementary prep.",
+                  "tag": "Free",
+                  "url": "https://www.freecodecamp.org",
+                  "login": false
+                },
+                {
+                  "title": "GeeksForGeeks",
+                  "desc": "Free coding tutorials, data structures/algorithms content, and curated interview questions.",
+                  "tag": "Free",
+                  "url": "https://www.geeksforgeeks.org",
+                  "login": false
+                }
+              ]
+            }
+          ]
+        },
+        "salary-negotiation": {
+          "label": "Salary & Offer Research",
+          "concepts": [
+            {
+              "title": "Tools",
+              "resources": [
+                {
+                  "title": "Comparably",
+                  "desc": "Free salary and company culture data, crowd-sourced by employees.",
+                  "tag": "Free",
+                  "url": "https://www.comparably.com",
+                  "login": false
+                },
+                {
+                  "title": "Levels.fyi",
+                  "desc": "Free, detailed leveling and compensation data, especially strong for tech roles.",
+                  "tag": "Free",
+                  "url": "https://www.levels.fyi/",
+                  "login": false
+                },
+                {
+                  "title": "Salary.com",
+                  "desc": "Free salary lookup tool by role, company and location.",
+                  "tag": "Free",
+                  "url": "https://www.salary.com/",
+                  "login": false
+                },
+                {
+                  "title": "Glassdoor",
+                  "desc": "Company reviews and salary data; full access to some data requires a free account.",
+                  "tag": "Freemium",
+                  "url": "https://www.glassdoor.com/",
+                  "login": true
+                },
+                {
+                  "title": "Payscale",
+                  "desc": "Free salary comparison tool based on role, skills and location.",
+                  "tag": "Free",
+                  "url": "https://www.payscale.com/",
+                  "login": false
+                },
+                {
+                  "title": "PaycheckCity",
+                  "desc": "Free calculator for estimating actual take-home pay from a salary offer.",
+                  "tag": "Free",
+                  "url": "https://www.paycheckcity.com",
+                  "login": false
+                }
+              ]
+            }
+          ]
+        },
+        "whatsapp-groups": {
+          "label": "Israeli Job-Search WhatsApp Groups",
+          "concepts": [
+            {
+              "title": "Groups",
+              "resources": [
+                {
+                  "title": "Hi-Tech Job Search — General",
+                  "desc": "A general WhatsApp group for hi-tech job searching in Israel.",
+                  "tag": "Free",
+                  "url": "https://lnkd.in/dz8zcHGH",
+                  "login": false
+                },
+                {
+                  "title": "Hi-Tech Job Search — Juniors & Students",
+                  "desc": "A WhatsApp group specifically for junior and student hi-tech job seekers in Israel.",
+                  "tag": "Free",
+                  "url": "https://lnkd.in/d3HZwB7N",
+                  "login": false
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   },
   "facts": {
